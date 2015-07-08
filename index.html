@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="css/reset.css" media="screen,print" rel="stylesheet">
+    <script src="css/modernizr.custom.30817.js"></script>
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>freeman.blue</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Main page">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <main>
+      <article class="header">
+      </article>
+      <article class="pages">
+        <section>
+          <h3>Finding Research Value &ndash; the metrics and methods for evaluating research</h3>
+          <div></div>
+          <p>
+            The value of the research is used in the process of allocating resources.  Traditionally, bibliometric methods, such as citation counts or journal impact factors, are used to evaluate the value of research. However, there are concerns of the accuracy and appropriateness of the bibliometrics being used. Most importantly, bibliometric methods do not capture the impact of research on economies and societies on general.  In this thesis, I detail some common bibliometric methods, and then describe government evaluation frameworks that include both the impact of research on other research as well as its socio-economic impact.  Such a combination of areas of effect is the likely future of the judgement of the value of research.
+          </p>
+          <a href=""><div>Read this…</div></a>
+        </section>
+        <section>
+          <h3>Gamification Literature Review</h3>
+          <div></div>
+          <p>
+            In this literature review of “gamification”, I start by covering the theory side of gamification, focusing on its definition, and also the on-going discussion of its goals and objectives. Then, after I import theories on player/user motivation from other fields in order to bridge the gap from gamification theory to its practice, I review some practical gamification advice and case studies, evaluating them against the theory.
+          </p>
+          <a href=""><div>Read this…</div></a>
+        </section>
+        <section>
+          <h3>Sideways Statistics</h3>
+          <div></div>
+          <p>
+            To help my understanding of the four major descriptive characteristics of linear regressions&mdash;&alpha;, &beta;, sample size, and size of effect&mdash;I've created a different way of visually representing those and their interrelations.  Though not academically rigorous, I hope that my approachable explanation of those visual representations, and of course the graphics themselves, will also help others to better understand how those four are related.
+          </p>
+          <a href=""><div>Read this…</div></a>
+        </section>
+      </article>
+      <article class="links">
+      </article>
+      <article class="footer">
+      </article>
+    </main>
+    <footer>
+      <meta name="creator" content="不爽老男人">
+    </footer>
+    <script>
+      if (!Modernizr.svg) {
+          var imgs = document.getElementsByTagName('img');
+          var svgExtension = /.*\.svg$/
+          var l = imgs.length;
+          for(var i = 0; i < l; i++) {
+              if(imgs[i].src.match(svgExtension)) {
+                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                  console.log(imgs[i].src);
+              }
+          }
+      }
+      function setDisplay (targetEID,targetDisplay) {
+        var targetElement = document.getElementById(targetEID);
+        targetElement.style.display = ( targetElement.style.display = targetDisplay );
+      }
+    </script>
+  </body>
+</html>
