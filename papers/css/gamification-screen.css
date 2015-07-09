@@ -263,7 +263,7 @@ th + th {
 /********************************************[ screen < 16.25 em ]*/
 /* This is a weirdly small size of viewport, thus not the default */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
-@media all and (min-width: 0) {
+@media all and (max-width: 16.24em) {
   body {
     min-width: 12.5em;
     /* matches breakpoint */
