@@ -109,10 +109,23 @@ img {
   /*border: solid 1px black;*/
   display: none;
 }
-
-.melink {
-  max-width: 12em;
+.links h3 {
+  display: block;
+  border-style: solid;
+  border-color: lightblue white white lightblue;
+  border-width: 0.35625em 0.617045em 0.617045em 0.35625em;
+  width:  95.725%;
+  height: 2.125em;
 }
+.links h4 {
+  display: block;
+  border-style: solid;
+  border-color: white lightblue lightblue white;
+  border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
+  width:  95.725%;
+  height: 2.125em;
+}
+
 
 /********************************[ 10.9375 em < screen ]**/
 @media all and (max-width: 10.9375em) {
@@ -136,14 +149,15 @@ img {
     margin-left:  0.25em;
   }
   .pages section {
-    width: 68.75%;
-    max-width: 48em;
+    width:      68.75%;
+    max-width:  48em;
     margin: 0.875em 0.875em 0.875em 10.375%;
   }
   .icon {
     display:    inline;
     width:      18.25%;
     max-width:  10em;
+    background-color: ghostwhite;
     border-style: solid;
     border-color: #36399E;
     border-width: 0.125em;
@@ -175,18 +189,39 @@ img {
   article.links {
     padding: 0.875em 0.875em 0.875em 10.375%;
   }
-  .links section {
-    display: inline-block;
-    max-width: 12em;
-    width: 12.5%;
-    margin: 0.125% 3.75% 0.125% 0.125%;
-  }
-  .melink div {
+  .links h3 {
+    box-sizing: padding-box;
     display: block;
+    border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
+    width: 31.9375%;  /* 63.8578125 */
+    height: 2.9625em;
+    margin: 0;
+  }
+  .links h4 {
+    box-sizing: padding-box;
+    display: block;
+    border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
+    width: 32.3125%;   /* 63.8578125% */
+    height: 2.9625em;
+    margin: -1em 0 0 42.2953125%;
+  }
+  .links section {
+    display:    inline-block;
+    max-width:  12em;
+    text-align: center;
+    width:  12.5%;
+    margin: 0 7.25%;
+  }
+  div#stylin {
+    display:    block;
+    text-align: center;
+    width:    77.875%;
+    margin:  -3.5625em 0;
+    padding:  0 0.7125em;
   }
   #snoo {
     max-width: 9em;
-    width: 9%;
+    width: 72%;
   }
 
 }
