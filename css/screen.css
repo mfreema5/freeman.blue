@@ -1,0 +1,209 @@
+/*****  screen.css: Screen Styles  *****/
+html {
+  box-sizing: border-box;
+  background-color: ;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Typography, color, etc. */
+h1 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:  700;
+  font-size:    1.625em;
+  line-height:  1.500em;
+  margin-bottom:  0.250em;
+  margin-left:    0.250em;
+}
+h1 + h1 {
+  margin-top:  -0.4375em;
+  margin-left:  0.5625em;
+  font-size:    1.3125em;
+  font-style:   italic;
+}
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  700;
+  font-size:    1.250em;
+  line-height:  1.250;
+  margin:       0.9375em 0 0.750em 0;
+}
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   italic;
+  font-weight:  700;
+  font-size:    1.125em;
+  line-height:  1.250;
+  margin:       0.9375em 0 0.5625em 0;
+}
+
+h4, h5, h6, b, strong, caption { 
+  font-weight: bold; 
+}
+i, em { 
+  font-style: italic;  
+}
+body { 
+  font-family: 'Merriweather Sans', sans-serif; 
+  font-weight:  300;
+}
+p { 
+  font-family: 'Merriweather Sans', sans-serif; 
+  font-weight:  300;
+  font-size:    1.0625em;
+  line-height:  1.250em;
+}
+main {
+  background-color: ;
+  border-radius: 0.250em;
+  padding-bottom: 4em;
+}
+article {
+  background-color: ;
+  border-radius: 0.250em;
+}
+section {
+  background-color: ;
+  border-radius: 0.125em;
+  overflow: hidden;
+  width: 100%;
+}
+ul { 
+  list-style-type: disc;
+}
+ol { 
+  list-style-type: decimal;
+}
+a {
+  color: #713d8a;
+  text-decoration: none;
+}
+a:hover { 
+  text-decoration: underline; 
+}
+a:hover.button {
+  text-decoration: none;
+}
+
+/********************************[ default layout ]**/
+
+#header-background {
+  width: 100%;
+  background-color: #9DC4F6;
+}
+#header-spacer {
+  display:      block;
+  line-height:  0;
+  height:       0.5em;
+}
+#header-title {
+  width:      9.750em;
+  min-width:  6.625em;
+}
+img {
+  max-width:  100%;
+  height:     auto;
+}
+#header-spacer img {
+  /*border: solid 1px black;*/
+  display: none;
+}
+
+.melink {
+  max-width: 12em;
+}
+
+/********************************[ 10.9375 em < screen ]**/
+@media all and (max-width: 10.9375em) {
+  #header-title {
+    width: 98.75%;
+  }
+}
+
+/********************************[ 25 em < screen ]**/
+@media all and (min-width: 25em) {
+  .header {
+    width: 100%;
+  }
+  #header-background {
+    width: 100%;
+    background-color: #9DC4F6;
+  }
+  #header-title {
+    width:        38.875%;
+    max-width:    17.125em;
+    margin-left:  0.25em;
+  }
+  .pages section {
+    width: 68.75%;
+    max-width: 48em;
+    margin: 0.875em 0.875em 0.875em 10.375%;
+  }
+  .icon {
+    display:    inline;
+    width:      18.25%;
+    max-width:  10em;
+    border-style: solid;
+    border-color: #36399E;
+    border-width: 0.125em;
+    float:      left;
+    margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
+    padding:    0.0625em;
+  }
+  img {
+    max-width:  100%;
+    height:     auto;
+  }
+  section span {
+    display:  inline-block;
+    width:    80%;
+  }
+  h3 {
+    display:    inline;
+    margin-top: 0.0625em;
+  }
+  .readthis {
+    display:  inline;
+    float:    right;
+    border:   solid #36399E 0.0625em;
+  }
+  .pages p {
+    display:        inline;
+    margin-bottom:  0.1825em;
+  }
+  article.links {
+    padding: 0.875em 0.875em 0.875em 10.375%;
+  }
+  .links section {
+    display: inline-block;
+    max-width: 12em;
+    width: 12.5%;
+    margin: 0.125% 3.75% 0.125% 0.125%;
+  }
+  .melink div {
+    display: block;
+  }
+  #snoo {
+    max-width: 9em;
+    width: 9%;
+  }
+
+}
+
+/********************************[ 40 em < screen ]**/
+@media all and (min-width: 40em) {
+  #header-spacer {
+    margin-top: -8.4375em;
+    height:     21.5625vw;
+  }
+  
+}
+
+/********************************[ 56 em < screen ]**/
+@media all and (min-width: 56em) {
+  #header-spacer {
+    height:     12.075em;
+  }
+
+}
