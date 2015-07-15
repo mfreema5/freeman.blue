@@ -55,16 +55,16 @@ p {
   line-height:  1.250em;
 }
 main {
-  background-color: ;
-  border-radius: 0.250em;
-  padding-bottom: 4em;
+  border-radius:  0.250em;
+  padding-bottom: 0.1250em;
+  background-color: #9DC4F6;
 }
 article {
   background-color: ;
   border-radius: 0.250em;
 }
 section {
-  background-color: ;
+  background-color: white;
   border-radius: 0.125em;
   overflow: hidden;
   width: 100%;
@@ -88,6 +88,13 @@ a:hover.button {
 
 /********************************[ default layout ]**/
 
+#backing{
+  background-color: #e3eefc;
+  background-image: url("http://localhost/~MJF/css/gfx/background-10.svg");
+  background-size: 100% 100%;
+  background-origin: border-box;
+  background-clip: border-box;
+}
 #header-background {
   width: 100%;
   background-color: #9DC4F6;
@@ -101,13 +108,31 @@ a:hover.button {
   width:      9.750em;
   min-width:  6.625em;
 }
+.header {
+  background-color: ghostwhite;
+}
+.header section {
+  padding:  0.6250em 6.6875% 1.875em 3.125%;
+  background-color: inherit;
+}
+.header h2 {
+  display: inline;
+  margin-left:  -0.4375em;
+  margin-right:  0.5625em;
+}
+h2 + p {
+  display: inline;
+}
+.header p {
+  font-size: 0.875em;
+  margin: 0.4375em 0;
+}
 img {
   max-width:  100%;
   height:     auto;
 }
-#header-spacer img {
-  /*border: solid 1px black;*/
-  display: none;
+article.pages {
+  padding-top: 0.0625em;
 }
 .links h3 {
   display: block;
@@ -142,16 +167,22 @@ img {
   #header-background {
     width: 100%;
     background-color: #9DC4F6;
+    margin-bottom:    0.8125em;
   }
   #header-title {
     width:        38.875%;
     max-width:    17.125em;
     margin-left:  0.25em;
   }
+  .header section {
+    max-width: 62.50em;
+    padding: 0 5.4375%;
+  }
   .pages section {
     width:      68.75%;
     max-width:  48em;
-    margin: 0.875em 0.875em 0.875em 10.375%;
+    margin: 0.5625em 0.5625em 0.5625em 10.375%;
+    padding: 0.3125em;
   }
   .icon {
     display:    inline;
@@ -187,13 +218,18 @@ img {
     margin-bottom:  0.1825em;
   }
   article.links {
-    padding: 0.875em 0.875em 0.875em 10.375%;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-color: white;
+    width:     68.75%;
+    max-width: 48em;
+    margin:    0.875em 0.875em 0.875em 10.375%;
   }
   .links h3 {
     box-sizing: padding-box;
     display: block;
     border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
-    width: 31.9375%;  /* 63.8578125 */
+    width: 48%;
     height: 2.9625em;
     margin: 0;
   }
@@ -201,9 +237,9 @@ img {
     box-sizing: padding-box;
     display: block;
     border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
-    width: 32.3125%;   /* 63.8578125% */
+    width: 48%;
     height: 2.9625em;
-    margin: -1em 0 0 42.2953125%;
+    margin: -1em 0 0 48%;
   }
   .links section {
     display:    inline-block;
@@ -215,7 +251,7 @@ img {
   div#stylin {
     display:    block;
     text-align: center;
-    width:    77.875%;
+    width:    96%; /* 77.875%; */
     margin:  -3.5625em 0;
     padding:  0 0.7125em;
   }
