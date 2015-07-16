@@ -90,8 +90,9 @@ a:hover.button {
 
 #backing{
   background-color: #e3eefc;
-  background-image: url("http://localhost/~MJF/css/gfx/background.svg");
-  background-size: 100% 100%;
+  background-image: url("http://freeman.blue/css/gfx/background.svg");
+  /* background-image: url("http://localhost/~MJF/css/gfx/background.svg"); */
+  background-size:  100%;
   background-origin: border-box;
   background-clip: border-box;
 }
