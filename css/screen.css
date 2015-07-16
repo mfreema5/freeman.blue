@@ -38,18 +38,18 @@ h3 {
   margin:       0.9375em 0 0.5625em 0;
 }
 
-h4, h5, h6, b, strong, caption { 
-  font-weight: bold; 
+h4, h5, h6, b, strong, caption {
+  font-weight: bold;
 }
-i, em { 
-  font-style: italic;  
+i, em {
+  font-style: italic;
 }
-body { 
-  font-family: 'Merriweather Sans', sans-serif; 
+body {
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
 }
-p { 
-  font-family: 'Merriweather Sans', sans-serif; 
+p {
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
   font-size:    1.0625em;
   line-height:  1.250em;
@@ -69,18 +69,18 @@ section {
   overflow: hidden;
   width: 100%;
 }
-ul { 
+ul {
   list-style-type: disc;
 }
-ol { 
+ol {
   list-style-type: decimal;
 }
 a {
   color: #713d8a;
   text-decoration: none;
 }
-a:hover { 
-  text-decoration: underline; 
+a:hover {
+  text-decoration: underline;
 }
 a:hover.button {
   text-decoration: none;
@@ -287,7 +287,7 @@ div#stylin {
     margin-top: -8.4375em;
     height:     21.5625vw;
   }
-  
+
 }
 
 /********************************[ 56 em < screen ]**/
