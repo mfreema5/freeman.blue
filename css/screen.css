@@ -134,22 +134,64 @@ img {
 }
 article.pages {
   padding-top: 0.0625em;
+  margin:      0.8750em 0;
+}
+.pages section {
+  margin-bottom: 0.375em;
+  padding: 0.7125em 0.3125em;
+}
+.pages p {
+  font-size: 0.9375em;
+}
+.icon {
+  display:    block;
+  width:      37%;
+  max-width:  10em;
+  background-color: ghostwhite;
+  border-style: solid;
+  border-color: #36399E;
+  border-width: 0.0625em;
+  margin:     0.1250em 30%;
+  padding:    0.0625em;
+}
+article.links {
+  background-color: white;
+  margin: 0.875em 0;
+}
+div#stylin {
+  text-align: center;
+  display: block;
+  margin:  -3.5625em 0;
+}
+.links section {
+  text-align: center;
+  max-width:  8em;
+  display: inline-block;
+  width:   18.75%;
+  margin:  0 5%;
+}
+#snoo {
+  display: inline-block;
+  max-width: 9em;
+  width: 72%;
 }
 .links h3 {
-  display: block;
+  display:   block;
+  font-size: 0.875em;
   border-style: solid;
   border-color: lightblue white white lightblue;
-  border-width: 0.35625em 0.617045em 0.617045em 0.35625em;
-  width:  95.725%;
-  height: 2.125em;
+  border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
+  width:  48.25%;
+  height: 4.90909em;
 }
 .links h4 {
   display: block;
   border-style: solid;
   border-color: white lightblue lightblue white;
   border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
-  width:  95.725%;
-  height: 2.125em;
+  width: 51.75%;
+  height: 4.90909em;
+  margin: -4.5em 0 0 48.25%;
 }
 
 
@@ -185,13 +227,12 @@ article.pages {
     margin: 0.5625em 0.5625em 0.5625em 10.375%;
     padding: 0.3125em;
   }
+  .pages p {
+    font-size: 1.0625em;
+  }
   .icon {
     display:    inline;
     width:      18.25%;
-    max-width:  10em;
-    background-color: ghostwhite;
-    border-style: solid;
-    border-color: #36399E;
     border-width: 0.125em;
     float:      left;
     margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
@@ -219,47 +260,25 @@ article.pages {
     margin-bottom:  0.1825em;
   }
   article.links {
-    background-origin: content-box;
-    background-clip: content-box;
     background-color: white;
     width:     68.75%;
     max-width: 48em;
     margin:    0.875em 0.875em 0.875em 10.375%;
   }
-  .links h3 {
-    box-sizing: content-box;
-    display: block;
-    border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
-    width: 48%;
-    height: 2.9625em;
-    margin: 0;
-  }
-  .links h4 {
-    box-sizing: content-box;
-    display: block;
-    border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
-    width: 48%;
-    height: 2.9625em;
-    margin: -1em 0 0 48%;
-  }
   .links section {
-    display:    inline-block;
-    max-width:  12em;
-    text-align: center;
     width:  12.5%;
     margin: 0 7.25%;
   }
-  div#stylin {
-    display:    block;
-    text-align: center;
-    width:    96%;
-    margin:  -3.5625em 0;
+  .links h3 {
+    font-size: 1.125em;
+    border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
+    height: 4.90909em;
   }
-  #snoo {
-    max-width: 9em;
-    width: 72%;
+  .links h4 {
+    margin-top: 0;
+    border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
+    height: 4.90909em;
   }
-
 }
 
 /********************************[ 40 em < screen ]**/
