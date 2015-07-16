@@ -227,7 +227,7 @@ article.pages {
     margin:    0.875em 0.875em 0.875em 10.375%;
   }
   .links h3 {
-    box-sizing: padding-box;
+    box-sizing: content-box;
     display: block;
     border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
     width: 48%;
@@ -235,7 +235,7 @@ article.pages {
     margin: 0;
   }
   .links h4 {
-    box-sizing: padding-box;
+    box-sizing: content-box;
     display: block;
     border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
     width: 48%;
@@ -252,9 +252,8 @@ article.pages {
   div#stylin {
     display:    block;
     text-align: center;
-    width:    96%; /* 77.875%; */
+    width:    96%;
     margin:  -3.5625em 0;
-    padding:  0 0.7125em;
   }
   #snoo {
     max-width: 9em;
