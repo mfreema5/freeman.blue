@@ -35,7 +35,6 @@ h3 {
   font-weight:  700;
   font-size:    1.125em;
   line-height:  1.250;
-  margin:       0.9375em 0 0.5625em 0;
 }
 
 h4, h5, h6, b, strong, caption {
@@ -90,6 +89,10 @@ a:hover.button {
 
 h2 + p {
   display: inline;
+}
+h3 {
+  margin-bottom: 0.5625em;
+  padding-top:   0.3750em;
 }
 #header-background {
   width: 100%;
@@ -147,14 +150,15 @@ article.pages {
   font-size: 0.9375em;
 }
 .icon {
-  display:    block;
-  width:      37%;
+  display:    inline;
+  float:      left;
+  width:      31.25%;
   max-width:  10em;
   background-color: ghostwhite;
   border-style: solid;
   border-color: #36399E;
   border-width: 0.0625em;
-  margin:     0.1250em 30%;
+  margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
   padding:    0.0625em;
 }
 article.links {
@@ -162,8 +166,8 @@ article.links {
   margin: 0.875em 0;
 }
 .readthis {
-  display:  inline;
-  float:    right;
+  display: block;
+  margin: 0.5em 33% 0;
 }
 div#stylin {
   text-align: center;
@@ -232,29 +236,28 @@ div#stylin {
     width:      68.75%;
     max-width:  48em;
     margin: 0.5625em 0.5625em 0.5625em 10.375%;
-    padding: 0.3125em;
+    padding: 0.3125em 1.125em 0.3125em 0.3125em;
   }
   .pages p {
     font-size: 1.0625em;
   }
   .icon {
-    display:    inline;
-    width:      18.25%;
+    width:        18.25%;
     border-width: 0.125em;
-    float:      left;
-    margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
-    padding:    0.0625em;
   }
   img {
     max-width:  100%;
     height:     auto;
   }
   h3 {
-    display:    inline;
-    margin-top: 0.0625em;
+    display:     inline;
+    padding-top: 0.6875em;
   }
   .readthis {
+    display:  inline;
+    float:    right;
     border:   solid #36399E 0.0625em;
+    margin: 0 -1.0em 0 0;
   }
   .pages p {
     display:        inline;
