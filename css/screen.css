@@ -88,13 +88,8 @@ a:hover.button {
 
 /********************************[ default layout ]**/
 
-#backing{
-  background-color: #e3eefc;
-  background-image: url("http://freeman.blue/css/gfx/background.svg");
-  /* background-image: url("http://localhost/~MJF/css/gfx/background.svg"); */
-  background-size:  100%;
-  background-origin: border-box;
-  background-clip: border-box;
+h2 + p {
+  display: inline;
 }
 #header-background {
   width: 100%;
@@ -121,12 +116,17 @@ a:hover.button {
   margin-left:  -0.4375em;
   margin-right:  0.5625em;
 }
-h2 + p {
-  display: inline;
-}
 .header p {
   font-size: 0.875em;
   margin: 0.4375em 0;
+}
+#backing{
+  background-color: #e3eefc;
+  background-image: url("http://freeman.blue/css/gfx/background.svg");
+  /* background-image: url("http://localhost/~MJF/css/gfx/background.svg"); */
+  background-size:  100%;
+  background-origin: border-box;
+  background-clip: border-box;
 }
 img {
   max-width:  100%;
@@ -139,6 +139,9 @@ article.pages {
 .pages section {
   margin-bottom: 0.375em;
   padding: 0.7125em 0.3125em;
+}
+.pages h3 {
+  display: block;
 }
 .pages p {
   font-size: 0.9375em;
@@ -157,6 +160,10 @@ article.pages {
 article.links {
   background-color: white;
   margin: 0.875em 0;
+}
+.readthis {
+  display:  inline;
+  float:    right;
 }
 div#stylin {
   text-align: center;
@@ -242,17 +249,11 @@ div#stylin {
     max-width:  100%;
     height:     auto;
   }
-  section span {
-    display:  inline-block;
-    width:    80%;
-  }
   h3 {
     display:    inline;
     margin-top: 0.0625em;
   }
   .readthis {
-    display:  inline;
-    float:    right;
     border:   solid #36399E 0.0625em;
   }
   .pages p {
