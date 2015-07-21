@@ -1,7 +1,6 @@
 /*****  screen.css: Screen Styles  *****/
 html {
   box-sizing: border-box;
-  background-color: ;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -59,7 +58,6 @@ main {
   background-color: #9DC4F6;
 }
 article {
-  background-color: ;
   border-radius: 0.250em;
 }
 section {
@@ -79,7 +77,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover.button {
   text-decoration: none;
@@ -166,8 +164,16 @@ article.links {
   margin: 0.875em 0;
 }
 .readthis {
-  display: block;
-  margin: 0.5em 33% 0;
+  display:   block;
+  margin: 0.0625em 5% 0 25%;
+  font-size: 0.8125em;
+  color:     white;
+  font-family: sans-serif;
+  /* background-image: url("http://freeman.blue/css/gfx/arrow-filled.svg"); */
+  background-image: url("http://localhost/~MJF/css/gfx/arrow-filled.svg");
+  background-size:  100% 100%;
+  padding: 0.5625em 1.125em 0.5625em 0.125em;
+
 }
 div#stylin {
   text-align: center;
@@ -254,10 +260,10 @@ div#stylin {
     padding-top: 0.6875em;
   }
   .readthis {
-    display:  inline;
-    float:    right;
-    border:   solid #36399E 0.0625em;
-    margin: 0 -1.0em 0 0;
+    display: inline;
+    float:   right;
+    font-size: 1.0625em;
+    margin:  0 -1.0em 0 0;
   }
   .pages p {
     display:        inline;
