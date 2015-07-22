@@ -94,7 +94,7 @@ h3 {
 }
 #header-background {
   width: 100%;
-  background-color: #9DC4F6;
+  background-color: #9dc4f6;
 }
 #header-spacer {
   display:      block;
@@ -123,22 +123,20 @@ h3 {
 }
 #backing{
   background-color: #e3eefc;
-  background-image: url("http://freeman.blue/css/gfx/background.svg");
-  /* background-image: url("http://localhost/~MJF/css/gfx/background.svg"); */
-  background-size:  100%;
-  background-origin: border-box;
-  background-clip: border-box;
+  padding-bottom: 0.125em;
+  border-width: 1em 0.125em;
+  border-style: solid;
+  border-color: #9dc4f6;
 }
 img {
   max-width:  100%;
   height:     auto;
 }
 article.pages {
-  padding-top: 0.0625em;
-  margin:      0.8750em 0;
+  padding-top:   0.0625em;
 }
 .pages section {
-  margin-bottom: 0.375em;
+  margin:  0.375em 0;
   padding: 0.7125em 0.3125em;
 }
 .pages h3 {
@@ -161,7 +159,7 @@ article.pages {
 }
 article.links {
   background-color: white;
-  margin: 0.875em 0;
+  margin: 0.5625em 0 0.5625em 0;
 }
 .readthis {
   display:   block;
@@ -169,8 +167,7 @@ article.links {
   font-size: 0.8125em;
   color:     white;
   font-family: sans-serif;
-  background-image: url("http://freeman.blue/css/gfx/arrow-filled.svg");
-  /* background-image: url("http://localhost/~MJF/css/gfx/arrow-filled.svg"); */
+  background-image: url("gfx/arrow-filled.svg");
   background-size:  100% 100%;
   padding: 0.5625em 1.125em 0.5625em 0.125em;
 
@@ -196,7 +193,7 @@ div#stylin {
   display:   block;
   font-size: 0.875em;
   border-style: solid;
-  border-color: lightblue white white lightblue;
+  border-color: #9dc4f6 white white #9dc4f6;
   border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
   width:  48.25%;
   height: 4.90909em;
@@ -204,7 +201,7 @@ div#stylin {
 .links h4 {
   display: block;
   border-style: solid;
-  border-color: white lightblue lightblue white;
+  border-color: white #9dc4f6 #9dc4f6 white;
   border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
   width: 51.75%;
   height: 4.90909em;
@@ -237,6 +234,10 @@ div#stylin {
   .header section {
     max-width: 62.50em;
     padding: 0 5.4375%;
+  }
+  #backing {
+    background-image: url("gfx/background.svg");
+    background-size:  100% 100%;
   }
   .pages section {
     width:      68.75%;
@@ -273,7 +274,7 @@ div#stylin {
     background-color: white;
     width:     68.75%;
     max-width: 48em;
-    margin:    0.875em 0.875em 0.875em 10.375%;
+    margin:    0.5625em 0.5625em 0.5625em 10.375%;
   }
   .links section {
     width:  12.5%;
