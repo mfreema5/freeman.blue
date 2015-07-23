@@ -287,7 +287,8 @@ th + th {
     /* Pad bottom to clear <nav>. */
   }
   article {
-    margin: 0.250em 2% 0.250em 2%;
+    font-size: 1em;
+    margin:  0.250em 2% 0.250em 2%;
     padding: 1% 2% 3% 2%;
   }
   section {
@@ -395,14 +396,12 @@ th + th {
     margin: 0 0 0 3.125em;
   }
   nav {
-    left: 3.875em;
-    width: 37.500em;
-    margin: 0;
-  }
+    width: 37.4375em;
+    margin: 0 0 0 3.875em;
+}
   aside {
-    left: 3.875em;
-    width: 37.500em;
-    margin: 0;
+    width: 37.4375em;
+    margin: 0 0 0 3.875em;
   }
 }
 /****************************************[ 60 em < screen ]*/
