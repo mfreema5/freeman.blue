@@ -296,6 +296,7 @@ div#stylin {
 @media all and (min-width: 40em) {
   #header-spacer {
     margin-top: -8.4375em;
+    height:      8.4375em;
     height:     21.5625vw;
   }
 
