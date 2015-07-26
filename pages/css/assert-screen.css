@@ -1,0 +1,26 @@
+/*****  screen.css: Screen Styles  *****/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #3a495c;
+}
+main {
+  display:   block;
+  width:     99.875%;
+  min-width: 18em;
+  background-color: #9dc4f6;
+  padding: 0.1875em 0.1875em 0 0.1875em;
+}
+img {
+  max-width:  100%;
+  height:     auto;
+  background-color: #f8f8ff;
+  border-style:  solid;
+  border-radius: 0.250em;
+  border-width:  0.125em;
+  border-color:  #7160A2;
+}
