@@ -120,6 +120,10 @@ h3 {
 .header p {
   font-size: 0.875em;
   margin: 0.4375em 0;
+  line-height: 1.4375em;
+}
+.header h2 + p {
+  line-height:  1.250;
 }
 #backing{
   background-color: #e3eefc;
