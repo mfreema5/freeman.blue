@@ -139,6 +139,7 @@ img {
   height:     auto;
 }
 .w1008, 
+.w1008-l, 
 .w1536, 
 .w1440, 
 .w2400, 
@@ -210,7 +211,8 @@ img {
     margin:   0.1875em;
     padding:  0.1250em;
   }
-  .w1008 {
+  .w1008,  
+  .w1008-l {
     width:     31.25%;
     max-width: 20.0em;
   }
