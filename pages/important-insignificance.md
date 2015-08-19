@@ -35,9 +35,11 @@ So, what would it look like if we designed our experiment from the beginning to 
 
 Instead of the sample probability curve on the left side of the graph being centered around the expected effect size, it would be centered around the value that's the minimum important correlation.  Then, the population probability curve on the right side of the graph would be positioned so that 95% of the area between it and the vertical baseline would be below the minimum important correlation.  The line that bisects the population probability curve is therefore the maximum correlation that demonstrates that the correlation does not meet your criteria for importance.  See Figure 04.
 
-[Figure 04]()
+[Figure 04](images/large/upper-bound-test.svg)
 
-This sort of analysis is called [NAME]?  Check your preferred reference for how to actually crunch the numbers (e.g., [CITE…]).
+The shaded area on the left side of the graph are all the population correlations that are lower than the minimum important correlation.  The shaded area on the right side is 5% of the area between the population correlation curve and the vertical baseline.  Since that shaded area is 0.05 of the total, the line bisecting the that curve marks the *maximum* sample correlation at which you can say, with ‘p<.05’, that the population correlation is unimportant.
+
+This sort of analysis is simply an application of established methods for testing the difference between two hypothesis, neither of which is zero (a.k.a., null).  Such analyses are referred to as [NAME]?  Check your preferred reference for how to actually crunch the numbers (e.g., [CITE…]).
 
 
 
