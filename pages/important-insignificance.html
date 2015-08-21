@@ -24,7 +24,7 @@
           When is an insignificant result important? When you check for the wrong significance.
         </p>
         <p>
-          (Note: This discussion employs visual aids I call “sideways statistics”. They are explained <a href="sideways-stats.html">here</a>.)
+          (Note: The discussion on this page employs visual aids I'm calling “sideways statistics”. They're explained on the page of the same name, <a href="sideways-stats.html"><i>Sideways Statistics</i></a>.)
         </p>
         <div class="w1008">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: Statistical experiment with alpha = 5% and statistical power = 84%" />
@@ -71,8 +71,11 @@
         <p>
           If we combine this hypothetical scenario with the hypothetical results from earlier, we can say that it doesn't matter that the resulting correlation didn't achieve statistical significance compared to null. What matters in this case is whether or not the upper bound we found is lower than the minimum correlation that supports using the new procedure. Because if it is, we can say with a confidence of ‘p&lt;.05’ that the new strategy isn't worth implementing. Even though we can't say (with the same confidence) that the correlation isn't significantly different than zero.
         </p>
+      </article>
+      <article>
+        <h2>Testing for an upper bound</h2>
         <p>
-          So, what would it look like if we designed our experiment from the beginning to check for something such as that? That is, let's test to see if we can say, with 95% confidence, that a correlation is lower than some value that we interpret as the minimum <b>important</b> correlation?
+          What would it look like if we designed our experiment from the beginning to check for an upper bound, such as described in the previous section? That is, let's test to see if we can say, with 95% confidence, that a correlation is lower than some value that we interpret as the minimum <b>important</b> correlation?
         </p>
         <div class="w1008-l">
           <img src="images/large/upper-bound-test.svg" alt="Figure 04: Statistical experiment to check upper bound" />
@@ -88,7 +91,32 @@
         <p>
           This sort of analysis is simply an application of established methods for testing the difference between two hypothesis, neither of which is zero (a.k.a., null). Such analyses are referred to as [NAME]? Check your preferred reference for how to actually crunch the numbers (e.g., [CITE…]).
         </p>
+      </article>
       <article>
+        <h2>Type I & II errors</h2> 
+        <div class="w1008">
+          <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 05: Type I error in an upper bound test" />
+          <a href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 05</p>
+        </div>
+        <p>
+          The visual interpretation of Type I and Type II errors for this type of analysis differs from that for a null-hypothesis significance test.  For a Type I error in a null-hypothesis significance test, the population is assumed to have a correlation of zero, and for a Type II error, the population is assumed to be equal to the correlation predicted in the estimate of effect size.  For an upper-bound type of test, there are no specific correlations to assume for the determination of error.  Rather, a worst-case-scenario is used.  For both error types, the worst-case is a population correlation that is almost exactly equal to the correlation selected as the lower boundary of importance.  In a Type I error, the worst-case population correlation is infinitesimally higher than the importance cut-off; in a Type II error, the worst-case population correlation is infinitesimally lower than the importance cut-off.
+        </p>
+        <p>
+          Type I errors are false positives.  In this case, that means that you would identify a population correlation as being below the minimum important correlation, when in fact it's equal to or above that minimum.  Figure 05 shows a population correlation that is infinitesimally higher than the minimum important correlation.  The line that bisects the population probability curve is the maximum correlation that would meet your hypothesis that the correlation is not important.  So, the area below that line, and between the sample probability curve and the vertical baseline, is equal to the worst-case probability of getting an apparently unimportant sample correlation for a population that, in fact, has an important correlation.
+        </p>
+        <div class="w1008-l">
+          <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 06: Type II error in an upper bound test" />
+          <a href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 06</p>
+        </div>
+        <p>
+          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in Figure 05.
+        </p>
+        <p>
+          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  Figure 06 shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
+        </p>
+      </article>
     </main>
     <footer>
       <meta name="creator" content="不爽老男人">
