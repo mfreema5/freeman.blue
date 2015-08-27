@@ -89,15 +89,30 @@
           The shaded area on the left side of the graph are all the population correlations that are lower than the minimum important correlation. The shaded area on the right side is 5% of the area between the population correlation curve and the vertical baseline. Since that shaded area is 0.05 of the total, the line bisecting the that curve marks the <em>maximum</em> sample correlation at which you can say, with ‘p&lt;.05’, that the population correlation is unimportant.
         </p>
         <p>
-          This sort of analysis is simply an application of established methods for testing the difference between two hypothesis, neither of which is zero (a.k.a., null). Such analyses are referred to as [NAME]? Check your preferred reference for how to actually crunch the numbers (e.g., [CITE…]).
+          When it comes to doing the actual calculation things become somewhat more complicated.  Or, rather, they are less symmetric.
         </p>
-      </article>
+        <p>
+          When considering correlations near zero (which is where null-hypothesis significance testing is most relevant), you can assume that the probability distributions are symmetric about some mean value.  But when looking at larger correlations, you can no longer assume that.
+        </p>
+        <p>
+          This is because correlations can never have a magnitude above 1.  So, as the correlation of interest moves higher up the vertical baseline, the probability distribution begins to “pile up” against the maximum value of 1, and this distorts the curve.  Or, rather, it <em>skews</em> it.
+        </p>
+        <p>
+          Figure 05 shows this.  The minimum important population correlation is no longer the mean of the sample correlation probability curve.  Instead it's the mode&mdash;the value with the highest probability. And the mode does not perfectly bisect the area of the sample correlation probability curve; this means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
+        </p>
+        <p>
+          To do the calculations, you have to transform the data in order to correct for this skew to the probability curves.  Typically this is done by calculating the Fisher <em>z</em>-score for the correlations, and doing the rest of the calculations based on that.  (See, for example: [CITE]).
+        </p>
+        <p>
+          This issue of skew will come up again in the discussion of Type II errors for this sort of analysis.
+        </p>
+</article>
       <article>
         <h2>Type I & II errors</h2> 
         <div class="w1008">
-          <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 05: Type I error in an upper bound test" />
+          <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 11: Type I error in an upper bound test" />
           <a href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 05</p>
+          <p>Figure 11</p>
         </div>
         <p>
           The visual interpretation of Type I and Type II errors for this type of analysis differs from that for a null-hypothesis significance test.  For a Type I error in a null-hypothesis significance test, the population is assumed to have a correlation of zero, and for a Type II error, the population is assumed to be equal to the correlation predicted in the estimate of effect size.  For an upper-bound type of test, there are no specific correlations to assume for the determination of error.  Rather, a worst-case-scenario is used.  For both error types, the worst-case is a population correlation that is almost exactly equal to the correlation selected as the lower boundary of importance.  In a Type I error, the worst-case population correlation is infinitesimally higher than the importance cut-off; in a Type II error, the worst-case population correlation is infinitesimally lower than the importance cut-off.
@@ -106,15 +121,15 @@
           Type I errors are false positives.  In this case, that means that you would identify a population correlation as being below the minimum important correlation, when in fact it's equal to or above that minimum.  Figure 05 shows a population correlation that is infinitesimally higher than the minimum important correlation.  The line that bisects the population probability curve is the maximum correlation that would meet your hypothesis that the correlation is not important.  So, the area below that line, and between the sample probability curve and the vertical baseline, is equal to the worst-case probability of getting an apparently unimportant sample correlation for a population that, in fact, has an important correlation.
         </p>
         <div class="w1008-l">
-          <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 06: Type II error in an upper bound test" />
+          <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 12: Type II error in an upper bound test" />
           <a href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 06</p>
+          <p>Figure 12</p>
         </div>
         <p>
-          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in Figure 05.
+          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in Figure 11.
         </p>
         <p>
-          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  Figure 06 shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
+          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  Figure 12 shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
         </p>
       </article>
     </main>
