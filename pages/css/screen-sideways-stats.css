@@ -138,6 +138,7 @@ img {
   max-width:  100%;
   height:     auto;
 }
+.w605-l, 
 .w1008, 
 .w1008-l, 
 .w1536, 
@@ -211,11 +212,7 @@ img {
     margin:   0.1875em;
     padding:  0.1250em;
   }
-  .w1008,  
-  .w1008-l {
-    width:     31.25%;
-    max-width: 20.0em;
-  }
+  .w605-l, 
   .w1008-l, 
   .w1536,
   #Standard_deviation_diagram,
@@ -225,6 +222,15 @@ img {
     clear:    left;
     margin:   0.625em 1.4125em 0.625em 0.625em;
     padding:  0.125em;
+  }
+  .w605-l {
+    width:     25.0%;
+    max-width: 11.375em;
+  }
+  .w1008,  
+  .w1008-l {
+    width:     31.25%;
+    max-width: 20.0em;
   }
   .w1536 {
     width:     46.875%;
@@ -258,5 +264,9 @@ img {
   }
   ul, ol {
     padding: 0.125em 0.300em 0.125em 2.500em;
+  }
+  .w605-l {
+    width:     18.75%;
+    max-width: 11.375em;
   }
 }

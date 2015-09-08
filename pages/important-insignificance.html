@@ -92,15 +92,15 @@
           When it comes to doing the actual calculation things become somewhat more complicated.  Or, rather, they are less symmetric.
         </p>
         <div class="w1008">
-          <img src="images/large/TruncationBunched.svg" alt="Figure 05: Probability curves distorted by truncation" />
-          <a href="images/TruncationBunched.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <img src="images/large/TruncationFades.svg" alt="Figure 05: Probability curves distorted by truncation" />
+          <a href="images/TruncationFades.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 05</p>
         </div>
         <p>
           When considering correlations near zero (which is where null-hypothesis significance testing is most relevant), you can assume that the probability distributions are symmetric about some mean value.  But when looking at larger correlations, you can no longer assume that.
         </p>
         <p>
-          This is because correlations can never have a magnitude above 1.  So, as the correlation of interest moves higher up the vertical baseline, the probability distribution begins to “pile up” against the maximum value of 1, and this distorts the curve.  Or, rather, it <em>skews</em> it.
+          This is because correlations can never have a magnitude above 1.  So, as the correlation of interest moves higher up the vertical baseline, the probability distribution begins to “pile up” against the maximum value of 1, and this distorts the curve, making it asymmetric.
         </p>
         <p>
           Figure 05 shows this.  The minimum important population correlation is no longer the mean of the sample correlation probability curve.  Instead it's the mode&mdash;the value with the highest probability. And the mode does not perfectly bisect the area of the sample correlation probability curve; this means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
@@ -108,13 +108,13 @@
         <p>
           To do the calculations, you have to transform the data in order to correct for this skew to the probability curves.  Typically this is done by calculating the Fisher <em>z</em>-score for the correlations, and doing the rest of the calculations based on that.
         </p>
-        <div class="w1008-l">
+        <div class="w605-l">
           <img src="images/large/Ztransformation.svg" alt="Figure 06: Fisher transformation stretching correlations to infinity" />
           <a href="images/Ztransformation.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 06</p>
         </div>
         <p>
-          That the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;respectively at +1 and -1&mdash;that's a consequence of the nature of correlations.  Figure 06 shows one way on understanding what the transformation does.  The straight diagonal line that doesn't extend beyond the square of dashed lines represents untransformed correlations.  It's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
+          What the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;respectively at +1 and -1&mdash;that's a consequence of the nature of correlations.  Figure 06 shows one way of understanding what the transformation does.  The perfectly straight diagonal line represents untransformed correlations; it's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
         </p>
         <p>
           This issue of skew will come up again in the discussion of Type II errors for this sort of analysis.
@@ -144,10 +144,23 @@
         <p>
           Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  Figure 12 shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
         </p>
+        <div class="w1008">
+          <img src="images/large/TruncationBeta.svg" alt="Figure 13: Type II error for truncated probability curves" />
+          <a href="images/TruncationBeta.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 13</p>
+        </div>
+        <p>
+          Based on Figure 12 alone, it would be reasonable to conclude that the worst-case statistical power would always be equal to <i>alpha</i>, and therefore the probability of a Type II error is always going to the residual of <i>alpha</i>.  So, in our examples, <i>beta</i> would always be 95%, and the statistical power 5%.  But it turns out this isn't always true, since you must also account for the effect that truncation has on the curves.  Figure 13 shows a hypothetical analysis with a worse-case statistical power of 39.2%.  This is because the truncation has an uneven effect on the two non-transformed probability curves, which means that they are no longer symmetric, so their respective mode lines no longer slice through identical areas at identical locations.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lorem ut libero dignissim faucibus. Nulla at egestas nisi. Cras semper metus augue, sit amet placerat lacus pharetra vel. Nulla quis placerat erat. Phasellus iaculis tempor facilisis. Proin sem sem, gravida id mi vel, pretium posuere neque. Integer egestas leo purus, in laoreet nisl accumsan eu. Maecenas turpis elit, porttitor nec purus eget, laoreet sagittis felis. Phasellus et tincidunt nunc, sit amet varius lorem.
+        </p>
+        <p>
+          Etiam a orci orci. Donec posuere fringilla nulla, eget viverra diam rhoncus in. Proin tempor metus ut velit egestas sagittis. Praesent elementum, risus in rutrum sollicitudin, risus tellus accumsan mi, eget lobortis eros mi id sem. Donec dolor sem, vestibulum id eros ut, condimentum ullamcorper massa. Quisque leo massa, ornare ut sem nec, placerat imperdiet neque. Suspendisse tempor turpis quis rhoncus pulvinar. 
+        </p>
       </article>
     </main>
     <footer>
-      <meta name="creator" content="不爽老男人">
     </footer>
     <script>
       if (!Modernizr.svg) {
