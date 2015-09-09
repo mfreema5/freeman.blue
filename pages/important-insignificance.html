@@ -3,20 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="common/reset.css" media="screen,print" rel="stylesheet">
     <link href="css/screen-sideways-stats.css" rel="stylesheet">
     <title>Important Insignificance</title>
     <meta name="author" content="Michael J. Freeman">
     <meta name="description" content="Using sideways stats to understand statistics.">
-    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../css/gfx/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="192x192" href="../css/gfx/favicon-192x192.png" type="image/png">
-    <link rel="icon" sizes="152x152" href="../css/gfx/favicon-152x152.png" type="image/png">
-    <link rel="icon" sizes="120x120" href="../css/gfx/favicon-120x120.png" type="image/png">
-    <link rel="shortcut icon" href="../css/gfx/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
     <script src="css/modernizr.custom.30817.js"></script>
   </head>
+  <div id="top-frame">&#8203;</div>
+  <div id="base-frame">&#8203;</div>
   <body>
-    <main>
+    <main id="ii-main">
+      <iframe name="Gframe" src="upper-bound-graphics.html" width="31.25%" height="100%"> 
+      </iframe>
       <h1>Important Insignificance</h1>
       <h2>An example of understanding statistics by looking at them sideways</h2>
       <article>
@@ -32,13 +37,13 @@
           <p>Figure 01</p>
         </div>
         <p>
-          Say you're about to run an linear regression. You've already determined the expected size of effect, you've set the significance bar at an alpha of 0.05, and with those two you've determined the sample size to give you a statistical power of 0.84. Figure 01 shows your statistical experiment as designed.
+          Say you're about to run an linear regression. You've already determined the expected size of effect, you've set the significance bar at an alpha of 0.05, and with those two you've determined the sample size to give you a statistical power of 0.84. <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a> shows your statistical experiment as designed.
         </p>
         <p>
           The minimum correlation that is statistically significant is marked by the line that bisects the population probability curve on the right side of the graphic. Since you set alpha to 0.05, 5% of the area bounded by the population probability curve extends below the null line.
         </p>
         <p>
-          That's all the same in the next graphic, Figure 02, but the arrow is pointing to the line that marks the results of your analysis. It has failed to be large enough to qualify as statistically significant.
+          That's all the same in the next graphic, <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure02">Figure 02</a>, but the arrow is pointing to the line that marks the results of your analysis. It has failed to be large enough to qualify as statistically significant.
         </p>
         <div class="w1008-l">
           <img src="images/large/alpha-beta-es-n-with-result.svg" alt="Figure 02: Statistical experiment with “insignificant” result" />
@@ -49,7 +54,7 @@
           Most people would assume that the analysis was a bust and that without a statistically significant correlation, you can't really say anything definitive about the results. But that isn't true.
         </p>
         <p>
-          Let's move on to Figure 03, in which the minimum statistically significant correlation has been removed, so that now the curve on the right side of the graphics is the population probability curve that's centered on the <strong>result</strong> from your hypothetical analysis. That result is not “statistically significant” at ‘p&lt;.05’ because more than 5% of the area between that curve and the vertical baseline is below the horizontal null line.
+          Let's move on to <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure03">Figure 03</a>, in which the minimum statistically significant correlation has been removed, so that now the curve on the right side of the graphics is the population probability curve that's centered on the <strong>result</strong> from your hypothetical analysis. That result is not “statistically significant” at ‘p&lt;.05’ because more than 5% of the area between that curve and the vertical baseline is below the horizontal null line.
         </p>
         <p>
           But that's going on at the bottom of the population probability curve. Let's consider the top of that curve, where there's been a new line added to the graph, one that's marked with an arrow. Below that line is 95% of the area between the population probability curve and the vertical baseline. Which means you can say, with a confidence of ‘p&lt;.05’, that the population correlation is <em>no higher than that line</em>.
@@ -83,7 +88,7 @@
           <p>Figure 04</p>
         </div>
         <p>
-          Instead of the sample probability curve on the left side of the graph being centered around the expected effect size, it would be centered around the value that's the minimum important correlation. Then, the population probability curve on the right side of the graph would be positioned so that 95% of the area between it and the vertical baseline would be below the minimum important correlation. The line that bisects the population probability curve is therefore the maximum correlation that demonstrates that the correlation does not meet your criteria for importance. See Figure 04.
+          Instead of the sample probability curve on the left side of the graph being centered around the expected effect size, it would be centered around the value that's the minimum important correlation. Then, the population probability curve on the right side of the graph would be positioned so that 95% of the area between it and the vertical baseline would be below the minimum important correlation. The line that bisects the population probability curve is therefore the maximum correlation that demonstrates that the correlation does not meet your criteria for importance. See <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure04">Figure 04</a>.
         </p>
         <p>
           The shaded area on the left side of the graph are all the population correlations that are lower than the minimum important correlation. The shaded area on the right side is 5% of the area between the population correlation curve and the vertical baseline. Since that shaded area is 0.05 of the total, the line bisecting the that curve marks the <em>maximum</em> sample correlation at which you can say, with ‘p&lt;.05’, that the population correlation is unimportant.
@@ -103,7 +108,7 @@
           This is because correlations can never have a magnitude above 1.  So, as the correlation of interest moves higher up the vertical baseline, the probability distribution begins to “pile up” against the maximum value of 1, and this distorts the curve, making it asymmetric.
         </p>
         <p>
-          Figure 05 shows this.  The minimum important population correlation is no longer the mean of the sample correlation probability curve.  Instead it's the mode&mdash;the value with the highest probability. And the mode does not perfectly bisect the area of the sample correlation probability curve; this means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
+          <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> shows this.  The minimum important population correlation is no longer the mean of the sample correlation probability curve.  Instead it's the mode&mdash;the value with the highest probability. And the mode does not perfectly bisect the area of the sample correlation probability curve; this means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
         </p>
         <p>
           To do the calculations, you have to transform the data in order to correct for this skew to the probability curves.  Typically this is done by calculating the Fisher <em>z</em>-score for the correlations, and doing the rest of the calculations based on that.
@@ -114,12 +119,12 @@
           <p>Figure 06</p>
         </div>
         <p>
-          What the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;respectively at +1 and -1&mdash;that's a consequence of the nature of correlations.  Figure 06 shows one way of understanding what the transformation does.  The perfectly straight diagonal line represents untransformed correlations; it's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
+          What the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;respectively at +1 and -1&mdash;that's a consequence of the nature of correlations.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure06">Figure 06</a> shows one way of understanding what the transformation does.  The perfectly straight diagonal line represents untransformed correlations; it's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
         </p>
         <p>
           This issue of skew will come up again in the discussion of Type II errors for this sort of analysis.
         </p>
-</article>
+      </article>
       <article>
         <h2>Type I & II errors</h2> 
         <div class="w1008">
@@ -131,7 +136,7 @@
           The visual interpretation of Type I and Type II errors for this type of analysis differs from that for a null-hypothesis significance test.  For a Type I error in a null-hypothesis significance test, the population is assumed to have a correlation of zero, and for a Type II error, the population is assumed to be equal to the correlation predicted in the estimate of effect size.  For an upper-bound type of test, there are no specific correlations to assume for the determination of error.  Rather, a worst-case-scenario is used.  For both error types, the worst-case is a population correlation that is almost exactly equal to the correlation selected as the lower boundary of importance.  In a Type I error, the worst-case population correlation is infinitesimally higher than the importance cut-off; in a Type II error, the worst-case population correlation is infinitesimally lower than the importance cut-off.
         </p>
         <p>
-          Type I errors are false positives.  In this case, that means that you would identify a population correlation as being below the minimum important correlation, when in fact it's equal to or above that minimum.  Figure 05 shows a population correlation that is infinitesimally higher than the minimum important correlation.  The line that bisects the population probability curve is the maximum correlation that would meet your hypothesis that the correlation is not important.  So, the area below that line, and between the sample probability curve and the vertical baseline, is equal to the worst-case probability of getting an apparently unimportant sample correlation for a population that, in fact, has an important correlation.
+          Type I errors are false positives.  In this case, that means that you would identify a population correlation as being below the minimum important correlation, when in fact it's equal to or above that minimum.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> shows a population correlation that is infinitesimally higher than the minimum important correlation.  The line that bisects the population probability curve is the maximum correlation that would meet your hypothesis that the correlation is not important.  So, the area below that line, and between the sample probability curve and the vertical baseline, is equal to the worst-case probability of getting an apparently unimportant sample correlation for a population that, in fact, has an important correlation.
         </p>
         <div class="w1008-l">
           <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 12: Type II error in an upper bound test" />
@@ -139,10 +144,10 @@
           <p>Figure 12</p>
         </div>
         <p>
-          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in Figure 11.
+          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure11">Figure 11</a>.
         </p>
         <p>
-          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  Figure 12 shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
+          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure12">Figure 12</a> shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
         </p>
         <div class="w1008">
           <img src="images/large/TruncationBeta.svg" alt="Figure 13: Type II error for truncated probability curves" />
@@ -150,13 +155,7 @@
           <p>Figure 13</p>
         </div>
         <p>
-          Based on Figure 12 alone, it would be reasonable to conclude that the worst-case statistical power would always be equal to <i>alpha</i>, and therefore the probability of a Type II error is always going to the residual of <i>alpha</i>.  So, in our examples, <i>beta</i> would always be 95%, and the statistical power 5%.  But it turns out this isn't always true, since you must also account for the effect that truncation has on the curves.  Figure 13 shows a hypothetical analysis with a worse-case statistical power of 39.2%.  This is because the truncation has an uneven effect on the two non-transformed probability curves, which means that they are no longer symmetric, so their respective mode lines no longer slice through identical areas at identical locations.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lorem ut libero dignissim faucibus. Nulla at egestas nisi. Cras semper metus augue, sit amet placerat lacus pharetra vel. Nulla quis placerat erat. Phasellus iaculis tempor facilisis. Proin sem sem, gravida id mi vel, pretium posuere neque. Integer egestas leo purus, in laoreet nisl accumsan eu. Maecenas turpis elit, porttitor nec purus eget, laoreet sagittis felis. Phasellus et tincidunt nunc, sit amet varius lorem.
-        </p>
-        <p>
-          Etiam a orci orci. Donec posuere fringilla nulla, eget viverra diam rhoncus in. Proin tempor metus ut velit egestas sagittis. Praesent elementum, risus in rutrum sollicitudin, risus tellus accumsan mi, eget lobortis eros mi id sem. Donec dolor sem, vestibulum id eros ut, condimentum ullamcorper massa. Quisque leo massa, ornare ut sem nec, placerat imperdiet neque. Suspendisse tempor turpis quis rhoncus pulvinar. 
+          Based on <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure12">Figure 12</a> alone, it would be reasonable to conclude that the worst-case statistical power would always be equal to <i>alpha</i>, and therefore the probability of a Type II error is always going to the residual of <i>alpha</i>.  So, in our examples, <i>beta</i> would always be 95%, and the statistical power 5%.  But it turns out this isn't always true, since you must also account for the effect that truncation has on the curves.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure13">Figure 13</a> shows a hypothetical analysis with a worse-case statistical power of 39.2%.  This is because the truncation has an uneven effect on the two non-transformed probability curves, which means that they are no longer symmetric, so their respective mode lines no longer slice through identical areas at identical locations.
         </p>
       </article>
     </main>
