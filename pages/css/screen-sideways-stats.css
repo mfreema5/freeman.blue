@@ -158,6 +158,16 @@ img {
   max-width:  100%;
   height:     auto;
 }
+.maths {
+  display:  block;
+  margin:   0.125em;
+  height:   3.250em;
+}
+.maths img {
+  display: block;
+  margin: 0.125em auto;
+  height: 100%;
+}
 .w605-l, 
 .w1008, 
 .w1008-l, 
@@ -216,6 +226,9 @@ iframe {
   ul, ol {
     margin:  0.125em 0.125em 0.125em 0.625em;
     padding: 0.125em 0.7500% 0.125em 6.25%;
+  }
+  .maths {
+    height:   3.9375em;
   }
   .w1008, 
   .w1536, 
@@ -293,6 +306,9 @@ iframe {
   }
   ul, ol {
     padding: 0.125em 0.300em 0.125em 2.500em;
+  }
+  .maths {
+    height:   4.3125em;
   }
   .w605-l {
     width:     18.75%;

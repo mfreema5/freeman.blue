@@ -111,18 +111,21 @@
           <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> shows this.  The minimum important population correlation is no longer the mean of the sample correlation probability curve.  Instead it's the mode&mdash;the value with the highest probability. And the mode does not perfectly bisect the area of the sample correlation probability curve; this means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
         </p>
         <p>
-          To do the calculations, you have to transform the data in order to correct for this skew to the probability curves.  Typically this is done by calculating the Fisher <em>z</em>-score for the correlations, and doing the rest of the calculations based on that.
+          To do the calculations, you have to transform the data in order to correct for this distorting truncation to the probability curves.  Typically this is done by transforming each correlation into its Fisher <em>z</em>-score, using the following equation. 
         </p>
         <div class="w605-l">
           <img src="images/large/Ztransformation.svg" alt="Figure 06: Fisher transformation stretching correlations to infinity" />
           <a href="images/Ztransformation.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 06</p>
         </div>
+        <div class="maths">
+          <img src="images/large/Zformula.svg" alt="Fisher transformation equation" />
+        </div>
         <p>
           What the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;respectively at +1 and -1&mdash;that's a consequence of the nature of correlations.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure06">Figure 06</a> shows one way of understanding what the transformation does.  The perfectly straight diagonal line represents untransformed correlations; it's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
         </p>
         <p>
-          This issue of skew will come up again in the discussion of Type II errors for this sort of analysis.
+          The effects of truncation will come up again in the discussion of Type II errors for this sort of analysis.
         </p>
       </article>
       <article>
