@@ -1,0 +1,214 @@
+/*****  screen.css: Screen Styles  *****/
+html {
+  box-sizing: border-box;
+  background-color: #7160a2;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Typography, color, etc. */
+h1 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:  700;
+  font-size:    1.625em;
+  line-height:  1.500em;
+  margin-bottom:  0.250em;
+  margin-left:    0.250em;
+}
+h1 + h1 {
+  margin-top:  -0.4375em;
+  margin-left:  0.5625em;
+  font-size:    1.3125em;
+  font-style:   italic;
+}
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  700;
+  font-size:    1.250em;
+  line-height:  1.250;
+  margin:       0.9375em 0 0.750em 0;
+}
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   italic;
+  font-weight:  700;
+  font-size:    1.125em;
+  line-height:  1.250;
+  margin:       0.9375em 0 0.5625em 0;
+}
+
+h4, h5, h6, b, strong, caption { 
+  font-weight: bold; 
+}
+i, em { 
+  font-style: italic;  
+}
+body { 
+  font-family: 'Merriweather Sans', sans-serif; 
+  font-weight:  300;
+}
+p { 
+  font-family: 'Merriweather Sans', sans-serif; 
+  font-weight:  300;
+  font-size:    1.0625em;
+  line-height:  1.250em;
+}
+div p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:  300;
+}
+main {
+  background-color: #cdc6e1;
+  border-radius: 0 0.250em 0.250em 0;
+  padding-bottom: 4em;
+}
+article {
+  background-color: #cdc6e1;
+  border-radius: 0.250em;
+}
+section {
+  background-color: #cdc6e1;
+  border-radius: 0.125em;
+  overflow: hidden;
+  width: 100%;
+}
+a {
+  color: #713d8a;
+  text-decoration: none;
+}
+a:hover { 
+  text-decoration: underline; 
+}
+a:hover.button {
+  text-decoration: none;
+}
+
+/********************************[ default layout ]**/
+body  {
+  margin: 0.625em 0.625em 0.625em 0.3125em;
+}
+article {
+  padding: 0.3125em;
+}
+p {
+  margin: 0.250em 0.125em 0.500em 0.250em;
+  padding: 0.250em 0 0.250em 0;
+  max-width: 48em;
+}
+p[id^="Figure"]{
+  display: block;
+  margin: 0 0 2em 0;
+  padding: 0;
+}
+div p {
+  font-size:    0.875em;
+}
+img {
+  max-width:  100%;
+  height:     auto;
+}
+.w605, 
+.w605-l, 
+.w1008, 
+.w1008-l, 
+.w1536, 
+.w1440, 
+.w2400, 
+.w3072 {
+  background-color: #ffffff;
+  border-style:     solid;
+  border-radius:    0.250em;
+  border-width:     0.125em;
+  border-color:     #7160A2;
+  display:          block;
+  width:      93.75%;
+  max-width:  20.0em;
+  float:      none;
+  margin:     0.1875em auto;
+  padding:    0.1250em;
+}
+.w605,
+.w605-l {
+  width:      76.125%;
+  max-width:  15.225em;
+}
+.button {
+  background-color: #C5CCE0;
+  border-style:     solid;
+  border-radius:    0.1875em;
+  border-width:     0.0625em;
+  border-color:     #43568B;
+  display:          block;
+  width:      10.3125%;
+  max-width:  1.5em;
+  float:      right;
+  margin:     0.0625em;
+  padding:    0;
+}
+#top-frame {
+  position:     fixed;
+  width:        100%;
+  top:          0;
+  border-width: 0.625em 0 0 0;
+  border-style: solid;
+  border-color: #7160a2;
+}
+#base-frame {
+  position:     fixed;
+  width:        100%;
+  bottom:       0;
+  border-width: 0 0 0.625em 0;
+  border-style: solid;
+  border-color: #7160a2;
+}
+
+/********************************[ 25 em < screen ]**/
+@media all and (min-width: 25em) {
+  article {
+    padding: 0.3125em;
+    max-width: 24em;
+  }
+  .w605, 
+  .w605-l, 
+  .w1008, 
+  .w1008-l, 
+  .w1440, 
+  .w1536, 
+  .w2400, 
+  .w3072 {
+    float:    none;
+    clear:    both;
+    padding:  0.125em;
+    width:    93.75%;
+    max-width: 20.0em;
+  }
+  .w605,
+  .w605-l {
+    width:     76.125%;
+    max-width: 15.225em;
+  }
+  .w1536 {
+    max-width: 30.0em;
+  }
+  .w1440 {
+    max-width: 49.1875em;
+  }
+  .w2400 {
+    max-width: 51.5625em;
+  }
+  .w3072 {
+    max-width: 75em;
+  }
+  .button {
+    max-width: 2.0625em;
+  }
+}
+
+/********************************[ 40 em < screen ]**/
+@media all and (min-width: 40em) {
+  article {
+    padding: 0.3125em 0.3125em 0.3125em 3.125em;
+    max-width: 24em;
+  }
+}

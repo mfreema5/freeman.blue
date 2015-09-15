@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   background-color: #7160a2;
+  height: auto;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -47,6 +48,7 @@ i, em {
 body {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
+  height: inherit;
 }
 p {
   font-family: 'Merriweather Sans', sans-serif;
@@ -62,10 +64,12 @@ main {
   background-color: #cdc6e1;
   border-radius: 0.250em;
   padding-bottom: 4em;
+  height: inherit;
 }
 article {
   background-color: #f5f3f9;
   border-radius: 0.250em;
+  height: auto;
 }
 section {
   background-color: #f5f3f9;
@@ -96,6 +100,22 @@ a:hover.button {
 #show_caveat,
 #show_unpublishable {
   display: inline;
+}
+#top-frame {
+  position:     fixed;
+  width:        100%;
+  top:          0;
+  border-width: 0.625em 0 0 0;
+  border-style: solid;
+  border-color: #7160a2;
+}
+#base-frame {
+  position:     fixed;
+  width:        100%;
+  bottom:       0;
+  border-width: 0 0 0.625em 0;
+  border-style: solid;
+  border-color: #7160a2;
 }
 
 /********************************[ default layout ]**/
@@ -166,7 +186,19 @@ img {
   max-width:  100%;
   height:     auto;
 }
+.maths {
+  display:  block;
+  margin:   0.125em;
+  height:   3.250em;
+}
+.maths img {
+  display: block;
+  margin: 0.125em auto;
+  height: 100%;
+}
+.w605-l,
 .w1008,
+.w1008-l,
 .w1536,
 .w1440,
 .w2400,
@@ -201,6 +233,9 @@ img {
   margin:     0.0625em;
   padding:    0;
 }
+iframe {
+  display: none;
+}
 
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
@@ -220,6 +255,9 @@ img {
     margin:  0.125em 0.125em 0.125em 0.625em;
     padding: 0.125em 0.7500% 0.125em 6.25%;
   }
+  .maths {
+    height:   3.9375em;
+  }
   .w1008,
   .w1536,
   .w1440,
@@ -238,10 +276,7 @@ img {
     margin:   0.1875em;
     padding:  0.1250em;
   }
-  .w1008 {
-    width:     31.25%;
-    max-width: 20.0em;
-  }
+  .w605-l,
   .w1008-l,
   .w1536,
   #Standard_deviation_diagram,
@@ -251,6 +286,15 @@ img {
     clear:    left;
     margin:   0.625em 1.4125em 0.625em 0.625em;
     padding:  0.125em;
+  }
+  .w605-l {
+    width:     25.0%;
+    max-width: 11.375em;
+  }
+  .w1008,
+  .w1008-l {
+    width:     31.25%;
+    max-width: 20.0em;
   }
   .w1536 {
     width:     46.875%;
@@ -271,6 +315,12 @@ img {
   .button {
     max-width: 2.0625em;
   }
+  .framejump {
+    pointer-events: none;
+    cursor: text;
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 /********************************[ 40 em < screen ]**/
@@ -284,5 +334,39 @@ img {
   }
   ul, ol {
     padding: 0.125em 0.300em 0.125em 2.500em;
+  }
+  .maths {
+    height:   4.3125em;
+  }
+  .w605-l {
+    width:     18.75%;
+    max-width: 11.375em;
+  }
+
+/***** Begin temporary ******/
+  div[class*="w"] {
+    display: none;
+  }
+  #ii-main {
+    padding-right: 31.25%;
+  }
+/***** End temporary ********/
+
+  iframe {
+    display:  block;
+    position: fixed;
+    top:      0;
+    right:    0;
+    float:    right;
+    clear:    none;
+    border:   none;
+    width:    31.25%;
+    height:   100%;
+  }
+  .framejump {
+    pointer-events: auto;
+    cursor: alias;
+    color: #713d8a;
+    text-decoration: underline;
   }
 }
