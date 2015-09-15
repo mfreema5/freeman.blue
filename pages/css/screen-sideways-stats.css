@@ -329,8 +329,7 @@ iframe {
     margin-right: 1em;
   }
   article {
-    padding: 0.3125em 0.3125em 0.3125em 3.125em;
-    max-width: 64em;
+    padding: 0.3125em 0.5625em 0.3125em 1.1875em;
   }
   ul, ol {
     padding: 0.125em 0.300em 0.125em 2.500em;
@@ -343,14 +342,12 @@ iframe {
     max-width: 11.375em;
   }
 
-/***** Begin temporary ******/
   div[class*="w"] {
     display: none;
   }
-  #ii-main {
+  main {
     padding-right: 31.25%;
   }
-/***** End temporary ********/
 
   iframe {
     display:  block;
@@ -368,5 +365,20 @@ iframe {
     cursor: alias;
     color: #713d8a;
     text-decoration: underline;
+  }
+}
+
+/********************************[ 56.75 em < screen ]**/
+@media all and (min-width: 56.75em) {
+  body {
+    padding-left: 1.375%;
+    background-color: #CDC6E1;
+    border-radius: 0.25em;
+  }
+  article {
+    padding: 0.3125em 1.3125em 0.3125em 3.9375%;
+    margin-left: 3.125%;
+    max-width: 40.125em;  /* 64em; */
+  }
   }
 }

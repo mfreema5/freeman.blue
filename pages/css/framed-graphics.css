@@ -38,18 +38,18 @@ h3 {
   margin:       0.9375em 0 0.5625em 0;
 }
 
-h4, h5, h6, b, strong, caption { 
-  font-weight: bold; 
+h4, h5, h6, b, strong, caption {
+  font-weight: bold;
 }
-i, em { 
-  font-style: italic;  
+i, em {
+  font-style: italic;
 }
-body { 
-  font-family: 'Merriweather Sans', sans-serif; 
+body {
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
 }
-p { 
-  font-family: 'Merriweather Sans', sans-serif; 
+p {
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
   font-size:    1.0625em;
   line-height:  1.250em;
@@ -77,8 +77,8 @@ a {
   color: #713d8a;
   text-decoration: none;
 }
-a:hover { 
-  text-decoration: underline; 
+a:hover {
+  text-decoration: underline;
 }
 a:hover.button {
   text-decoration: none;
@@ -86,7 +86,7 @@ a:hover.button {
 
 /********************************[ default layout ]**/
 body  {
-  margin: 0.625em 0.625em 0.625em 0.3125em;
+  margin: 0.625em 0.625em 0.625em 0.0625em;
 }
 article {
   padding: 0.3125em;
@@ -108,13 +108,13 @@ img {
   max-width:  100%;
   height:     auto;
 }
-.w605, 
-.w605-l, 
-.w1008, 
-.w1008-l, 
-.w1536, 
-.w1440, 
-.w2400, 
+.w605,
+.w605-l,
+.w1008,
+.w1008-l,
+.w1536,
+.w1440,
+.w2400,
 .w3072 {
   background-color: #ffffff;
   border-style:     solid;
@@ -162,6 +162,11 @@ img {
   border-style: solid;
   border-color: #7160a2;
 }
+/*
+.w3072 img {
+  transform: rotate(-90deg);
+}
+*/
 
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
@@ -169,13 +174,13 @@ img {
     padding: 0.3125em;
     max-width: 24em;
   }
-  .w605, 
-  .w605-l, 
-  .w1008, 
-  .w1008-l, 
-  .w1440, 
-  .w1536, 
-  .w2400, 
+  .w605,
+  .w605-l,
+  .w1008,
+  .w1008-l,
+  .w1440,
+  .w1536,
+  .w2400,
   .w3072 {
     float:    none;
     clear:    both;
