@@ -38,18 +38,18 @@ h3 {
   margin:       0.9375em 0 0.5625em 0;
 }
 
-h4, h5, h6, b, strong, caption { 
-  font-weight: bold; 
+h4, h5, h6, b, strong, caption {
+  font-weight: bold;
 }
-i, em { 
-  font-style: italic;  
+i, em {
+  font-style: italic;
 }
-body { 
-  font-family: 'Merriweather Sans', sans-serif; 
+body {
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
 }
-p { 
-  font-family: 'Merriweather Sans', sans-serif; 
+p {
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
   font-size:    1.0625em;
   line-height:  1.250em;
@@ -64,27 +64,27 @@ main {
   padding-bottom: 4em;
 }
 article {
-  background-color: #cdc6e1;
+  background-color: #f5f3f9;
   border-radius: 0.250em;
 }
 section {
-  background-color: #cdc6e1;
+  background-color: #f5f3f9;
   border-radius: 0.125em;
   overflow: hidden;
   width: 100%;
 }
-ul { 
+ul {
   list-style-type: disc;
 }
-ol { 
+ol {
   list-style-type: decimal;
 }
 a {
   color: #713d8a;
   text-decoration: none;
 }
-a:hover { 
-  text-decoration: underline; 
+a:hover {
+  text-decoration: underline;
 }
 a:hover.button {
   text-decoration: none;
@@ -134,14 +134,42 @@ li {
   text-indent: -1.375em;
   /* for hacky hanging indents */
 }
+table {
+  min-width: 14em;
+  border-collapse: collapse;
+  margin: 0.750em 0 1em 1.825%;
+}
+thead th {
+  padding: 0.4em;
+  font-size: 1em;
+  color: #faf9fc;
+  background-color: #5a4c83;
+  border: 1px solid #4f4373;
+}
+tbody td {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.9325em;
+  background-color: #ebe8f3;
+  border: 1px solid #4f4373;
+  color: #5a4c83;
+  padding: 0.6em;
+}
+tbody tr:nth-child(odd) td {
+  background-color: #cdc6e1;
+}
+td + td,
+th + th {
+  text-align: center;
+}
 img {
   max-width:  100%;
   height:     auto;
 }
-.w1008, 
-.w1536, 
-.w1440, 
-.w2400, 
+.w1008,
+.w1536,
+.w1440,
+.w2400,
 .w3072 {
   background-color: #ffffff;
   border-style:     solid;
@@ -155,8 +183,8 @@ img {
   margin:     0.1875em auto;
   padding:    0.1250em;
 }
-.w1440, 
-.w2400, 
+.w1440,
+.w2400,
 .w3072  {
   max-width: 24.625em;
 }
@@ -192,18 +220,18 @@ img {
     margin:  0.125em 0.125em 0.125em 0.625em;
     padding: 0.125em 0.7500% 0.125em 6.25%;
   }
-  .w1008, 
-  .w1536, 
-  .w1440, 
-  .w2400, 
+  .w1008,
+  .w1536,
+  .w1440,
+  .w2400,
   .w3072 {
     float:    right;
     clear:    right;
     margin:   0.625em 0.0625em 0.625em 1.4125em;
     padding:  0.125em;
   }
-  .w1440, 
-  .w2400, 
+  .w1440,
+  .w2400,
   .w3072  {
     float:    none;
     clear:    both;
@@ -214,7 +242,7 @@ img {
     width:     31.25%;
     max-width: 20.0em;
   }
-  .w1008-l, 
+  .w1008-l,
   .w1536,
   #Standard_deviation_diagram,
   #population-probability,
