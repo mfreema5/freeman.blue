@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>Probability Distributions Brief</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Probability Distributions Brief &ndash; an introduction to how probability curves are view in sideways statistics.">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Probability Distributions Brief</h1>
+      <h1>an introduction to how probability curves are view in sideways statistics</h2>
+      <article>
+        <section>
+          <h2>Measuring <em>foo</em></h2>
+          <p>Let's jump straight into a fictional example.</p>
+          <p>You're a quality assurance technician at ACME's chemical plant. There's a tanker car full of the company's newest product, SnaFoo&copy;, waiting to be certified and shipped. Your task is to determine the amount of <code>foo</code> in the SnaFoo&copy;.</p>
+          <p>You take five samples from the rail car, and run them through the lab's <em>Foo-inator 2000&trade;</em>. The following table are the results, reported in ‘seuss/geisel’.</p>
+          <table>
+            <thead>
+              <tr class="header">
+                <th>Sample</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                  <td>foo (s/g)</td>
+                <td>850</td>
+                <td>680</td>
+                <td>670</td>
+                <td>700</td>
+                <td>750</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>So, how much <code>foo</code> is there? How confident are you that you know the true <code>foo</code> content?</p>
+          <div class="w1008">
+            <img src="images/large/probability-brief-1.svg" alt="Figure 01: <em>Foo-inator 2000&trade;</em> results" />
+            <a href="images/probability-brief-1.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p>Figure 01</p>
+          </div>
+          <p>We'll start to visualize the data with a simple line chart; see Figure 01. The scale is the amount of <code>foo</code> in the sample, and each large dot is the result of one sample. (The dots, by the way, are 10 units across, because our <em>Foo-inator 2000&trade;</em> rounds everything off to the nearest 10.) The lowest result was 670 s/g, the highest was 850 s/g, and the rest of the dots are spread unevenly between between those two.</p>
+          <p>Next we calculate the mean value of the results—it's 730 s/g, and the standard deviation is roughly 70. Now that we have a mean and standard deviation, we can calculate a probability distribution for our results. That's Figure 02.</p>
+          <div class="w1008">
+            <img src="images/large/probability-brief-2.svg" alt="Figure 02: Probabilty around results" />
+            <a href="images/probability-brief-2.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p>Figure 02</p>
+          </div>
+          <p>The dots for each of the samples are also in Figure 02. Instead of a dot, though, the mean value is marked by the line that goes from the baseline up to the highest part of the curve, bisecting the area under the curve. The standard deviation isn't directly represented in Figure 02. However, since it's what defines the exact shape of the curve of the probability distribution, the standard deviation is indirectly represented.</p>
+          <p>So, we ask again, how much <code>foo</code> is there? The highest point in the probability curve is the value with the highest probability of being the true amount of <code>foo</code>. (The “true” amount is the amount we would measure if we used an infinitely precise and perfectly accurate instrument—something our <em>Foo-inator 2000&trade;</em> is light-years away from being.) That highest point is also the mean value from our five samples. So, we could report that as the amount of <code>foo</code> in the rail-car load of SnaFoo&copy;.</p>
+          <p>But how confident are we that the mean really is the true value? The height of the curve at that highest point is 0.5%. So, we can say that the amount of <code>foo</code> is 730.0 s/g, with 0.5% confidence. Not a very high confidence level, that.</p>
+          <p>But, there's another problem: the <em>Foo-inator 2000&trade;</em> rounds everything off to the nearest 10. Reporting 730.0 s/g implies that we know the amount of <code>foo</code> is above 729.9 s/g, and is also below 730.1 s/g. However, we don't know that, since the <em>Foo-inator 2000&trade;</em> would report anything between 725 and 735 as “730”.</p>
+          <p>The dashed lines and shaded area around the mean in Figure 02 are that same region—the span between 725 and 735 that the <em>Foo-inator 2000&trade;</em> reports as “730”. So, instead of talking about the percentage represent by the height of the curve at any point, let's consider the <em>area</em> of the curve bounded by those dashed lines. Of the total area under the curve, that middle shaded region is 5.4%.</p>
+          <div class="w1008">
+            <img src="images/large/probability-brief-3.svg" alt="Figure 03: Probabilty ranges" />
+            <a href="images/probability-brief-3.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p>Figure 03</p>
+          </div>
+          <p>So, we could report that the amount of <code>foo</code> is between 725 and 735 s/g, with a confidence of 5.4%. Which is a lot better than our 0.5% confidence in 730.0 s/g, but it's still not very confident.</p>
+          <p>To be able to report an amount of <code>foo</code> with a higher confidence we have to make that shaded region larger, by spreading the dashed lines apart. The next graphic, Figure 03, shows some larger shaded regions. The area bounded by the two dashed lines closes to the mean is 25% of the total. Between the next two is 75%, which includes the 25% of the first area. And the next pair outward contain an area that's 95% of the total (and includes the previous areas).</p>
+          <p>Where do those pairs of dashed lines fall? They're at:</p>
+          <table>
+            <thead>
+              <tr class="header">
+                <th>area</th>
+                <th>min</th>
+                <th>max</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td>25%</td>
+                <td>706</td>
+                <td>754</td>
+              </tr>
+              <tr class="even">
+                <td>75%</td>
+                <td>645</td>
+                <td>815</td>
+              </tr>
+              <tr class="odd">
+                <td>95%</td>
+                <td>585</td>
+                <td>875</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>We can therefore report with 95% confidence that the amount of <code>foo</code> in the latest batch of SanFoo&copy; is between 585 and 875 s/g. (Though, this would likely be reported as 730 s/g ± 145 s/g.)</p>
+        </section>
+        <section>
+          <h2>Everything is <em>foo</em></h2>
+          <p>The point here is this: you ran some sample, and calculated a single mean value. But it's very likely that the mean value you calculated was <em>not</em> the true value. In fact, we determined that there was a 99.5% probability that it wasn't.</p>
+          <p>That mean value is still a useful result, however, because it helps define a range within which the true value most likely falls.</p>
+          <p>Linear regressions and correlation calculations are the same way. You put a lot of samples into some software package, and you get some discrete numbers in return. But most of the time those numbers are <em>not</em> the “true” value, in the sense of being infinitely precise and perfectly accurate. Rather, those numbers mark some region of values, within which lays that essentially unknowable true value.</p>
+          <div class="w1008">
+            <img src="images/large/probability-brief-4.svg" alt="Figure 04: Probabilty ranges in sideways stats" />
+            <a href="images/probability-brief-4.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p>Figure 03</p>
+          </div>
+          <p>In sideways statistics, those discrete values are considered to simply mark the middle of a curve of probabilities of the true value. They aren't a result <em>per se</em>, but rather are a way to identify an area of probable results.</p>
+          <p>However, in sideways statistics, probability curves and their areas are used in a way that differs in one important aspect from the way they were used in the SnaFoo&copy; example here. In sideways statistics, areas under the curve are often measured starting from one side of the curve, instead of being measured outward from the middle. Figure 04 shows the same size areas as in the previous graphic (Figure 03), but here they are measured starting from the left side of the curve. That's why instead of having six dashed lines marking of the different areas, Figure 04 has only three. But otherwise the meaning of the areas is the same—it's a measure of the probability of some value being in that region.</p>
+          <p>And now back to the main page for “<a href="sideways-stats.html">sideways statistics</a>”.
+        </section>
+      </article>
+    </main>
+    <footer></footer>
+    <script>
+      if (!Modernizr.svg) {
+          var imgs = document.getElementsByTagName('img');
+          var svgExtension = /.*\.svg$/
+          var l = imgs.length;
+          for(var i = 0; i < l; i++) {
+              if(imgs[i].src.match(svgExtension)) {
+                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                  console.log(imgs[i].src);
+              }
+          }
+      }
+      function setDisplay (targetEID,targetDisplay) {
+        var targetElement = document.getElementById(targetEID);
+        targetElement.style.display = ( targetElement.style.display = targetDisplay );
+      }
+    </script>
+  </body>
+</html>
