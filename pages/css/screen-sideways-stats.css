@@ -233,7 +233,13 @@ img {
   margin:     0.0625em;
   padding:    0;
 }
-iframe {
+iframe.nav {
+  display:  block;
+  clear:    both;
+  border:   none;
+  width:    93.75%;
+}
+iframe.graphics {
   display: none;
 }
 
@@ -349,7 +355,7 @@ iframe {
     padding-right: 31.25%;
   }
 
-  iframe {
+  iframe.graphics {
     display:  block;
     position: fixed;
     top:      0;
