@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="common/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>Sideways statistics navigation frame</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Reusable frame of navigation for Sideways Stats pages">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
+  </head>
+  <body class="navframe">
+    <main>
+      <article>
+        <div class="destination">
+          <div class="icon" id="too-wide">
+            <a href="sideways-stats.html">
+              <img src="images/large/basic-alpha-beta-es-n.svg" alt="basic α, β, N, & effect size" />
+            </a>
+          </div>
+          <p>
+            Sideways Stats
+          </p>
+        </div>
+        <div class="destination">
+          <div class="icon">
+            <a href="probability-curves-primer.html">
+              <img src="images/large/probability-brief-3.svg" alt="Confidence ranges in a probability curve" />
+            </a>
+          </div>
+          <p>
+            Primer on probability curves
+          </p>
+        </div>
+        <div class="destination">
+          <div class="icon">
+            <a href="upper-bound-hypothesis.html">
+              <img src="images/large/TruncationFades.svg" alt="Truncated probability curves" />
+            </a>
+          </div>
+          <p>
+            Checking an upper-bound hypothesis
+          </p>
+        </div>
+        <div class="destination">
+          <div class="icon" id="too-short">
+            <a href="../index.html">
+              <img src="common/gfx/background.svg" alt="freeman.blue - main page" />
+            </a>
+          </div>
+          <p>
+            Freeman&#8203;.blue &ndash; main page
+          </p>
+        </div><div style="clear: both;"></div>
+      </article>
+    </main><footer></footer>
+    <script>
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
+    </script>
+  </body>
+</html>

@@ -122,8 +122,21 @@ a:hover.button {
 body  {
   margin: 0.625em;
 }
+.navframe body {
+  margin:  0.1250em;
+  padding: 0.1250em;
+}
+.navframe main {
+  padding: 0;
+  max-width: none;
+}
 article {
   padding: 0.3125em;
+}
+.navframe article {
+  padding: 0.0625em;
+  padding-bottom: 0.625em;
+  text-align: center;
 }
 section > section {
   display: inline;
@@ -242,6 +255,44 @@ iframe.nav {
 iframe.graphics {
   display: none;
 }
+.framejump {
+  pointer-events: none;
+  cursor: text;
+  color: inherit;
+  text-decoration: none;
+}
+div.destination {
+  display: inline-block;
+  background-color: #E3EEFC;
+  border-radius:    0.250em;
+  border-style: solid;
+  border-color: #9DC4F6;
+  border-width: 0.125em;
+  overflow: hidden;
+  width:    100%;
+  max-width:  9em;
+  margin:     0.125em 0 0 0;
+}
+.destination p {
+  font-size: 0.6875em;
+  text-align: left;
+}
+.icon {
+  display:    inline;
+  float:      left;
+  width:      31.25%;
+  max-width:  3.625em;
+  background-color: ghostwhite;
+  border-style: solid;
+  border-color: #36399E;
+  border-width: 0.0625em;
+  margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
+  padding:    0.0625em;
+}
+.destination .icon {
+  margin-right: 0.4375em;
+}
+
 
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
@@ -251,6 +302,11 @@ iframe.graphics {
   article {
     padding: 0.3125em 0.3125em 0.3125em 7.8125%;
     max-width: 64em;
+  }
+  .navframe article {
+    padding: 0.3125em;
+    text-align: center;
+    max-width: none;
   }
   h3.before {display: none;}
   h3.after  {display: inline-block;}
@@ -321,18 +377,45 @@ iframe.graphics {
   .button {
     max-width: 2.0625em;
   }
-  .framejump {
-    pointer-events: none;
-    cursor: text;
-    color: inherit;
-    text-decoration: none;
+  div.destination {
+    display:    inline-block;
+    width:      38.75%;
+    max-width:  9.250em;
+    margin:     0.1875em;
+    padding:    0.1250em;
+    border-color: #9DC4F6;
   }
-}
+  div.icon {
+    width:       3.625em;
+    max-width:   8em;
+    max-height:  8em;
+  }
+  .icon#too-wide {
+    width:      3.625em;
+    height:     3.875em;
+  }
+  .icon#too-wide img {
+    padding:    0 0 0.3125em 0;
+    width:      3.625em;
+    height:     3.625em;
+  }
+  .icon#too-short {
+    width:      3.625em;
+    height:     3.875em;
+  }
+  .icon#too-short img {
+    width:      3.625em;
+    height:     3.750em;
+  }
+
 
 /********************************[ 40 em < screen ]**/
 @media all and (min-width: 40em) {
   body  {
     margin-right: 1em;
+  }
+  body.navframe {
+    margin: 0;
   }
   article {
     padding: 0.3125em 0.5625em 0.3125em 1.1875em;
@@ -347,14 +430,12 @@ iframe.graphics {
     width:     18.75%;
     max-width: 11.375em;
   }
-
   div[class*="w"] {
     display: none;
   }
   main {
     padding-right: 31.25%;
   }
-
   iframe.graphics {
     display:  block;
     position: fixed;
@@ -381,10 +462,17 @@ iframe.graphics {
     background-color: #CDC6E1;
     border-radius: 0.25em;
   }
+  body.navframe {
+    padding: 0;
+  }
   article {
     padding: 0.3125em 1.3125em 0.3125em 3.9375%;
     margin-left: 3.125%;
     max-width: 40.125em;  /* 64em; */
   }
+  .navframe article {
+    padding: 0.3125em;
+    margin: 0;
+    max-width: reset;
   }
 }
