@@ -62,7 +62,7 @@ div p {
 }
 main {
   background-color: #cdc6e1;
-  border-radius: 0.250em;
+  border-radius: 0.25em 0.25em 0px 0px;
   padding-bottom: 0.3125em;
   height: inherit;
 }
@@ -79,7 +79,7 @@ section {
 }
 footer {
   background-color: #cdc6e1;
-  border-radius: 0.250em;
+  border-radius:  0 0 0.25em 0.25em;
 }
 ul {
   list-style-type: disc;
@@ -106,29 +106,41 @@ a:hover.button {
   display: inline;
 }
 #top-frame {
-  position:     fixed;
-  width:        100%;
-  top:          0;
-  border-width: 0.625em 0 0 0;
-  border-style: solid;
-  border-color: #7160a2;
+  position:       fixed;
+  width:          100%;
+  top:            0;
+  left:           0;
+  border-style:   solid;
+  border-color:   #7160a2;
+  border-width:   0.750em 0.625em 0 0.625em;
+  border-radius:  0.875em 0.875em 0 0 / 1.000em 0.875em 0 0;
+  height:         0.875em;
+  margin-top:    -0.125em;
 }
 #base-frame {
-  position:     fixed;
-  width:        100%;
-  bottom:       0;
-  border-width: 0 0 0.625em 0;
-  border-style: solid;
-  border-color: #7160a2;
+  position:       fixed;
+  width:          100%;
+  bottom:         0;
+  left:           0;
+  border-style:   solid;
+  border-color:   #7160a2;
+  border-width:   0 0.625em 0.750em 0.625em;
+  border-radius:  0 0 0.875em 0.875em / 0 0 0.875em 1.000em;
+  height:         0.875em;
+  margin-bottom: -0.125em;
 }
 
 /********************************[ default layout ]**/
 body  {
-  margin: 0.625em;
+  margin: 0.625em 0.625em 0.625em 0;
+  border-style:   solid;
+  border-color:   #7160a2;
+  border-width:   0 0 0 0.625em;
 }
 body.navframe {
   margin:  0;
   padding: 0;
+  border-width: 0;
 }
 .navframe main {
   padding: 0;
@@ -143,18 +155,19 @@ article {
   padding: 0.0625em;
   padding-bottom: 0.625em;
   text-align: center;
-  min-height: 10.5em;
 }
 section > section {
   display: inline;
 }
 footer {
-  padding: 0.3125em 0.3125em 0.625em 0.3125em;
-  margin-top: 0.0625em;
+  padding:  0.3125em 0 0.625em 0;;
   height: auto;
 }
 footer.navframe {
   display: none;
+}
+object.nav {
+  width: 100%;
 }
 h3.before {display: inline-block;}
 h3.after  {display: none;}
@@ -261,12 +274,12 @@ img {
   margin:     0.0625em;
   padding:    0;
 }
-iframe.nav {
+object.nav {
   display:  block;
   clear:    both;
-  width:    100%;
-  height:   10.5em;
-  border-radius: 0.1875em;
+  width:    96.875%;         /* 96.875% + margin = 100% */
+  height:   10.625em;        /* But WHY?  */
+  border-radius: 0.1875em;   /* Wait… ‘border-box’ doesn't include margins, does it? */
   border-width: 0;
 }
 iframe.graphics {
@@ -453,8 +466,8 @@ div.destination {
   main,
   footer {
     padding-right: 31.25%;
+    padding-left:   0.3125em;
   }
-
   iframe.graphics {
     display:  block;
     position: fixed;
@@ -477,27 +490,34 @@ div.destination {
 /********************************[ 56.75 em < screen ]**/
 @media all and (min-width: 56.75em) {
   body {
-    padding-left: 1.375%;
     background-color: #CDC6E1;
-    border-radius: 0.25em;
+    border-radius: 0.250em;
   }
   body.navframe {
     padding: 0;
   }
-  article {
-    padding: 0.3125em 1.3125em 0.3125em 3.9375%;
+  footer {
+    margin: 0.1875em 0;
+  }
+  main,
+  footer {
+    margin-left: 1.375%;
+    padding-left: 0;
+  }
+  article,
+  object.nav {
     margin-left: 3.125%;
     max-width: 40.125em;
+  }
+  article {
+    padding: 0.3125em 1.3125em 0.3125em 3.9375%;
+  }
+  object.nav {
+    padding: 0;
   }
   .navframe article {
     padding: 0.3125em;
     margin: 0;
     max-width: reset;
-  }
-  footer {
-    margin: 0.1875em 0.3125em 0.3125em 2.0%;
-  }
-  iframe.nav {
-    max-width: 40.125em;
   }
 }
