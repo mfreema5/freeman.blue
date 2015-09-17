@@ -46,10 +46,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.43"
-     inkscape:cx="537.72052"
-     inkscape:cy="679.32141"
+     inkscape:cx="198.18564"
+     inkscape:cy="493.2749"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      units="px"
      objecttolerance="24"
@@ -108,12 +108,6 @@
      inkscape:label="Shade"
      style="display:inline"
      transform="translate(0,-336)">
-    <path
-       style="display:inline;fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 408,1392 0,-216 99.56075,0 C 444,1224 420,1278 420,1392 Z"
-       id="path4171"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 408,996 -202.3072,0 C 300,1056 366,1086 385.7311,1176 L 408,1176 Z"
