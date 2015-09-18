@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="common/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>Insignificance is Not Failure</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Using sideways stats to see that ‘significance’ is not ‘importance’.">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
+  </head>
+  <div id="top-frame">&#8203;</div>
+  <div id="base-frame">&#8203;</div>
+  <body>
+    <main>
+      <iframe class="graphics" name="Gframe" src="upper-bound-graphics.html" width="31.25%" height="100%"></iframe>
+      <h1>Insignificance is Not Failure</h1>
+      <h2>Trying to find importance among the significance.</h2>
+      <article>
+        <h3>Unpublishable?</h3>
+        <p>
+          Statistical power or <i>beta</i> don't come up very often in humanities papers that involve null hypothesis significance testing.  I believe that's because most researchers are fishing for results instead of testing specific hypothesis, but that's not the point at the moment.  Without a consideration of the statistical power of an experiment, there can be no discussion made of Type II errors.
+        </p>
+        <div class="w1008" id="type-2-errors" >
+          <img src="images/large/type-2-errors.svg" alt="Figure 01: Sideways Type II error" />
+          <a href="images/type-2-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 01</p>
+        </div>
+        <p>
+          The example graphic (<a class= "framejump" target="Gframe" href="not-failure-graphics.html#Figure01">Figure 01</a>) represents a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 84%.
+        </p>
+        <p>
+          Remember that a Type II error is when a population correlation exists, but the sample fails to find it.  So, in the example graphic, a Type II error would be any sample correlation that is below the minimum statistically significant correlation. Therefore, the area of the sample probability curve on the left side of the graphic that is shaded covers the sample correlations that would be a Type II error.
+        </p>
+        <p>
+          If your sample correlation is low enough that it would cross the shaded area on the left side of the graph, your result is not statistically significant. Which, I suspect, is the point when many researchers stop in the analysis of their data.  Because sample correlations that are not significantly different from null are largely unpublishable.  They are not viewed as ‘negative results’; rather, they're viewed as a non-results.
+        </p>
+        <p>
+          But is that appropriate? If you calculate a statistical power of 84%, and then you fail to get a statistically significant sample correlation, there is a 16% that you just have bad luck. But there's a 84% chance that there's something wrong with effect size you were expecting.
+        </p>
+        <p>
+          Is finding that your expected size of effect was wrong a useful result?  That depends on how you went about coming up with your effect size.  (It also assumes you did in fact consider statistical power in the design of your study, which often doesn't seem to be the case in humanities research.)  In general, you probably estimated the expected effect size based on one of three things:
+        </p>
+        <ol>
+          <li>The results of previous studies of the same correlation.</li>
+          <li>The results of previous studies of similar correlations, combined with accept theories about the relation between those correlations and the one you're studying.</li>
+          <li>An interpretation of what magnitude of result would qualify as “important”.
+        </ol>
+        <p>
+          If you are doing a “replication study”, then you used the first approach. And when you failed to find a statistically significant result, that means that there's a 84% chance that those previous studies were wrong.  That would seem to be worth further investigation, but is not something you see very often (if ever) in the humanities literature.
+        </p>
+        <p>
+          If you aren't doing a replication study, you likely used the second approach. So, when you failed to find a statistically significant result, per NHST, the implication is that either the previous related studies were wrong, or the accepted theories that relates those studies to yours are wrong.  Again, while that seems like a potentially interesting result, you rarely see such a thing explored in the humanities literature.
+        </p>
+        <div class="w1008">
+          <img src="images/large/type-1-errors.svg" alt="Figure 02: Sideways Type I error" />
+          <a href="images/type-1-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 02</p>
+        </div>
+        <p>
+          In any of both of those cases, by not exploring the negative result, you are effectively saying that an 84% unlikelihood of a Type II error isn't compelling.  Yet, a 95% percent unlikelihood of a Type I error is considered, not merely compelling, but definitive. (Compare <a class= "framejump" target="Gframe" href="not-failure-graphics.html#Figure01">figure 01</a> and <a class= "framejump" target="Gframe" href="not-failure-graphics.html#Figure02">figure 02</a>.)  So, if a 95% confidence level is enough to get a positive result it published, what's the required level of confidence in a negative result to get it published?  There doesn't seem to be one. The utility of negative results from studies with large statistical power remains, as far as I know, largely unused.
+        </p>
+        <p>
+          But what about the third case?  That's when you estimated your expected size of effect on an interpretation of what magnitude of result would qualify as “important”.  That's discussed in the next section.
+        </p>
+      </article>
+      <article>
+        <h3>Checking for the wrong significance</h3>
+        <p>
+          If your linear regression fails to produce a correlation that's significantly different from null, does that mean you haven't found anything useful?  Not necessarily.  You may have simply stumbled into a Type II error, where your hypothesis is correct, but because of the inherent random error in a sampling process you failed to demonstrate that with statistically significant result.
+        </p>
+        <p>
+          But maybe the problem isn't with your hypothesis, or your data.  Maybe the problem is that you're looking for the <em>wrong</em> statistical significance.
+        </p>
+        <p>
+        <div class="w1008">
+          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 03: Statistical experiment with alpha = 5% and statistical power = 84%" />
+          <a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 03</p>
+        </div>
+        <p>
+          <a class= "framejump" target="Gframe" href="not-failure-graphics.html#Figure03">Figure 03</a> shows a statistical experiment with an alpha of 0.05, and a statistical power of 0.84. And the effect size used to calculated the statistical power was based on previous, similar studies.
+        </p>
+        <p>
+          The minimum correlation that is statistically significant is marked by the line that bisects the population probability curve on the right side of the graphic. Since you set alpha to 0.05, 5% of the area bounded by the population probability curve extends below the null line.
+        </p>
+        <p>
+          After you run such an experiment, you can end up with something like the next graphic, <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure04">Figure 04</a>.  Everything is the same as the previous one, with the exception that a line marking the results of the analysis has been added (and is marked by an arrow).  That result has failed to be large enough to qualify as statistically significant.
+        </p>
+        <div class="w1008-l">
+          <img src="images/large/alpha-beta-es-n-with-result.svg" alt="Figure 04: Statistical experiment with “insignificant” result" />
+          <a target="_blank" href="images/alpha-beta-es-n-with-result.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 04</p>
+        </div>
+        <p>
+          Most people would assume that the analysis was a bust and that without a statistically significant correlation, you can't really say anything definitive about the results. But that isn't true.
+        </p>
+        <p>
+          Let's move on to <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure03">Figure 03</a>, in which the minimum statistically significant correlation has been removed, so that now the curve on the right side of the graphics is the population probability curve that's centered on the <strong>result</strong> from your hypothetical analysis. That result is not “statistically significant” at ‘p&lt;.05’ because more than 5% of the area between that curve and the vertical baseline is below the horizontal null line.
+        </p>
+        <p>
+          But that's going on at the bottom of the population probability curve. Let's consider the top of that curve, where there's been a new line added to the graph, one that's marked with an arrow. Below that line is 95% of the area between the population probability curve and the vertical baseline. Which means you can say, with a confidence of ‘p&lt;.05’, that the population correlation is <em>no higher than that line</em>.
+        </p>
+        <div class="w1008">
+          <img src="images/large/insignificant-result.svg" alt="Figure 03: Reconsidering the results of a statistical experiment" />
+          <a href="images/insignificant-result.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 03</p>
+        </div>
+        <p>
+          Therefore, another way to look at the results of your analysis is to say that you have found a statistically significant “upper bound” for the population correlation. Whether or not that is a useful thing to know depends on what real-world phenomena your data is tracking.
+        </p>
+        <p>
+          So, for example, if your data is tracking the effectiveness of some new investment strategy by correlating its implementation to the change in overall returns, it might be fairly straight-forward to determine the minimum impact required to make it worthwhile to use the new strategy. Whatever correlation matches to that impact becomes the minimum correlation that supports using the new strategy.
+        </p>
+        <p>
+          In a scenario such as that, a null-hypothesis significance test would likely be useless to you. If it wasn't readily apparent—or at least highly probable—that the new strategy would improve outcomes, no one would even be trying. That there will be an improvement is something of a foregone conclusion; what matters is the degree of the improvement. And what matters to you is the confidence with which you can state that the correlation you find through your analysis is either higher or lower than the minimum correlation that supports using that new strategy.
+        </p>
+        <p>
+          If we combine this hypothetical scenario with the hypothetical results from earlier, we can say that it doesn't matter that the resulting correlation didn't achieve statistical significance compared to null. What matters in this case is whether or not the upper bound we found is lower than the minimum correlation that supports using the new procedure. Because if it is, we can say with a confidence of ‘p&lt;.05’ that the new strategy isn't worth implementing. Even though we can't say (with the same confidence) that the correlation isn't significantly different than zero.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <object class="nav" data="nav-frame-sideways-stats.html" type="text/html" />
+    </footer>
+    <script>
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
+    </script>
+  </body>
+</html>
