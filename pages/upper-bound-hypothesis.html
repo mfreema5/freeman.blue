@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link href="common/reset.css" media="screen,print" rel="stylesheet">
     <link href="css/screen-sideways-stats.css" rel="stylesheet">
-    <title>Important Insignificance</title>
+    <title>Upper-bound significance testing</title>
     <meta name="author" content="Michael J. Freeman">
     <meta name="description" content="Using sideways stats to understand statistics.">
     <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
@@ -21,63 +21,10 @@
   <body>
     <main>
       <iframe class="graphics" name="Gframe" src="upper-bound-graphics.html" width="31.25%" height="100%"></iframe>
-      <h1>Important Insignificance</h1>
-      <h2>An example of understanding statistics by looking at them sideways</h2>
+      <h1>Upper-bound significance testing</h1>
+      <h2>One of the alternatives to checking against null</h2>
       <article>
-        <p>
-          When is an insignificant result important? When you check for the wrong significance.
-        </p>
-        <p>
-          (Note: The discussion on this page employs visual aids I'm calling “sideways statistics”. They're explained on the page of the same name, <a href="sideways-stats.html"><i>Sideways Statistics</i></a>.)
-        </p>
-        <div class="w1008">
-          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: Statistical experiment with alpha = 5% and statistical power = 84%" />
-          <a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 01</p>
-        </div>
-        <p>
-          Say you're about to run an linear regression. You've already determined the expected size of effect, you've set the significance bar at an alpha of 0.05, and with those two you've determined the sample size to give you a statistical power of 0.84. <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a> shows your statistical experiment as designed.
-        </p>
-        <p>
-          The minimum correlation that is statistically significant is marked by the line that bisects the population probability curve on the right side of the graphic. Since you set alpha to 0.05, 5% of the area bounded by the population probability curve extends below the null line.
-        </p>
-        <p>
-          That's all the same in the next graphic, <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure02">Figure 02</a>, but the arrow is pointing to the line that marks the results of your analysis. It has failed to be large enough to qualify as statistically significant.
-        </p>
-        <div class="w1008-l">
-          <img src="images/large/alpha-beta-es-n-with-result.svg" alt="Figure 02: Statistical experiment with “insignificant” result" />
-          <a href="images/alpha-beta-es-n-with-result.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 02</p>
-        </div>
-        <p>
-          Most people would assume that the analysis was a bust and that without a statistically significant correlation, you can't really say anything definitive about the results. But that isn't true.
-        </p>
-        <p>
-          Let's move on to <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure03">Figure 03</a>, in which the minimum statistically significant correlation has been removed, so that now the curve on the right side of the graphics is the population probability curve that's centered on the <strong>result</strong> from your hypothetical analysis. That result is not “statistically significant” at ‘p&lt;.05’ because more than 5% of the area between that curve and the vertical baseline is below the horizontal null line.
-        </p>
-        <p>
-          But that's going on at the bottom of the population probability curve. Let's consider the top of that curve, where there's been a new line added to the graph, one that's marked with an arrow. Below that line is 95% of the area between the population probability curve and the vertical baseline. Which means you can say, with a confidence of ‘p&lt;.05’, that the population correlation is <em>no higher than that line</em>.
-        </p>
-        <div class="w1008">
-          <img src="images/large/insignificant-result.svg" alt="Figure 03: Reconsidering the results of a statistical experiment" />
-          <a href="images/insignificant-result.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 03</p>
-        </div>
-        <p>
-          Therefore, another way to look at the results of your analysis is to say that you have found a statistically significant “upper bound” for the population correlation. Whether or not that is a useful thing to know depends on what real-world phenomena your data is tracking.
-        </p>
-        <p>
-          So, for example, if your data is tracking the effectiveness of some new investment strategy by correlating its implementation to the change in overall returns, it might be fairly straight-forward to determine the minimum impact required to make it worthwhile to use the new strategy. Whatever correlation matches to that impact becomes the minimum correlation that supports using the new strategy.
-        </p>
-        <p>
-          In a scenario such as that, a null-hypothesis significance test would likely be useless to you. If it wasn't readily apparent—or at least highly probable—that the new strategy would improve outcomes, no one would even be trying. That there will be an improvement is something of a foregone conclusion; what matters is the degree of the improvement. And what matters to you is the confidence with which you can state that the correlation you find through your analysis is either higher or lower than the minimum correlation that supports using that new strategy.
-        </p>
-        <p>
-          If we combine this hypothetical scenario with the hypothetical results from earlier, we can say that it doesn't matter that the resulting correlation didn't achieve statistical significance compared to null. What matters in this case is whether or not the upper bound we found is lower than the minimum correlation that supports using the new procedure. Because if it is, we can say with a confidence of ‘p&lt;.05’ that the new strategy isn't worth implementing. Even though we can't say (with the same confidence) that the correlation isn't significantly different than zero.
-        </p>
-      </article>
-      <article>
-        <h2>Testing for an upper bound</h2>
+        <h2>Testing for importance using significance</h2>
         <p>
           What would it look like if we designed our experiment from the beginning to check for an upper bound, such as described in the previous section? That is, let's test to see if we can say, with 95% confidence, that a correlation is lower than some value that we interpret as the minimum <b>important</b> correlation?
         </p>
