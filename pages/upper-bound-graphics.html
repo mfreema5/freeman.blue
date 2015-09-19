@@ -21,77 +21,46 @@
     <main>
       <article>
         <p id="Figure01"></p>
-        <div class="w1008">
-          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: Statistical experiment with alpha = 5% and statistical power = 84%" />
-          <a target="_blank" href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+        <div class="w1008-l">
+          <img src="images/large/upper-bound-test.svg" alt="Figure 01: Statistical experiment to check upper bound" />
+          <a target="_blank" href="images/upper-bound-test.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 01</p>
         </div>
         <p id="Figure02"></p>
         <div class="w1008-l">
-          <img src="images/large/alpha-beta-es-n-with-result.svg" alt="Figure 02: Statistical experiment with “insignificant” result" />
-          <a target="_blank" href="images/alpha-beta-es-n-with-result.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <img src="images/large/TruncationFades.svg" alt="Figure 02: Probability curves distorted by truncation" />
+          <a target="_blank" href="images/TruncationFades.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 02</p>
         </div>
         <p id="Figure03"></p>
-        <div class="w1008">
-          <img src="images/large/insignificant-result.svg" alt="Figure 03: Reconsidering the results of a statistical experiment" />
-          <a target="_blank" href="images/insignificant-result.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+        <div class="w605-l">
+          <img src="images/large/Ztransformation.svg" alt="Figure 03: Fisher transformation stretching correlations to infinity" />
+          <a target="_blank" href="images/Ztransformation.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 03</p>
         </div>
         <p id="Figure04"></p>
-        <div class="w1008-l">
-          <img src="images/large/upper-bound-test.svg" alt="Figure 04: Statistical experiment to check upper bound" />
-          <a target="_blank" href="images/upper-bound-test.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+        <div class="w1008">
+          <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 04: Type I error in an upper bound test" />
+          <a target="_blank" href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 04</p>
         </div>
         <p id="Figure05"></p>
-        <div class="w1008-l">
-          <img src="images/large/TruncationFades.svg" alt="Figure 05: Probability curves distorted by truncation" />
-          <a target="_blank" href="images/TruncationFades.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+        <div class="w1008">
+          <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 05: Type II error in an upper bound test" />
+          <a target="_blank" href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 05</p>
         </div>
         <p id="Figure06"></p>
-        <div class="w605-l">
-          <img src="images/large/Ztransformation.svg" alt="Figure 06: Fisher transformation stretching correlations to infinity" />
-          <a target="_blank" href="images/Ztransformation.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 06</p>
-        </div>
-        <p id="Figure11"></p>
         <div class="w1008">
-          <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 11: Type I error in an upper bound test" />
-          <a target="_blank" href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 11</p>
-        </div>
-        <p id="Figure12"></p>
-        <div class="w1008">
-          <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 12: Type II error in an upper bound test" />
-          <a target="_blank" href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 12</p>
-        </div>
-        <p id="Figure13"></p>
-        <div class="w1008">
-          <img src="images/large/TruncationBeta.svg" alt="Figure 13: Type II error for truncated probability curves" />
+          <img src="images/large/TruncationBeta.svg" alt="Figure 06: Type II error for truncated probability curves" />
           <a target="_blank" href="images/TruncationBeta.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 13</p>
+          <p>Figure 06</p>
         </div><div style="clear: both;"></div>
       </article>
     </main><footer></footer>
     <script>
-      if (!Modernizr.svg) {
-          var imgs = document.getElementsByTagName('img');
-          var svgExtension = /.*\.svg$/
-          var l = imgs.length;
-          for(var i = 0; i < l; i++) {
-              if(imgs[i].src.match(svgExtension)) {
-                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-                  console.log(imgs[i].src);
-              }
-          }
-      }
-      function setDisplay (targetEID,targetDisplay) {
-        var targetElement = document.getElementById(targetEID);
-        targetElement.style.display = ( targetElement.style.display = targetDisplay );
-      }
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
     </script>
   </body>
 </html>
