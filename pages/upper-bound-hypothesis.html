@@ -26,7 +26,13 @@
       <article>
         <h2>Testing for importance using significance</h2>
         <p>
-          What would it look like if we designed our experiment from the beginning to check for an upper bound, such as described in the previous section? That is, let's test to see if we can say, with 95% confidence, that a correlation is lower than some value that we interpret as the minimum <b>important</b> correlation?
+          As part of the designing a study that will use linear regression analysis, you should consider what the best hypothesis against which to test for significance would be.  You want a hypothesis that fits both the theory you're intending to support or debunk, and that works with the sort of data that you're expecting to have.
+        </p>
+        <p>
+          The page on this site titled <a href="insignificance-is-not-failure.html">“Insignificance is not failure”</a> discusses why null-hypothesis significance testing is not really the universal litmus test for significance that so many researchers in the humanties treat is as.  An example of an alternative test given on that page is an upper-bound significance test, one in which you're attempting to demonstrate that a correlation is too small in effect to be important.  This page looks at that sort of analysis in a little more detail.
+        </p>
+        <p>
+          What would it look like if we designed our experiment from the beginning to check for an upper bound? That is, what if we were trying to demonstrate that, with 95% confidence, a correlation is lower than some value that we have interpreted as the minimum <b>important</b> correlation?
         </p>
         <div class="w1008-l">
           <img src="images/large/upper-bound-test.svg" alt="Figure 01: Statistical experiment to check upper bound" />
@@ -34,13 +40,13 @@
           <p>Figure 01</p>
         </div>
         <p>
-          Instead of the sample probability curve on the left side of the graph being centered around the expected effect size, it would be centered around the value that's the minimum important correlation. Then, the population probability curve on the right side of the graph would be positioned so that 95% of the area between it and the vertical baseline would be below the minimum important correlation. The line that bisects the population probability curve is therefore the maximum correlation that demonstrates that the correlation does not meet your criteria for importance. See <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a>.
+          First, we'd mark our upper bound&mdash;which equates to the minimum important correlaton&mdash;on the the vertical baseline of our ‘sideways’ graph of the analysis.  Then, the population probability curve on the right side of the graph would be positioned so that 95% of the area between it and the vertical baseline would be below that minimum important correlation. That would mean that line that bisects the population probability curve is therefore the maximum sample correlation that demonstrates that the population correlation does not meet your criteria for importance, with ‘<i>p</i>&lt;.05’. See <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a>.
         </p>
         <p>
-          The shaded area on the left side of the graph are all the population correlations that are lower than the minimum important correlation. The shaded area on the right side is 5% of the area between the population correlation curve and the vertical baseline. Since that shaded area is 0.05 of the total, the line bisecting the that curve marks the <em>maximum</em> sample correlation at which you can say, with ‘p&lt;.05’, that the population correlation is unimportant.
+          As with null-hypothesis testing, the sample population curve on the left side of the ‘sideways’ graph is centered on the population correlation we're expecting to see.  The farther away from the minimum important correlation that expected size of effect is, the better off we are, as can be seen in <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a>, since the shaded area under the sample probability curve on the left side of the graph is the <em>statistical power</em> of the analysis.  The statistical power is the probability of <b>not</b> committing a Type II error (discussed more below) and therefore the larger it is, the better.  And the way to make that shaded area in <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a> larger would be to move the sample probability curve down, away from the upper bound.  In this example, the statistical power is a somewhat dismal 16%.
         </p>
         <p>
-          When it comes to doing the actual calculation things become somewhat more complicated.  Or, rather, they are less symmetric.
+          So, arranging things on a sideways graph to help understand an upper-bound significant test is fairly straight-forward.  However, when it comes to doing the actual calculation things become somewhat more complicated.  More specifically, they are less symmetric.
         </p>
         <div class="w1008">
           <img src="images/large/TruncationFades.svg" alt="Figure 02: Probability curves distorted by truncation" />
