@@ -38,8 +38,13 @@ h3 {
   line-height:  1.250;
   margin:       0.9375em 0 0.5625em 0;
 }
-
-h4, h5, h6, b, strong, caption {
+h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   italic;
+  font-weight:  300;
+  font-size:    0.90625em;
+}
+h5, h6, b, strong, caption {
   font-weight: bold;
 }
 i, em {
@@ -100,12 +105,10 @@ a:hover {
 a:hover.button {
   text-decoration: none;
 }
-#caveat,
-#popcorr {
+span.expansion {
   display: none;
 }
-#show_caveat,
-#show_unpublishable {
+span.show-expansion {
   display: inline;
 }
 #top-frame {
@@ -160,7 +163,8 @@ article {
   text-align: center;
 }
 section.digression {
-  padding-left: 0.8175em;
+  padding-left:  1.1875em;
+  margin-bottom: 1.1875em;
 }
 section > section {
   display: inline;

@@ -67,9 +67,9 @@
         <p>
           I haven't yet tried to apply visual representations such as these to issues regarding the use of null-hypothesis significance testing. Presumably, that will be the next step, once I'm completely satisfied with my understanding of these four characteristics.
         </p>
-        <section>
-          <h3>Caveat emptor <span id='show_caveat'><a onclick="setDisplay('show_caveat','none'); setDisplay('caveat','inline-block')">&nbsp;…&nbsp;</a></span></h3>
-          <span id='caveat'><p>
+        <section class="digression">
+          <h4>Caveat emptor <span class="show-expansion" id='show_caveat'><a onclick="setDisplay('show_caveat','none'); setDisplay('caveat','inline-block')">&nbsp;…&nbsp;</a></span></h4>
+          <span class="expansion" id='caveat'><p>
               I've been a chemist, a quality manager, a copy editor, and a specialty gas consultant, and I'm aiming to be a technical writer, but I am not a statistician. You should confirm the validity of anything you read here before applying it. Especially since my interest in the use of these four characteristics of statistical analysis is a narrow one. While I may not be wrong in my understanding of how they apply to linear regressions in the social sciences, my ideas about them may be way off-base in regard to other applications.<a onclick="setDisplay('show_caveat','inline'); setDisplay('caveat','none')">&nbsp;<b>&#x2190;</b>&nbsp;</a>
           </p></span>
         </section>
@@ -132,8 +132,8 @@
           The other characteristic, “beta”, is a proportion of the sample probability curve, which is the curve that defines the likely value of the sample correlation that you'll get from your analysis, based on the population's correlation.  Often, “beta” is described as the proportion of the sample probability curve that is <em>not</em> the “statistical power”.  More simply, ‘1 - &beta; = statistical power’.  In sideways statistics, it's easier to just see that the sample probability curve will be divided into two parts.  One of those is <i>beta</i>, the other is the <i>statistical power</i>.  (And that's why they always add up to 100%&mdash;because each is just one of two proportions of the total area bounded by the sample probability curve.)
         </p>
         <section class="digression">
-          <p>But I don't know the population correlation, do I?<span id="show_popcorr"><a onclick="setDisplay('show_popcorr','none'); setDisplay('popcorr','inline-block')">&nbsp;&hellip;&nbsp;</a></span></small></p>
-          <span id="popcorr"><p>
+          <h4>But I don't know the population correlation, do I?<span class="show-expansion" id="show_popcorr"><a onclick="setDisplay('show_popcorr','none'); setDisplay('popcorr','inline-block')">&nbsp;&hellip;&nbsp;</a></span></small></h4>
+          <span class="expansion" id="popcorr"><p>
             It may seem somewhat confusing to talk about the population correlation as defining the location of the sample probability curve, since if you knew the exact population correlation, you wouldn't need to be doing a linear regression to demonstrate what it is.  The thing to keep in mind is that the population correlation exists irrespective of whether or not you know what it is, since that correlation is an intrinsic property of whatever phenomenon it is you're studying.  So, in practice, you typically come up with some way to estimate the population correlation, and then use that estimate to find the <i>beta</i> and the <i>statistical power</i> of your analysis.<a onclick="setDisplay('show_popcorr','inline'); setDisplay('popcorr','none')">&nbsp;<b>&#x2190;</b>&nbsp;</a>
           </p></span>
         </section>
@@ -144,7 +144,7 @@
       <article>
         <h2>Probability curves and linear regression</h2>
         <p>
-          The last part of the previous section, that discusses probability curves, along with <i>alpha</i> and <i>beta</i> is not, for me at least, intuitively obvious, so let's go over it again.  (If it already makes sense to you, you might skip ahead to <b><em><a href="#alpha-beta-effects">Confidence level &amp; statistical power</a></em></b>.)
+          The last part of the previous section, that discusses probability curves, along with <i>alpha</i> and <i>beta</i> is not, for me at least, intuitively obvious, so let's go over it again.  (If it already makes sense to you, you might skip ahead to <em><a href="#alpha-beta-effects">&lsquo;Confidence level &amp; statistical power&rsquo;</a></em>.)
         </p>
         <div class="w1008" id="population-probability">
           <img src="images/large/population-probability.svg" alt="Figure 05: Population probability around sample correlation" />
