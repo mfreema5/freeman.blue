@@ -60,10 +60,10 @@
           This is because correlations can never have a magnitude above 1.  So, as the correlation of interest moves higher up the vertical baseline, the probability distribution begins to “pile up” against the maximum value of 1, and this distorts the curve, making it asymmetric.
         </p>
         <p>
-          <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure02">Figure 02</a> shows this.  The minimum important population correlation is no longer the mean of the sample correlation probability curve.  Instead it's the mode&mdash;the value with the highest probability. And the mode does not perfectly bisect the area of the sample correlation probability curve; this means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
+          <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure02">Figure 02</a> shows this.  The line marking the mean of the curve no longer perfectly bisects the area of the sample correlation probability curve.  When one side of the curve is truncated, the probability of the remaining values increase, distorting the distribution of area about the mean.  Which means we can no longer assume that 50% of the area is on either side of the correlation that defines the curve.
         </p>
         <p>
-          To do the calculations, you have to transform the data in order to correct for this distorting truncation to the probability curves.  Typically this is done by transforming each correlation into its Fisher <em>z</em>-score, using the following equation.
+          To do the calculations, you have to correct for this distorting truncation to the probability curves.  You can do this by transforming the data; typically you would transform each correlation into its Fisher <em>z</em>-score, using the following equation.
         </p>
         <div class="w605-l">
           <img src="images/large/Ztransformation.svg" alt="Figure 03: Fisher transformation stretching correlations to infinity" />
@@ -74,35 +74,38 @@
           <img src="images/large/Zformula.svg" alt="Fisher transformation equation" />
         </div>
         <p>
-          What the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;respectively at +1 and -1&mdash;that's a consequence of the nature of correlations.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure03">Figure 03</a> shows one way of understanding what the transformation does.  The perfectly straight diagonal line represents untransformed correlations; it's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
-        </p>
-        <p>
-          The effects of truncation will come up again in the discussion of Type II errors for this sort of analysis.
+          What the Fisher transformation does it to effectively remove the upper and lower bounds&mdash;at +1 and -1&mdash;that are a consequence of the nature of correlations.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure03">Figure 03</a> shows one way of understanding what the transformation does.  The perfectly straight diagonal line represents untransformed correlations; it's the line where <i>r</i>=<i>r</i>.  The long curving line is shows the results of Fisher transformations; it's the line where <i>r</i>=<i><b>z</b>(r)</i>.  Near the origin the two lines are almost identical, but as the correlation magnitude approaches 1, the transformed values split away and extend toward infinity.  This effectively removes the truncating bounds, so the probability curves have nothing to “bunch up” against.
         </p>
       </article>
       <article>
-        <h2>Type I & II errors</h2>
+        <h2>Type I errors</h2>
         <div class="w1008">
           <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 04: Type I error in an upper bound test" />
           <a href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 04</p>
         </div>
         <p>
-          The visual interpretation of Type I and Type II errors for this type of analysis differs from that for a null-hypothesis significance test.  For a Type I error in a null-hypothesis significance test, the population is assumed to have a correlation of zero, and for a Type II error, the population is assumed to be equal to the correlation predicted in the estimate of effect size.  For an upper-bound type of test, there are no specific correlations to assume for the determination of error.  Rather, a worst-case-scenario is used.  For both error types, the worst-case is a population correlation that is almost exactly equal to the correlation selected as the lower boundary of importance.  In a Type I error, the worst-case population correlation is infinitesimally higher than the importance cut-off; in a Type II error, the worst-case population correlation is infinitesimally lower than the importance cut-off.
+          The visual interpretation of Type I errors for this type of analysis differs from that for a null-hypothesis significance test.  For a Type I error in a null-hypothesis significance test, the population is assumed to have a correlation of zero.  While the same sort of wort-case scenario is used in an upper-bound significance test for understanding Type I errors, the specific worst-case used is different.  For a Type I error, instead of being equal to <i>null</i>, the worst-case population correlation is assumed to be infinitesimally higher than the correlation selected as the boundary of importance.
         </p>
         <p>
           Type I errors are false positives.  In this case, that means that you would identify a population correlation as being below the minimum important correlation, when in fact it's equal to or above that minimum.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure02">Figure 02</a> shows a population correlation that is infinitesimally higher than the minimum important correlation.  The line that bisects the population probability curve is the maximum correlation that would meet your hypothesis that the correlation is not important.  So, the area below that line, and between the sample probability curve and the vertical baseline, is equal to the worst-case probability of getting an apparently unimportant sample correlation for a population that, in fact, has an important correlation.
         </p>
+        <p>
+          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure04">Figure 04</a>.
+        </p>
+      </article>
+      <article>
+        <h2>Type II errors</h2>
         <div class="w1008-l">
           <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 05: Type II error in an upper bound test" />
           <a href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 05</p>
         </div>
         <p>
-          Much like with the null-hypothesis significance test, we know that the area that covers the Type I error is 5%, since it is symmetric with the area that's between the population probability curve and the vertical baseline, and also above  the value chosen as the minimum important population correlation.  The sample population curve was positioned vertical such that the area above the minimum important correlation was 5% of the total, giving the analysis ‘p<.05’.  Both the 5% areas are shaded in <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure04">Figure 04</a>.
+          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> shows the Type II error in our example test that gave us <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 01</a>.  The difference in Figure 05 is that instead of the statistical power being shaded, the area equal to <i>beta</i> is shaded.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
         </p>
         <p>
-          Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> shows a population correlation that is infinitesimally lower than the minimum important correlation.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
+          One important thing to note is that the two areas related to Type II errors in these tests are reversed from those for Type II errors with null-hypothesis significance tests.  In the latter, the statistical power was the area farther from the null-line.  In upper-bound tests, the statistical power is the area nearer to the null-line.  This is because the null-hypothesis test are effectively a specialized sort of <em>lower</em>-bound test&mdash;one in which the lower-bound is equal to zero.
         </p>
         <div class="w1008">
           <img src="images/large/TruncationBeta.svg" alt="Figure 06: Type II error for truncated probability curves" />
@@ -110,7 +113,10 @@
           <p>Figure 06</p>
         </div>
         <p>
-          Based on <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> alone, it would be reasonable to conclude that the worst-case statistical power would always be equal to <i>alpha</i>, and therefore the probability of a Type II error is always going to the residual of <i>alpha</i>.  So, in our examples, <i>beta</i> would always be 95%, and the statistical power 5%.  But it turns out this isn't always true, since you must also account for the effect that truncation has on the curves.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure06">Figure 06</a> shows a hypothetical analysis with a worse-case statistical power of 39.2%.  This is because the truncation has an uneven effect on the two non-transformed probability curves, which means that they are no longer symmetric, so their respective mode lines no longer slice through identical areas at identical locations.
+          Of course, these figures are assuming that the correlations have undergone a Fisher transformation. For comparison purposes, <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure06">Figure 06</a> is an example of untransformed correlations.  It's also a different analysis that the one used in the earlier figures, and shows a statistical power of 39.2%.  What's particularly interesting is that the expected population correlation has been moved up to not only be close to +1, but is also equal to the upper-bound.  Without the truncation inherent in correlation analyses, the statistical power would have been only 5%. But since that inherent truncation has an uneven effect on the two non-transformed probability curves, it means that they are no longer symmetric, so their respective mean lines no longer slice through identical areas at identical locations, so the areas bounded by them are no longer equal.
+        </p>
+        <p>
+          So, while with non-truncated curves <i>alpha</i> would have been exactly equal to the statistical power, at 5%, with the truncation, the statistical power has grown to almost 40%.  Presumably, this increase would continue as the upper-bound approached the maximum possible correlation of +1, and should achieve 100% when the upper-bound equals +1.  (Which makes sense&mdash;<em>every</em> untransformed correlation is at or below 1 in magnitude.)
         </p>
       </article>
     </main>
