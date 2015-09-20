@@ -128,26 +128,10 @@
         <article class="footer">
         </article>
       </div>
-    </main>
-    <footer>
-      <meta name="creator" content="不爽老男人">
-    </footer>
+    </main><footer></footer>
     <script>
-      if (!Modernizr.svg) {
-          var imgs = document.getElementsByTagName('img');
-          var svgExtension = /.*\.svg$/
-          var l = imgs.length;
-          for(var i = 0; i < l; i++) {
-              if(imgs[i].src.match(svgExtension)) {
-                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-                  console.log(imgs[i].src);
-              }
-          }
-      }
-      function setDisplay (targetEID,targetDisplay) {
-        var targetElement = document.getElementById(targetEID);
-        targetElement.style.display = ( targetElement.style.display = targetDisplay );
-      }
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
     </script>
   </body>
 </html>
