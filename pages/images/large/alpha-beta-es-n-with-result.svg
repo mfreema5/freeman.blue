@@ -1,1 +1,127 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1008" height="1200" viewBox="0 0 1008 1200"><defs><marker orient="auto" id="c" overflow="visible"><path d="M10 0l4-4L0 0l14 4-4-4z" fill-rule="evenodd" stroke="#000" stroke-width=".8pt"/></marker></defs><path d="M504 1056V840h99.56C540 888 516 942 516 1056zm0-396H260.5C216 636 174 606 174 570c0-42 36-60 114-108 156-90 204-126 204-288h12z" fill="silver" fill-rule="evenodd"/><g transform="translate(0 -336)"><path d="M504 1464V408m408 768H96" fill="none" stroke="#000" stroke-width="4"/><use xlink:href="#a" transform="matrix(-1 0 0 1 1008 90)" width="100%" height="100%"/><path id="b" d="M492 1302c0-174-60-204-192-282-66-42-126-66-126-114s60-72 126-114c126-78 192-102 192-282" fill="none" fill-rule="evenodd" stroke="#000" stroke-width="3"/><path d="M260.5 996H504" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="8, 8"/><path d="M150 906h354" id="a" fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2"/><use xlink:href="#b" transform="matrix(-1 0 0 1 1008 90)" width="100%" height="100%"/><path d="M876 1008H504" fill="none" stroke="#000" stroke-width="3"/><path d="M882 1014l78 108" fill="none" stroke="#000" stroke-width="3" marker-start="url(#c)"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1008"
+   height="1200"
+   viewBox="0 0 1008 1200"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="alpha-beta-es-n-with-result.svg"
+   inkscape:export-filename="/Users/MJF/Documents/Git Repositories/freeman.blue/pages/images/large/alpha-beta-es-n-with-result.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata29">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1126"
+     inkscape:window-height="702"
+     id="namedview27"
+     showgrid="false"
+     inkscape:zoom="0.19666667"
+     inkscape:cx="-322.27119"
+     inkscape:cy="600"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <marker
+       orient="auto"
+       id="c"
+       overflow="visible">
+      <path
+         d="M10 0l4-4L0 0l14 4-4-4z"
+         fill-rule="evenodd"
+         stroke="#000"
+         stroke-width=".8pt"
+         id="path7" />
+    </marker>
+  </defs>
+  <path
+     d="M504 1056V840h99.56C540 888 516 942 516 1056zm0-396H260.5C216 636 174 606 174 570c0-42 36-60 114-108 156-90 204-126 204-288h12z"
+     fill="silver"
+     fill-rule="evenodd"
+     id="path9" />
+  <g
+     transform="translate(0 -336)"
+     id="g11">
+    <path
+       d="M504 1464V408m408 768H96"
+       fill="none"
+       stroke="#000"
+       stroke-width="4"
+       id="path13" />
+    <use
+       xlink:href="#a"
+       transform="matrix(-1 0 0 1 1008 90)"
+       width="100%"
+       height="100%"
+       id="use15" />
+    <path
+       id="b"
+       d="M492 1302c0-174-60-204-192-282-66-42-126-66-126-114s60-72 126-114c126-78 192-102 192-282"
+       fill="none"
+       fill-rule="evenodd"
+       stroke="#000"
+       stroke-width="3" />
+    <path
+       d="M260.5 996H504"
+       fill="none"
+       stroke="#000"
+       stroke-width="2"
+       stroke-dasharray="8, 8"
+       id="path18" />
+    <path
+       d="M150 906h354"
+       id="a"
+       fill="none"
+       fill-rule="evenodd"
+       stroke="#000"
+       stroke-width="2" />
+    <use
+       xlink:href="#b"
+       transform="matrix(-1 0 0 1 1008 90)"
+       width="100%"
+       height="100%"
+       id="use21" />
+    <path
+       d="M876 1008H504"
+       fill="none"
+       stroke="#000"
+       stroke-width="3"
+       id="path23" />
+    <path
+       d="M882 1014l78 108"
+       fill="none"
+       stroke="#000"
+       stroke-width="3"
+       marker-start="url(#c)"
+       id="path25" />
+  </g>
+</svg>
