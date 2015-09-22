@@ -57,117 +57,137 @@
         </section>
       </article>
       <article>
-        <h2>What are “sideways” statistics?</h2>
-        <p>
-          I've called this “Sideways statistics” because of the graphics I use to help myself understand the four significance-related characteristics of linear regressions, such as <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure01">Figure 01</a>.
-        </p>
-        <div class="w1008" id="Standard_deviation_diagram">
-          <img src="images/large/Standard_deviation_diagram.svg" alt="Figure 02a: Probability curve" />
-          <p>Figure 02</p>
-        </div>
-        <p>
-          To explain how I got to the graphics such as in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure01">Figure 01</a>, let's start with a graph of a standard probability curve, <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure02">Figure 02</a> (adapted from <a href="https://commons.wikimedia.org/wiki/File:Standard_deviation_diagram.svg">a graphic</a> on Wikimedia Commons).  I'm assuming you've seen something like it before.  If you haven't, you might want to take at look at the <i><a href="probability-curves-primer.html">Probability Distributions Primer</a></i> before continuing.
-        </p>
-        <div class="w1008">
-          <img src="images/large/basic-prob-alpha.svg" alt="Figure 03: Basic correlation with alpha = 5%" />
-          <a href="images/basic-prob-alpha.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 03a</p>
-        </div>
-        <p>
-          The horizontal axis is the possible values for some measure. The vertical axis is the probability of getting each value on the horizontal axis when you make a measurement. Typically, however, we aren't interested in the probability of a specific value, but rather we're interested in the probability of getting a result in a range; in other words, a result that is “greater than or equal to” or that is “less than or equal to” some value.
-        </p>
-        <p>
-          The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a>, the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.
-        </p>
-        <p>
-          In the case of linear regression, the probability that comes up most often is the “<i>p</i> value”, a.k.a, “alpha”, “confidence level”, etc. In the social sciences, the most common value for <i>alpha</i> is 5%, often reported as “<i>p</i>&lt;.05”.  The shaded area in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a> is 5% of the total area.
-        </p>
-        <p>
-          When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 95% means that there is a 95% chance that population correlation is not zero. You don't precisely know the population correlation because you measured and analyzed only a sample of the population, instead of the entire population. So, what you've found is the sample correlation, and the population correlation is related to the sample correlation by a probability curve.
-        </p>
-        <div class="w1536">
-          <img src="images/large/basic-prob-alpha-sideways.svg" alt="Figure 03b: Sideways correlation with alpha = 5%" />
-          <a href="images/basic-prob-alpha-sideways.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 03b</p>
-        </div>
-        <p>
-          In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a>, we'll say that the mean value of the probability curve is the value of a sample correlation of some analysis. The probability curve therefore shows what values the <em>population</em> correlation may have, based on the <em>sample</em> correlation value. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a>, 5% of the total area under the curve is bounded by a measured value of <span class="glow">zero</span>. So, there is a 5% probability that the population correlation is “less than or equal to” zero. (That's not quite the same as the “null” in “null hypothesis significance testing”, but for now we'll treat it like it is. And everything still works out properly if we do.  See the section on <a href="#type-i-errors">Type I errors</a> for why it works.)
-        </p>
-        <p>
-          You can take the previous example graphic and stand it up on end, as is shown in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03b">Figure 03b</a>. Doing so puts the zero/null line at the bottom of the graph, and makes the horizontal axis the probabilities of the curve. Meanwhile, the vertical axis becomes the value of correlations.
-        </p>
-        <p>
-          Why is this is a useful convention?  Because when you're designing a study that will use a linear regression analysis, there are two probability curves involved, and the “sideways” arrangment makes it easier to see the relationship between them, because we can place them next to each other, such as in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure04">Figure 04</a>.
-        </p>
-        <div class="w1008">
-          <img src="images/large/basic-prob-alpha-sideways-dual.svg" alt="Figure 04: Comparing two sideways graphs" />
-          <a href="images/basic-prob-alpha-sideways-dual.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 04</p>
-        </div>
-        <p>
-          The first curve that's involved describes the sample correlation you're likely to find when you do the analysis.  Its location is determined by the population correlation.  The second curve describes the population correlation.  Its location is determined by the sample correlation that you get from your analysis.
-        </p>
-        <p>
-          The more common way to refer to these two probability curves is through the characteristics  “alpha” and “beta”.  As was mentioned above, <i>alpha</i> is also referred to as the “<i>p</i> value”, or the “confidence level”, etc.  <i>Alpha</i> is a proportion of the population probability curve.
-        </p>
-        <p>
-          The other characteristic, <i>beta</i>, is a proportion of the sample probability curve.  Often, “beta” is described as the proportion of the sample probability curve that is <em>not</em> the “statistical power”.  More simply, ‘1 - &beta; = statistical power’.  In sideways statistics, it's easier to just say that the sample probability curve will be divided into two parts.  One of those is <i>beta</i>, the other is the <i>statistical power</i>.  (And that's why they always add up to 100%&mdash;because each is just one of two proportions of the total area.)
-        </p>
-        <section class="digression">
-          <h4>But I don't know the population correlation, do I?<span class="show-expansion" id="show_popcorr"><a onclick="setDisplay('show_popcorr','none'); setDisplay('popcorr','inline-block')">&nbsp;&hellip;&nbsp;</a></span></small></h4>
-          <span class="expansion" id="popcorr"><p>
-            It may seem somewhat confusing to talk about the population correlation as defining the location of the sample probability curve, since if you knew the exact population correlation, you wouldn't need to be doing a linear regression to demonstrate what it is.  The thing to keep in mind is that the population correlation exists irrespective of whether or not you know what it is, since that correlation is an intrinsic property of whatever phenomenon it is you're studying.  So, in practice, you typically come up with some way to estimate the population correlation, and then use that estimate to find the <i>beta</i> and the <i>statistical power</i> of your analysis.<a onclick="setDisplay('show_popcorr','inline'); setDisplay('popcorr','none')">&nbsp;<b>&#x2190;</b>&nbsp;</a>
-          </p></span>
+        <h2>Sideways statistics show the relationship between two probability curves</h2>
+        <section>
+          <p>
+            I've called this “Sideways statistics” because of the graphics I use to help myself understand the four significance-related characteristics of linear regressions, such as <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure01">Figure 01</a>.
+          </p>
+          <div class="w1008" id="Standard_deviation_diagram">
+            <img src="images/large/Standard_deviation_diagram.svg" alt="Figure 02a: Probability curve" />
+            <p><b>Figure 02</b> &ndash; normally distributed probabilities</p>
+          </div>
+          <p>
+            To explain how I got to the graphics such as in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure01">Figure 01</a>, let's start with a graph of a standard probability curve, <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure02">Figure 02</a> (adapted from <a href="https://commons.wikimedia.org/wiki/File:Standard_deviation_diagram.svg">a graphic</a> on Wikimedia Commons).  I'm assuming you've seen something like it before.  If you haven't, you might want to take at look at the <i><a href="probability-curves-primer.html">Probability Distributions Primer</a></i> before continuing.
+          </p>
+          <div class="w1008">
+            <img src="images/large/basic-prob-alpha.svg" alt="Figure 03: Basic correlation with alpha = 5%" />
+            <a href="images/basic-prob-alpha.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p><b>Figure 03a</b> &ndash; splitting the total area under the curve into two proportions</p>
+          </div>
+          <p>
+            The horizontal axis comprises the possible values for some measure. The vertical axis is the probability of getting each value on the horizontal axis when you make a measurement. Typically, however, we aren't interested in the probability of a specific value, but rather we're interested in the probability of getting a result in a range; in other words, a result that is “greater than or equal to” or that is “less than or equal to” some value.
+          </p>
+          <p>
+            The probability of getting a result that is bounded by a specific value is equal to the total area under the curve on the appropriate side of that value. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a>, the the shaded area is the probability of getting a result that's “less than or equal to” the bounding value.
+          </p>
+        <section>
         </section>
-        <p>
-          So, the major reason for making these example graphics “sideways” is to make it easier to understand the relationship of these two probability curves. By making them vertical, we can put them “back-to-back” and therefore see how the characteristics of <i>alpha</i>, <i>beta</i>, <i>sample size</i>, and <i>effect size</i> are related to each other.
-        </p>
+          <h3>Setting the boundary for alpha</h3>
+          <p>
+            In the case of linear regression, the probability that comes up most often is the “<i>p</i> value”, a.k.a, “alpha”, “confidence level”, etc. In the social sciences, the most common value for <i>alpha</i> is 5%, often reported as “<i>p</i>&lt;.05”.  The shaded area in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a> is 5% of the total area.
+          </p>
+          <p>
+            When you're using a null-hypothesis significance test to analyze a sample, a confidence level of 95% means that there is a 95% chance that population correlation is not zero. You don't precisely know the population correlation because you measured and analyzed only a sample of the population, instead of the entire population. So, what you've found is the sample correlation, and the population correlation is related to the sample correlation by a probability curve.
+          </p>
+          <div class="w1536">
+            <img src="images/large/basic-prob-alpha-sideways.svg" alt="Figure 03b: Sideways correlation with alpha = 5%" />
+            <a href="images/basic-prob-alpha-sideways.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p><b>Figure 03b</b> &ndash; turning a probability curve sideways</p>
+          </div>
+          <p>
+            In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a>, we'll say that the mean value of the probability curve is the value of a sample correlation of some analysis. The probability curve therefore shows what values the <em>population</em> correlation may have, based on the <em>sample</em> correlation value. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03a">Figure 03a</a>, 5% of the total area under the curve is bounded by a measured value of <span class="glow">zero</span>. So, there is a 5% probability that the population correlation is “less than or equal to” zero. (That's not quite the same as the “null” in “null hypothesis significance testing”, but for now we'll treat it like it is. And everything still works out properly if we do.  See the section on <a href="#type-i-errors">Type I errors</a> for why it works.)
+          </p>
+          <p>
+            You can take the previous example graphic and stand it up on end, as is shown in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure03b">Figure 03b</a>. Doing so puts the zero/null line at the bottom of the graph, and makes the horizontal axis the probabilities of the curve. Meanwhile, the vertical axis becomes the value of correlations.
+          </p>
+          <p>
+            Why is this is a useful convention?  Because when you're designing a study that will use a linear regression analysis, there are two probability curves involved in the experimental design, and the “sideways” arrangment makes it easier to see the relationship between them, because we can place them next to each other, such as in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure04">Figure 04</a>.
+          </p>
+        <section>
+        </section>
+          <h3 class="before">Two probabilities: alpha and beta</h3>
+          <div class="w1008">
+            <img src="images/large/basic-prob-alpha-sideways-dual.svg" alt="Figure 04: Comparing two sideways graphs" />
+            <a href="images/basic-prob-alpha-sideways-dual.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p><b>Figure 04</b> &ndash; relating two probability curves</p>
+          </div>
+          <h3 class="after">Two probabilities: alpha and beta</h3>
+          <p>
+            The first curve that's involved in the design of a statistical experiment describes the sample correlation you're likely to find when you do the analysis.  Its location is determined by the population correlation.  The second curve describes the population correlation.  Its location is determined by the sample correlation that you get from your analysis.
+          </p>
+          <p>
+            The more common way to refer to these two probability curves is through the characteristics  “alpha” and “beta”.  As was mentioned above, <i>alpha</i> is also referred to as the “<i>p</i> value”, or the “confidence level”, etc.  <i>Alpha</i> is a proportion of the population probability curve.
+          </p>
+          <p>
+            The other characteristic, <i>beta</i>, is a proportion of the sample probability curve.  Often, “beta” is described as the proportion of the sample probability curve that is <em>not</em> the “statistical power”.  More simply, ‘1 - &beta; = statistical power’.  In sideways statistics, it's easier to just say that the sample probability curve will be divided into two parts.  One of those is <i>beta</i>, the other is the <i>statistical power</i>.  (And that's why they always add up to 100%&mdash;because each is just one of two proportions of the total area.)
+          </p>
+          <section class="digression">
+            <h4>But I don't know the population correlation, do I?<span class="show-expansion" id="show_popcorr"><a onclick="setDisplay('show_popcorr','none'); setDisplay('popcorr','inline-block')">&nbsp;&hellip;&nbsp;</a></span></small></h4>
+            <span class="expansion" id="popcorr"><p>
+              It may seem somewhat confusing to talk about the population correlation as defining the location of the sample probability curve, since if you knew the exact population correlation, you wouldn't need to be doing a linear regression to demonstrate what it is.  The thing to keep in mind is that the population correlation exists irrespective of whether or not you know what it is, since that correlation is an intrinsic property of whatever phenomenon it is you're studying.  So, in practice, you typically come up with some way to estimate the population correlation, and then use that estimate to find the <i>beta</i> and the <i>statistical power</i> of your analysis.<a onclick="setDisplay('show_popcorr','inline'); setDisplay('popcorr','none')">&nbsp;<b>&#x2190;</b>&nbsp;</a>
+            </p></span>
+          </section>
+          <p>
+            So, the major reason for making these example graphics “sideways” is to make it easier to understand the relationship of these two probability curves. By making them vertical, we can put them “back-to-back” and therefore see how the characteristics of <i>alpha</i>, <i>beta</i>, <i>sample size</i>, and <i>effect size</i> are related to each other.
+          </p>
+        </section>
       </article>
       <article>
-        <h2>Probability curves and linear regression</h2>
+        <h2>The two probability curves in more detail</h2>
         <p>
           The last part of the previous section, that discusses probability curves, along with <i>alpha</i> and <i>beta</i> is not, for me at least, intuitively obvious, so let's go over it again.  (If it already makes sense to you, you might skip ahead to <em><a href="#alpha-beta-effects">&lsquo;Confidence level &amp; statistical power&rsquo;</a></em>.)
         </p>
-        <div class="w1008" id="population-probability">
-          <img src="images/large/population-probability.svg" alt="Figure 05: Population probability around sample correlation" />
-          <a href="images/population-probability.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 05 &ndash; Sample correlation bisects population probability curve</p>
-        </div>
-        <p>
-          Let's say you measure a variety of characteristics of a presumably representative sample of a population. You can do a linear regression analysis of the measurements, and precisely calculate the correlations between the characteristics you measured. But, your results are only precise descriptions of the sample. They aren't precise descriptions of the population, because there is always some amount of error, some amount of potential discrepancy, between the mean value of some characteristic for a sample, and the mean value of that characteristic for the population.
-        </p>
-        <p>
-          So, you can't precisely determine the correlation between characteristics for the population. But what you can determine precisely is the probability that the population's correlation falls within some range of values. In the case of null-hypothesis significance testing, your goal is to calculate the probability that the population correlation is not zero. When you report that a correlation is, e.g., “statistically significant at ‘p&lt;.05’”, you're reporting the probability that you calculated—based on the sample correlation—that the magnitude of the population's correlation is greater than zero. In the case of ‘p&lt;.05’, that probability is 0.95, in other words, 95%.
-        </p>
-        <p>
-          You can think about that probability calculation as being a probability curve that you draw around the sample correlation. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure05">Figure 05</a>, the horizontal line that splits the curve marks the value of the sample correlation. The probability curve itself, however, describes the correlation of the population.
-        </p>
-        <div class="w1008">
-          <img src="images/large/sample-probability.svg" alt="Figure 06: Sample probability around population correlation" />
-          <a href="images/sample-probability.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 06 &ndash; Population correlation bisects sample probability curve</p>
-        </div>
-        <p>
-          This is an important distinction to understand. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure05">Figure 05</a>, the straight line is about the <em>sample</em>. The curve is about the <em>population</em>.
-        </p>
-        <p>
-          (<a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure06">Figure 06</a> is the opposite of that. The straight line is about the <em>population</em>. The curve is about the <em>sample</em>. They are both on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.
-        </p>
-        <p>
-          What is that relationship? It's the probability of finding some particular value for a sample correlation, based on what the population correlation is. Even though you may not be able to ever directly measure the population correlation, it does exist and it does have some value. And that value establishes the probabilities of the sample correlation value you'll find.
-        </p>
-        <p>
-          The sample probability curve is described by <i>beta</i>, and/or “statistical power”.  The population probability curve, which was in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure05">Figure 05</a>, is described by <i>alpha</i>, a.k.a. “confidence level” or “<i>p</i> value”.
-        </p>
+        <section>
+          <h3 class="before">Sample correlation &rarr; Population probability</h3>
+          <div class="w1008" id="population-probability">
+            <img src="images/large/population-probability.svg" alt="Figure 05: Population probability around sample correlation" />
+            <a href="images/population-probability.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p><b>Figure 05</b> &ndash; <i>Sample</i> correlation bisects <i>population</i> probability curve</p>
+          </div>
+          <h3 class="after">Sample correlation &rarr; Population probability</h3>
+          <p>
+            Let's say you measure a variety of characteristics of a presumably representative sample of a population. You can do a linear regression analysis of the measurements, and precisely calculate the correlations between the characteristics you measured. But, your results are only precise descriptions of the sample. They aren't precise descriptions of the population, because there is always some amount of error, some amount of potential discrepancy, between the mean value of some characteristic for a sample, and the mean value of that characteristic for the population.
+          </p>
+          <p>
+            So, you can't precisely determine the correlation between characteristics for the population. But what you can determine precisely is the probability that the population's correlation falls within some range of values. In the case of null-hypothesis significance testing, your goal is to calculate the probability that the population correlation is not zero. When you report that a correlation is, e.g., “statistically significant at ‘p&lt;.05’”, you're reporting the probability that you calculated—based on the sample correlation—that the magnitude of the population's correlation is greater than zero. In the case of ‘p&lt;.05’, that probability is 0.95, in other words, 95%.
+          </p>
+          <p>
+            You can think about that probability calculation as being a probability curve that you draw around the sample correlation. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure05">Figure 05</a>, the horizontal line that splits the curve marks the value of the sample correlation. The probability curve itself, however, describes the correlation of the population.
+          </p>
+          <p>
+            This is an important distinction to understand. In <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure05">Figure 05</a>, the straight line is about the <em>sample</em>. The curve is about the <em>population</em>.
+          </p>
+        </section>
+        <section>
+          <h3 class="before">Population correlation &rarr; Sample probability</h3>
+          <div class="w1008">
+            <img src="images/large/sample-probability.svg" alt="Figure 06: Sample probability around population correlation" />
+            <a href="images/sample-probability.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p><b>Figure 06</b> &ndash; <i>Population</i> correlation bisects <i>sample</i> probability curve</p>
+          </div>
+          <h3 class="after">Population correlation &rarr; Sample probability</h3>
+          <p>
+            <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure06">Figure 06</a> is the opposite of that. The straight line is about the <em>population</em>. The curve is about the <em>sample</em>. They are both on the opposite side of the vertical axis from the previous graph because they show the opposite relationship.
+          </p>
+          <p>
+            What is that relationship? It's the probability of finding some particular value for a sample correlation, based on what the population correlation is. Even though you may not be able to ever directly measure the population correlation, it does exist and it does have some value. And that value establishes the probabilities of the sample correlation value you'll find.
+          </p>
+        </section>
+        <section>
+            <h3>Population probability &harr; alpha<br />Sample probability &harr; beta</h3>
+          <p>
+            The sample probability curve is described by <i>beta</i>, and/or “statistical power”.  The population probability curve, which was in <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure05">Figure 05</a>, is described by <i>alpha</i>, a.k.a. “confidence level” or “<i>p</i> value”.
+          </p>
+        </section>
       </article>
       <article id="alpha-beta-effects">
-        <h2>[Some other title]</h2>
-
+        <h2 class="before">Relation of alpha and beta</h2>
         <div class="w1008">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 08: Basic relationship of alpha and beta" />
           <a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 08</p>
         </div>
+        <h2 class="after">Relation of alpha and beta</h2>
         <p>
           <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure08">Figure 08</a> takes advantage of the sideways arrangment, and shows both the population and the sample probability curves for some hypothetical linear regression.
         </p>

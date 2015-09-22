@@ -176,8 +176,8 @@ footer.navframe {
 object.nav {
   width: 100%;
 }
-h3.before {display: inline-block;}
-h3.after  {display: none;}
+.before {display: inline-block;}
+.after  {display: none;}
 p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
@@ -347,8 +347,8 @@ div.destination {
     text-align: center;
     max-width: none;
   }
-  h3.before {display: none;}
-  h3.after  {display: inline-block;}
+  .before {display: none;}
+  .after  {display: inline;}
   div p {
     font-size:    0.875em;
   }
