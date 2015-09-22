@@ -138,10 +138,7 @@ span.show-expansion {
 
 /********************************[ default layout ]**/
 body  {
-  margin: 0.625em 0.625em 0.625em 0;
-  border-style:   solid;
-  border-color:   #7160a2;
-  border-width:   0 0 0 0.625em;
+  margin: 0.0625em;
 }
 body.navframe {
   margin:  0;
@@ -292,7 +289,9 @@ object.nav {
   border-width:  0;
   border-radius: 0.1875em;
 }
-iframe.graphics {
+iframe.graphics,
+#top-frame,
+#base-frame {
   display: none;
 }
 .framejump {
@@ -337,7 +336,7 @@ div.destination {
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
   body  {
-    margin-right: 2.5%;
+    margin: 0.625em 2.5% 0.625em 0.625em;
   }
   article {
     padding: 0.3125em 0.3125em 0.3125em 7.8125%;
@@ -460,7 +459,10 @@ div.destination {
 /********************************[ 40 em < screen ]**/
 @media all and (min-width: 40em) {
   body  {
-    margin-right: 1em;
+    margin: 0.625em 1em 0.625em 0;
+    border-style:   solid;
+    border-color:   #7160a2;
+    border-width:   0 0 0 0.625em;
   }
   body.navframe {
     margin: 0;
@@ -496,6 +498,10 @@ div.destination {
     border:   none;
     width:    31.25%;
     height:   100%;
+  }
+  #top-frame,
+  #base-frame {
+    display: block;
   }
   .framejump {
     pointer-events: auto;
