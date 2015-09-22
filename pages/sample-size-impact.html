@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="common/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>Impact of sample size</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Using sideways stats to understand statistics.">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
+  </head>
+  <div id="top-frame">&#8203;</div>
+  <div id="base-frame">&#8203;</div>
+  <body>
+    <main>
+      <iframe class="graphics" name="Gframe" src="sample-size-graphics.html" width="31.25%" height="100%"></iframe>
+      <h1>Impact of sample size</h1>
+      <h2>Implications of the size of the sample on significance testing</h2>
+      <article>
+        <p>
+          The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes. The next example graphic (<a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure10">Figure 10</a>) represents how the population probability curve tightens as the sample size increases. The sample size, “N”, increases from left to right for the three examples.
+        </p>
+        <div class="w1440">
+          <img src="images/large/changing-N-and-alpha.svg" alt="Figure 10: Probabilities tighten as N increases" />
+          <a href="images/changing-N-and-alpha.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 10</p>
+        </div>
+        <p>
+          In those three examples, <i>alpha</i> is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line. In other words, at the same confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.
+        </p>
+        <p>
+          This is why one of criticisms of null-hypothesis significance testing is that it ‘doesn't indicate anything other than the fact that a sufficiently large sample was used.’ In other words, <em>any</em> non-zero correlation can be statistically significant at <em>any</em> confidence level—the only thing you have to do is find a way to increase the sample size far enough.
+        </p>
+        <p>
+          <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure11">Figure 11</a> shows the relation between sample size and the minimum statistically significant correlation (<i>p</i>&lt;.05). The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.
+        </p>
+        <div class="w1008">
+          <img src="images/large/correlation-vs-samplesize.png" alt="Figure 11: Relation of statistical significance to sample size" />
+          <p>Figure 11</p>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <object class="nav" data="nav-frame-sideways-stats.html" type="text/html" />
+    </footer>
+    <script>
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
+    </script>
+  </body>
+</html>
+

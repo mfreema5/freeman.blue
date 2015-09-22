@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="common/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>Type I and Type II errors</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Using sideways stats to understand statistics.">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
+  </head>
+  <div id="top-frame">&#8203;</div>
+  <div id="base-frame">&#8203;</div>
+  <body>
+    <main>
+      <iframe class="graphics" name="Gframe" src="error-types-graphics.html" width="31.25%" height="100%"></iframe>
+      <h1>Sideways Type I and Type II errors</h1>
+      <h2>A new way to look at both</h2>
+      <article>
+        <p>
+          A Type I error is a “false positive”. When you find a correlation in a sample that doesn't exist in the population, that's a Type I error.
+        </p>
+        <p>
+          A Type II error is a “false negative”. When there exists a correlation in a population but you failed to find it in your sample, that's a Type II error.
+        </p>
+        <p>
+          The following two sections show both types of errors as sideways statistics.
+        </p>
+      </article>
+      <article id="type-i-errors">
+        <h3 class="before">Sideways Type I errors</h3>
+        <div class="w1008">
+          <img src="images/large/type-1-errors.svg" alt="Figure 14: Sideways Type I error" />
+          <a href="images/type-1-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 14</p>
+        </div>
+        <h3 class="after">Sideways Type I errors</h3>
+        <p>
+          <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure14">Figure 14</a> represents a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.
+        </p>
+        <p>
+          The unusual thing in this graphic is the sample probability curve on the left side of the graph, which has been centered on the null line.  It is there because that is what is involved in a Type I error&mdash;a population for which there is no correlation; so the population correlation is set at zero.
+        </p>
+        <p>
+          A Type I error would be any analysis that found a statistically significant sample correlation, despite the fact that no correlation exists in the population. On the sample probability curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error. That area is 5% of the total area “under” the sample probability curve.
+        </p>
+        <p>
+          An important thing to note here is that when the population correlation is zero, the area of the sample probability curve that extends above the line of the minimum statistically significant sample correlation will always be exactly equal to the area of the population probability curve that's below the null line.  This is because the two curves are identical in shape and are in perfect symmetry.  So, the area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.
+        </p>
+        <p>
+          This symmetry is why lining up the population probability curve with 5% of the area below the zero/null line works for establishing a “95% confidence level”.
+        </p>
+      </article>
+      <article id="type-ii-errors">
+        <h3 class="before">Sideways Type II errors</h3>
+        <div class="w1008" id="type-2-errors" >
+          <img src="images/large/type-2-errors.svg" alt="Figure 15: Sideways Type II error" />
+          <a href="images/type-2-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 15</p>
+        </div>
+        <h3 class="after">Sideways Type II errors</h3>
+        <p>
+          <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure15">Figure 15</a> represents a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 84%.
+        </p>
+        <p>
+          Remember that a Type II error is when a population correlation exists, but the sample fails to find it.  So, on the graph, a Type II error would be any sample correlation that is below the minimum statistically significant correlation. A result for a sample analysis in this region would fail to be statistically significant, despite the population correlation not being null.  Therefore, the area of the sample probability curve on the left side of the graphic that is shaded covers the sample correlations that would be a Type II error.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <object class="nav" data="nav-frame-sideways-stats.html" type="text/html" />
+    </footer>
+    <script>
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
+    </script>
+  </body>
+</html>
