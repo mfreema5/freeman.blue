@@ -59,7 +59,7 @@ p {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
   font-size:    1.0625em;
-  line-height:  1.250em;
+  line-height:  1.3125em;
 }
 div p {
   font-family: 'Merriweather Sans', sans-serif;
@@ -111,6 +111,24 @@ span.expansion {
 span.show-expansion {
   display: inline;
 }
+.showgloss {
+  display: inline;
+  vertical-align: super;
+  font-size: 0.75em;
+  line-height: 0.75em;
+}
+.gloss {
+  display: none;
+  font-size: small;
+  vertical-align: middle;
+}
+.gloss a {
+  color: initial;
+}
+.gloss  a:hover{
+  text-decoration: none;
+}
+
 #top-frame {
   position:       fixed;
   width:          100%;
