@@ -138,7 +138,7 @@ li, .ref p {
   text-indent: -1em;
   /* for hacky hanging indents */
 }
-p.indent { 
+p.indent {
   margin-left: 0.4375em;
 }
 nav {
@@ -366,7 +366,7 @@ th + th {
   blockquote {
     margin: 1.125em 1.625em 1.125em 1.625em;
   }
-  p.indent { 
+  p.indent {
     margin-left: 0.8125em;
   }
   nav {
@@ -396,30 +396,31 @@ th + th {
     width: 37.5em;
     margin: 0 0 0 3.125em;
   }
-  nav {
-    width: 37.4375em;
-    margin: 0 0 0 3.875em;
-}
+  nav,
   aside {
     width: 37.4375em;
     margin: 0 0 0 3.875em;
-  }
+}
 }
 /****************************************[ 60 em < screen ]*/
 @media all and (min-width: 60em) {
   body { padding: 2% 1px; }
   main { padding: 0.3125em 0 0.3125em 0; }
-  nav {
-    /* nail it down */
+  nav,
+  aside {
     border-radius: 0.9375em;
     border-width: 0.325em;
     position: fixed;
-    top: 3em;
-    bottom: initial;
-    height: initial;
     left: 44.5em;
     min-width: 12.50em;
     width: 26%;
+    margin: 0;
+  }
+  nav {
+    /* nail it down */
+    top: 3em;
+    bottom: initial;
+    height: initial;
     padding: 0.1875em;
   }
   nav div {
@@ -437,15 +438,9 @@ th + th {
     /* make it glow */
   }
   aside {
-    border-radius: 0.9375em;
-    border-width: 0.325em;
     border-color: #d1c0a9;
     border-style: solid;
-    position: fixed;
     bottom: 3em;
-    left: 44.5em;
-    min-width: 12.50em;
-    width: 26%;
     padding: 0.375em;
   }
   aside div {
@@ -456,4 +451,14 @@ th + th {
     overflow: hidden;
   }
   aside h4 { font-size: initial; }
+}
+/****************************************[ 69.375 em < screen ]*/
+@media all and (min-width: 69.375em) {
+  nav,
+  aside {
+    left:   auto;
+    right:  6.8375em;
+    width:  18.0375em;
+    margin: 0;
+  }
 }
