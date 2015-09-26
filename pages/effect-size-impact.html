@@ -25,7 +25,7 @@
       <h1>Implications of the size of effect on significance testing</h1>
       <article>
         <p>
-          Descriptions of what the “effect size” is can sometimes be esoteric, but since we've limited ourselves to talking about linear regressions that use null-hypothesis significance testing, we can simply say that it's the correlation that exist in the population.
+          As mentioned on the page <a href="alpha-beta-interaction.html">&ldquo;Interaction of <i>alpha</i> and <i>beta</i>&rdquo;</a>, we've been using &lsquo;population correlation&rsquo; to refer to what is often called &lsquo;effect size&rsquo; in experimental design.  This is a valid substitution since we've limited ourselves to talking about linear regressions and significance testing.
         </p>
         <div class="w1008">
           <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: Basic relationship of alpha and beta" />
@@ -33,37 +33,31 @@
           <p>Figure 01</p>
         </div>
         <p>
-          The somewhat confusing thing is that most of the time we don't know the value of the <i>effect size</i>—since if we knew the population correlation, we wouldn't need to be trying to find a sample correlation—yet we need to know its value in order to determine the <i>statistical power</i> of an analysis.
+          Talking about effect size can be somewhat confusing since most of the time we don't know the population correlation; if we did, we wouldn't need to be trying to find a sample correlation.  Yet we need to know the effect size in order to determine the <i>statistical power</i> of an analysis.
         </p>
         <p>
-          One mistake that you might make is to use your sample correlation as an estimate of the population correlation, which is the <i>effect size</i>. Doing that defeats the main purpose of <i>statistical power</i>, since you are forcing it to always be 50%. A <i>statistical power</i> of 50% is of effectively no use in avoiding or discussing Type II errors.
+          In <a class= "framejump" target="Gframe" href="effect-size-graphics.html#Figure01">Figure 01</a> the statistical power is the shaded area under<span class="showgloss" id='gloss20'><a onclick="setDisplay('gloss20','none'); setDisplay('gloss21','inline')">&dagger;</a></span><span class="gloss" id='gloss21'><a onclick="setDisplay('gloss20','inline'); setDisplay('gloss21','none')"> (where “under” means between the curve and the vertical baseline)</a></span> the sample probability curve on the left side of the graph. The size of that area is determined by two things: the shape of the probability curves, and the distance between the lines bisecting the curves.
         </p>
         <p>
-          And, regardless of what method you use to determine <i>effect size</i>, if you don't use it to calculate <i>statistical power</i> until after you've collected and analyzed your data, you've already missed out on the chance to use it to help determine the right <i>sample size</i> for your study.
+          The two curves are identical, since they are determined by the sample size.
         </p>
         <p>
-          Let's go back to the basic example graphic (<a class= "framejump" target="Gframe" href="effect-size-graphics.html#Figure02">Figure 01</a>) that shows both the population and the sample probability curves for some hypothetical linear regression.
+          The line that bisects the population probability curve on the right side of the graph is the minimum statistically significant sample correlation.  The location of the curve, and thus its bisecting line, is determined by the sample size and the value of <i>alpha</i>.
         </p>
         <p>
-          The statistical power is the shaded area “under” the sample probability curve of the left side of the graph. The size of that area is determined by two things: the shape of the probability curves, and the distance between the lines that bisects the curves.
+          The line that bisects the sample probability curve on the left side of the graph is the effect size.  That line itself is what determines the placement of the sample probability curve.  You typically estimate the effect size based on previous studies of the same, or similar, phenomena.
         </p>
         <p>
-          The two curves are identical, and are a result of the <i>sample size</i>.
+          Figure 02 shows two examples that are identical except for the effect size.  The different effect size shifts the curve on the left side of the graph, and therefore shifts the relative proportions of the statistical power and <i>beta</i> for the analysis.
         </p>
-        <p>
-          The height of the line that bisects the population probability curve on the right side of the graph is a result of the shape of the probability curves combined with the <em>confidence level</em> of the analysis.
-        </p>
-        <p>
-          The height of the line that bisects the sample probability curve is the <i>effect size</i> of the analysis, a.k.a., the population correlation.
-        </p>
-        <p>
-          In general, a larger sample size will give you a larger statistical power. Think of it this way: if the two bisecting lines (the sample and population correlations) are a great distance apart, then even if the probability curves are wide and low, there will be a large area that's between the bisection lines. But if the two lines are close together, the probability curves will need to be very tight in order to find a large area between the two bisecting lines. See the next example graphic, (<a class= "framejump" target="Gframe" href="effect-size-graphics.html#Figure02">Figure 02</a>).
-        </p>
-        <div class="w3072">
-          <img src="images/large/N-impact-on-power-overlapped.svg" alt="Figure 02: Impact of sample size on statistical power" />
-          <a href="images/N-impact-on-power-overlapped.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+        <div class="w1440">
+          <img src="images/large/effect-size-comparison.svg" alt="Figure 02: Effect size influences statistical power and beta" />
+          <a href="images/effect-size-comparison.svg"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
           <p>Figure 02</p>
         </div>
+        <p>
+          Of course, you can't really adjust effect size to your liking.  So, to manipulate the statistical power, you have to adjust either the sample size (see: <a href="sample-size-impact.html">&ldquo;Impact of sample size&rdquo;</a>), or <i>alpha</i> (see: <a href="alpha-beta-interaction.html">&ldquo;Interaction of <i>alpha</i> and <i>beta</i>&rdquo;</a>).
+        </p>
       </article>
     </main>
     <footer>

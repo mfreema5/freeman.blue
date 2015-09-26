@@ -25,7 +25,10 @@
       <h1>Implications of the size of the sample on significance testing</h1>
       <article>
         <p>
-          The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, the population probability curve that surrounds the sample correlation will be less spread out for larger sample sizes. The next example graphic (<a class= "framejump" target="Gframe" href="sample-size-graphics.html#Figure01">Figure 01</a>) represents how the population probability curve tightens as the sample size increases. The sample size, “N”, increases from left to right for the three examples.
+          In sideways statistics the shape of the probability curves is determined by the sample size<span class="showgloss" id='gloss10'><a onclick="setDisplay('gloss10','none'); setDisplay('gloss11','inline')">&dagger;.</a></span><span class="gloss" id='gloss11'><a onclick="setDisplay('gloss10','inline'); setDisplay('gloss11','none')">. (Technically, it's a function of the standard deviation, which itself is a function of the sample size and the sum of variances from the mean.  But since the only one of those that you some control over in your experimental design is sample size, we'll treat the others as unvarying.)</a></span>
+        </p>
+        <p>
+          The larger the sample size in an analysis the less influence random error has on the sample correlation. Therefore, for larger sample sizes the population probability curve that surrounds the sample correlation will be less spread out. <a class= "framejump" target="Gframe" href="sample-size-graphics.html#Figure01">Figure 01</a> represents how the population probability curve tightens as the sample size increases. The sample size increases from one curve to the next.
         </p>
         <div class="w1440">
           <img src="images/large/changing-N-and-alpha.svg" alt="Figure 01: Probabilities tighten as N increases" />
@@ -33,17 +36,25 @@
           <p>Figure 01</p>
         </div>
         <p>
-          In those three examples, <i>alpha</i> is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line. In other words, at the same confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.
+          In those examples, <i>alpha</i> is constant, and therefore as the probability curve tightens the line that bisects the probability curve drops closer to the null line. In other words, at a constant confidence level, the larger the sample size is, the lower the minimum correlation that is statistically significant becomes.
         </p>
         <p>
-          This is why one of criticisms of null-hypothesis significance testing is that it ‘doesn't indicate anything other than the fact that a sufficiently large sample was used.’ In other words, <em>any</em> non-zero correlation can be statistically significant at <em>any</em> confidence level—the only thing you have to do is find a way to increase the sample size far enough.
-        </p>
-        <p>
-          <a class= "framejump" target="Mframe" href="sample-size-graphics.html#Figure02">Figure 02</a> shows the relation between sample size and the minimum statistically significant correlation (<i>p</i>&lt;.05). The relation is what we would expect from the sideways examples—as N get larger, the minimum statistically significant sample correlation drops.
+          <a class= "framejump" target="Mframe" href="sample-size-graphics.html#Figure02">Figure 02</a> shows the relation between sample size and the minimum statistically significant correlation<span class="showgloss" id='gloss20'><a onclick="setDisplay('gloss20','none'); setDisplay('gloss21','inline')">&dagger;</a></span><span class="gloss" id='gloss21'><a onclick="setDisplay('gloss20','inline'); setDisplay('gloss21','none')"> (for an analysis with one independent variable, <i>p</i>&lt;.05, and a statistical power of 50%)</a></span>.  The relation is what we would expect from the sideways examples&mdash;as sample sizes get larger, the minimum statistically significant sample correlation drops.
         </p>
         <div class="w1008">
           <img src="images/large/correlation-vs-samplesize.png" alt="Figure 02: Relation of statistical significance to sample size" />
           <p>Figure 02</p>
+        </div>
+        <p>
+          This relations between sample size and the minimum significant correlation leads to one of the major criticisms of null-hypothesis significance testing: the only thing NHST really proves is  that a sufficiently large sample was used. Technically, <em>any</em> non-zero correlation can be statistically significant at <em>any</em> confidence level if you increase the sample size large enough.
+        </p>
+        <p>
+          Sample size also has a similar effect on statistical power.  All other things being equal, a study with a larger sample size will have a larger statistical power.  Figure 03 shows two examples, along with an overlay of the two.  The blue area of the overlay highlights where the statistical power is being increased by the narrowing of the probability curves that is a result of a larger sample size.
+        </p>
+        <div class="w3072">
+          <img src="images/large/N-impact-on-power-overlapped.svg" alt="Figure 02: Impact of sample size on statistical power" />
+          <a href="images/N-impact-on-power-overlapped.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+          <p>Figure 03</p>
         </div>
       </article>
     </main>
