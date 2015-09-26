@@ -262,9 +262,9 @@ img {
   margin: 0.125em auto;
   height: 100%;
 }
-.w605-l,
+.w605,
 .w1008,
-.w1008-l,
+.w1008,
 .w1536,
 .w1440,
 .w2400,
@@ -307,7 +307,6 @@ object.nav {
   border-width:  0;
   border-radius: 0.1875em;
 }
-iframe.graphics,
 #top-frame,
 #base-frame {
   display: none;
@@ -349,8 +348,6 @@ div.destination {
 .destination .icon {
   margin-right: 0.4375em;
 }
-
-
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
   body  {
@@ -395,12 +392,8 @@ div.destination {
     margin:   0.1875em;
     padding:  0.1250em;
   }
-  .w605-l,
-  .w1008-l,
-  .w1536,
-  #Standard_deviation_diagram,
-  #population-probability,
-  #type-2-errors {
+  .left,
+  .w1536 {
     float:    left;
     clear:    left;
     margin:   0.625em 1.4125em 0.625em 0.625em;
@@ -410,8 +403,7 @@ div.destination {
     width:     25.0%;
     max-width: 11.375em;
   }
-  .w1008,
-  .w1008-l {
+  .w1008 {
     width:     31.25%;
     max-width: 20.0em;
   }
@@ -464,16 +456,13 @@ div.destination {
     width:      3.625em;
     height:     3.750em;
   }
-
+}
 /********************************[ 32 em < screen ]**/
 @media all and (min-width: 32em) {
   object.nav {
     height: 10.625em;
   }
 }
-
-
-
 /********************************[ 40 em < screen ]**/
 @media all and (min-width: 40em) {
   body  {
@@ -488,6 +477,9 @@ div.destination {
   article {
     padding: 0.3125em 0.5625em 0.3125em 1.1875em;
   }
+  section {
+    overflow: visible;
+  }
   ul, ol {
     padding: 0.125em 0.300em 0.125em 2.500em;
   }
@@ -498,24 +490,23 @@ div.destination {
     width:     18.75%;
     max-width: 11.375em;
   }
+  .left {
+    float: right;
+    clear: right;
+  }
   div[class^="w"] {
-    display: none;
+    display: block;
+    margin-right:  -49.375%;
+    width: 45%;
+  }
+  .w605,
+  .w1008 {
+    max-width: 25em;
   }
   main,
   footer {
     padding-right: 31.25%;
     padding-left:   0.3125em;
-  }
-  iframe.graphics {
-    display:  block;
-    position: fixed;
-    top:      0;
-    right:    0;
-    float:    right;
-    clear:    none;
-    border:   none;
-    width:    31.25%;
-    height:   100%;
   }
   #top-frame,
   #base-frame {
@@ -528,7 +519,6 @@ div.destination {
     text-decoration: underline;
   }
 }
-
 /********************************[ 56.75 em < screen ]**/
 @media all and (min-width: 56.75em) {
   body {
@@ -546,6 +536,9 @@ div.destination {
     margin-left: 1.375%;
     padding-left: 0;
   }
+  div[class^="w"] {
+    margin-right:  -50.75%;    /* 49.375 + 1.375 = 50.75 */
+  }
   article,
   object.nav {
     margin-left: 3.125%;
@@ -561,5 +554,14 @@ div.destination {
     padding: 0.3125em;
     margin: 0;
     max-width: reset;
+  }
+}
+/********************************[ 63.50 em < screen ]**/
+@media all and (min-width: 63.50em) {
+  body {
+    max-width: 70em;
+  }
+  div[class^="w"] {
+    margin-right: -29.3125vw;
   }
 }
