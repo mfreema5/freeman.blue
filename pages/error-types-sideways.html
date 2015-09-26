@@ -25,53 +25,62 @@
       <h1>A different way to look at both</h1>
       <article>
         <p>
-          A Type I error is a “false positive”. When you find a correlation in a sample that doesn't exist in the population, that's a Type I error.
+          A Type I error is a “false positive”. When the correlation you find in a sample doesn't exist in the population, that's a Type I error.
         </p>
         <p>
-          A Type II error is a “false negative”. When there exists a correlation in a population but you failed to find it in your sample, that's a Type II error.
+          A Type II error is a “false negative”. When there exists a correlation in a population but you fail to find it in your sample, that's a Type II error.
         </p>
         <p>
-          The following two sections show both types of errors as sideways statistics.
+          The following sections use sideways statistics to show both types of errors.
         </p>
-      </article>
-      <article id="type-i-errors">
-        <h3 class="before">Sideways Type I errors</h3>
-        <div class="w1008">
-          <img src="images/large/type-1-errors.svg" alt="Figure 14: Sideways Type I error" />
-          <a href="images/type-1-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 14</p>
-        </div>
-        <h3 class="after">Sideways Type I errors</h3>
-        <p>
-          <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure14">Figure 14</a> represents a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.
-        </p>
-        <p>
-          The unusual thing in this graphic is the sample probability curve on the left side of the graph, which has been centered on the null line.  It is there because that is what is involved in a Type I error&mdash;a population for which there is no correlation; so the population correlation is set at zero.
-        </p>
-        <p>
-          A Type I error would be any analysis that found a statistically significant sample correlation, despite the fact that no correlation exists in the population. On the sample probability curve, on the left side of the graph, the area that's shaded covers the sample correlations that would be Type I error. That area is 5% of the total area “under” the sample probability curve.
-        </p>
-        <p>
-          An important thing to note here is that when the population correlation is zero, the area of the sample probability curve that extends above the line of the minimum statistically significant sample correlation will always be exactly equal to the area of the population probability curve that's below the null line.  This is because the two curves are identical in shape and are in perfect symmetry.  So, the area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.
-        </p>
-        <p>
-          This symmetry is why lining up the population probability curve with 5% of the area below the zero/null line works for establishing a “95% confidence level”.
-        </p>
-      </article>
-      <article id="type-ii-errors">
-        <h3 class="before">Sideways Type II errors</h3>
-        <div class="w1008" id="type-2-errors" >
-          <img src="images/large/type-2-errors.svg" alt="Figure 15: Sideways Type II error" />
-          <a href="images/type-2-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 15</p>
-        </div>
-        <h3 class="after">Sideways Type II errors</h3>
-        <p>
-          <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure15">Figure 15</a> represents a Type II error. It shows a linear regression done at a 95% confidence level, that has a statistical power of 84%.
-        </p>
-        <p>
-          Remember that a Type II error is when a population correlation exists, but the sample fails to find it.  So, on the graph, a Type II error would be any sample correlation that is below the minimum statistically significant correlation. A result for a sample analysis in this region would fail to be statistically significant, despite the population correlation not being null.  Therefore, the area of the sample probability curve on the left side of the graphic that is shaded covers the sample correlations that would be a Type II error.
-        </p>
+        <section id="type-i-errors">
+          <h3 class="before">Sideways Type I errors</h3>
+          <div class="w1008">
+            <img src="images/large/type-1-errors.svg" alt="Figure 14: Sideways Type I error" />
+            <a href="images/type-1-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p>Figure 14</p>
+          </div>
+          <h3 class="after">Sideways Type I errors</h3>
+          <p>
+            <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure14">Figure 14</a> shows a linear regression done at a 95% confidence level. The population probability curve on the right side of the graph has 5% of its area bounded by null, and the line that bisects it is the minimum sample correlation that would be statistically significant.
+          </p>
+          <p>
+            The unusual thing in this graphic is that the sample probability curve on the left side of the graph has been centered on the null line.  It is there because that is what is involved in a Type I error&mdash;a population correlation of zero.
+          </p>
+          <p>
+            A Type I error would be any analysis that found a statistically significant sample correlation, despite the fact that no correlation exists in the population. On the sample probability curve, on the left side of the graph, the area under<span class="showgloss" id='gloss10'><a onclick="setDisplay('gloss10','none'); setDisplay('gloss11','inline')">&dagger;</a></span><span class="gloss" id='gloss11'><a onclick="setDisplay('gloss10','inline'); setDisplay('gloss11','none')"> (where “under” means between the curve and the vertical baseline)</a></span> the sample probability curve that is <i>higher</i> than the minimum significant correlation, is the chance of a Type I error. That shaded area is <i>alpha</i>, and is 5% of the total area under the sample probability curve.
+          </p>
+          <section id="symmetry">
+          <h3>Symmetry</h3>
+            <p>
+              An important thing to note here is that when the population correlation is zero, the area of the sample probability curve that extends above the line of the minimum statistically significant sample correlation will always be identical to the area of the population probability curve that's below the null line.  This is because the two curves are the same shape and in perfect symmetry.  So, the area of one curve that is bounded by the bisecting line of the other curve is identical to the area of the other curve that is bounded by its bisecting line.
+            </p>
+            <p>
+              This symmetry is why lining up the population probability curve with 5% of the area below the zero/null line works for establishing a “95% confidence level”.
+            </p>
+          </section>
+        </section>
+        <section id="type-ii-errors">
+          <h3 class="before">Sideways Type II errors</h3>
+          <div class="w1008" id="type-2-errors" >
+            <img src="images/large/type-2-errors.svg" alt="Figure 15: Sideways Type II error" />
+            <a href="images/type-2-errors.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
+            <p>Figure 15</p>
+          </div>
+          <h3 class="after">Sideways Type II errors</h3>
+          <p>
+            <a class= "framejump" target="Mframe" href="main-sideways-graphics.html#Figure15">Figure 15</a> also shows a linear regression done at a 95% confidence level, but this example has a statistical power of 84%.
+          </p>
+          <p>
+            A Type II error is when a population correlation exists, but the sample fails to find it.  So, on the graph, a Type II error would be any sample correlation that is below the minimum statistically significant correlation. A result for a sample analysis in this region would fail to be statistically significant, despite the population correlation not being null.  Therefore, the area under the sample probability curve that is <i>lower</i> than the minimum significant correlation, is the chance of a Type II error. That shaded area is <i>beta</i>, and is 16%<span class="showgloss" id='gloss20'><a onclick="setDisplay('gloss20','none'); setDisplay('gloss21','inline')">&dagger;</a></span><span class="gloss" id='gloss21'><a onclick="setDisplay('gloss20','inline'); setDisplay('gloss21','none')"> ( 100% &#8722; 84% = 16% )</a></span> of the total area under the sample probability curve.
+          </p>
+        </section>
+        <section>
+          <h3>Are Type II &lsquo;second-class&rsquo; errors?</h3>
+          <p>
+            Type I and Type II errors are at the core of what significance testing is all about.  Many researchers in the social sciences seem to consider only Type I errors to be important, but there is no basis for that distinction in the statistics themselves.  As is mentioned on the page <a href="alpha-beta-interaction.html#alpha-beta-tradeoff">&ldquo;Interaction of <i>alpha</i> and <i>beta</i>&rdquo;</a>, if researchers don't care at all about Type II errors, they can minimize the value of <i>alpha</i> by maximizing the value of <i>beta</i>.  Which, in practical application, is typically 0.50, giving a statistical power of 50%.  E.g., a large number of the empirical studies in the Academia of Management Review have a statistical power of roughly 50%, evidence that researchers are minimizing the chance of Type I errors at the expense of increasing the chance of a Type II error.
+          </p>
+        </section>
       </article>
     </main>
     <footer>
