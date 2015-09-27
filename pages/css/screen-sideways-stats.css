@@ -385,7 +385,6 @@ div.destination {
     padding:  0.125em;
   }
   .w1440,
-  .w2048,
   .w3072  {
     float:    none;
     clear:    both;
@@ -416,8 +415,8 @@ div.destination {
     max-width: 49.1875em;
   }
   .w2048 {
-    width:     61.6875%;
-    max-width: 51.5625em;
+    width:     59.8175%;
+    max-width: 50em;
   }
   .w3072 {
     width:     89.7500%;
