@@ -267,7 +267,7 @@ img {
 .w1008,
 .w1536,
 .w1440,
-.w2400,
+.w2048,
 .w3072 {
   background-color: #ffffff;
   border-style:     solid;
@@ -282,7 +282,7 @@ img {
   padding:    0.1250em;
 }
 .w1440,
-.w2400,
+.w2048,
 .w3072  {
   max-width: 24.625em;
 }
@@ -377,7 +377,7 @@ div.destination {
   .w1008,
   .w1536,
   .w1440,
-  .w2400,
+  .w2048,
   .w3072 {
     float:    right;
     clear:    right;
@@ -385,7 +385,7 @@ div.destination {
     padding:  0.125em;
   }
   .w1440,
-  .w2400,
+  .w2048,
   .w3072  {
     float:    none;
     clear:    both;
@@ -415,7 +415,7 @@ div.destination {
     width:     58.8750%;
     max-width: 49.1875em;
   }
-  .w2400 {
+  .w2048 {
     width:     61.6875%;
     max-width: 51.5625em;
   }
