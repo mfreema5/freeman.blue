@@ -507,6 +507,9 @@ div.destination {
   .trigraph {
     width: 98.75%;
   }
+  #tri-alphas {
+    margin-top: -22em;
+  }
   .w605,
   .w1008 {
     max-width: 25em;

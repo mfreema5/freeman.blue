@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="960"
-   height="1536"
-   viewBox="0 0 960 1536"
+   height="1200"
+   viewBox="0 0 960 1200"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -35,7 +35,7 @@
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="1191"
      inkscape:window-height="747"
@@ -46,20 +46,27 @@
      inkscape:snap-intersection-paths="false"
      inkscape:snap-grids="true"
      inkscape:zoom="0.3"
-     inkscape:cx="760.98864"
-     inkscape:cy="759.03181"
+     inkscape:cx="440.98864"
+     inkscape:cy="615.03181"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer1"
+     fit-margin-top="72"
+     fit-margin-right="72"
+     fit-margin-bottom="72"
+     fit-margin-left="72">
     <inkscape:grid
        type="xygrid"
-       id="grid3481" />
+       id="grid3481"
+       originx="0"
+       originy="-144" />
   </sodipodi:namedview>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Shade">
+     inkscape:label="Shade"
+     transform="translate(0,-192)">
     <path
        style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 380.44,852 99.56,0 0,-576 -12,0 C 468,480 371.8026,490.42626 276.4183,557.74114 226.8138,592.74286 149.9905,617.50291 150,672 c 0.093,46.66302 55.8092,68.97781 95.7079,95.47064 C 290.8071,793.95092 346.8071,824.57019 380.44,852 Z"
@@ -71,7 +78,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Main"
-     style="opacity:1">
+     style="opacity:1"
+     transform="translate(0,-192)">
     <path
        style="fill:#efefef;fill-rule:evenodd"
        inkscape:connector-curvature="0"
