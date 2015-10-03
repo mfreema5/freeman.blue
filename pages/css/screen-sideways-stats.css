@@ -252,6 +252,10 @@ img {
   max-width:  100%;
   height:     auto;
 }
+.trigraph {
+  width:  32.125%;
+  height: auto;
+}
 .maths {
   display:  block;
   margin:   0.125em;
@@ -489,14 +493,19 @@ div.destination {
     width:     18.75%;
     max-width: 11.375em;
   }
-  .left {
+  .left,
+  .w1440,
+  .w3072  {
     float: right;
     clear: right;
   }
   div[class^="w"] {
-    display: block;
-    margin-right:  -49.375%;
-    width: 45%;
+    display:  block;
+    width:    45%;
+    margin-right: -49.375%;
+  }
+  .trigraph {
+    width: 98.75%;
   }
   .w605,
   .w1008 {
