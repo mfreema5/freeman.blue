@@ -53,15 +53,13 @@
           <p>So, how much <code>foo</code> is there? How confident are you that you know the true <code>foo</code> content?</p>
           <div class="w1008">
             <img src="images/large/probability-brief-1.svg" alt="Figure 01: <em>Foo-inator 2000&trade;</em> results" />
-            <a href="images/probability-brief-1.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-            <p>Figure 01</p>
+            <p>Figure 01<span><a href="images/probability-brief-1.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
           </div>
           <p>We'll start to visualize the data with a simple line chart; see Figure 01. The scale is the amount of <code>foo</code> in the sample, and each large dot is the result of one sample. (The dots, by the way, are 10 units across, because our <em>Foo-inator 2000&trade;</em> rounds everything off to the nearest 10.) The lowest result was 670 s/g, the highest was 850 s/g, and the rest of the dots are spread unevenly between between those two.</p>
           <p>Next we calculate the mean value of the results—it's 730 s/g, and the standard deviation is roughly 70. Now that we have a mean and standard deviation, we can calculate a probability distribution for our results. That's Figure 02.</p>
           <div class="w1008">
             <img src="images/large/probability-brief-2.svg" alt="Figure 02: Probabilty around results" />
-            <a href="images/probability-brief-2.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-            <p>Figure 02</p>
+            <p>Figure 02<span><a href="images/probability-brief-2.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
           </div>
           <p>The dots for each of the samples are also in Figure 02. Instead of a dot, though, the mean value is marked by the line that goes from the baseline up to the highest part of the curve, bisecting the area under the curve. The standard deviation isn't directly represented in Figure 02. However, since it's what defines the exact shape of the curve of the probability distribution, the standard deviation is indirectly represented.</p>
           <p>So, we ask again, how much <code>foo</code> is there? The highest point in the probability curve is the value with the highest probability of being the true amount of <code>foo</code>. (The “true” amount is the amount we would measure if we used an infinitely precise and perfectly accurate instrument—something our <em>Foo-inator 2000&trade;</em> is light-years away from being.) That highest point is also the mean value from our five samples. So, we could report that as the amount of <code>foo</code> in the rail-car load of SnaFoo&copy;.</p>
@@ -70,8 +68,7 @@
           <p>The dashed lines and shaded area around the mean in Figure 02 are that same region—the span between 725 and 735 that the <em>Foo-inator 2000&trade;</em> reports as “730”. So, instead of talking about the percentage represent by the height of the curve at any point, let's consider the <em>area</em> of the curve bounded by those dashed lines. Of the total area under the curve, that middle shaded region is 5.4%.</p>
           <div class="w1008">
             <img src="images/large/probability-brief-3.svg" alt="Figure 03: Probabilty ranges" />
-            <a href="images/probability-brief-3.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-            <p>Figure 03</p>
+            <p>Figure 03<span><a href="images/probability-brief-3.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
           </div>
           <p>So, we could report that the amount of <code>foo</code> is between 725 and 735 s/g, with a confidence of 5.4%. Which is a lot better than our 0.5% confidence in 730.0 s/g, but it's still not very confident.</p>
           <p>To be able to report an amount of <code>foo</code> with a higher confidence we have to make that shaded region larger, by spreading the dashed lines apart. The next graphic, Figure 03, shows some larger shaded regions. The area bounded by the two dashed lines closes to the mean is 25% of the total. Between the next two is 75%, which includes the 25% of the first area. And the next pair outward contain an area that's 95% of the total (and includes the previous areas).</p>
@@ -111,8 +108,7 @@
           <p>Linear regressions and correlation calculations are the same way. You put a lot of samples into some software package, and you get some discrete numbers in return. But most of the time those numbers are <em>not</em> the “true” value, in the sense of being infinitely precise and perfectly accurate. Rather, those numbers mark some region of values, within which lays that essentially unknowable true value.</p>
           <div class="w1008">
             <img src="images/large/probability-brief-4.svg" alt="Figure 04: Probabilty ranges in sideways stats" />
-            <a href="images/probability-brief-4.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-            <p>Figure 04</p>
+            <p>Figure 04<span><a href="images/probability-brief-4.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
           </div>
           <p>In sideways statistics, those discrete values are considered to simply mark the middle of a curve of probabilities of the true value. They aren't a result <em>per se</em>, but rather are a way to identify an area of probable results.</p>
           <p>However, in sideways statistics, probability curves and their areas are used in a way that differs in one important aspect from the way they were used in the SnaFoo&copy; example here. In sideways statistics, areas under the curve are often measured starting from one side of the curve, instead of being measured outward from the middle. Figure 04 shows the same size areas as in the previous graphic (Figure 03), but here they are measured starting from the left side of the curve. That's why instead of having six dashed lines marking of the different areas, Figure 04 has only three. But otherwise the meaning of the areas is the same—it's a measure of the probability of some value being in that region.</p>

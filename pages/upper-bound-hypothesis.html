@@ -35,8 +35,7 @@
         </p>
         <div class="w1008 left">
           <img src="images/large/upper-bound-test.svg" alt="Figure 01: Statistical experiment to check upper bound" />
-          <a href="images/upper-bound-test.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 01</p>
+          <p>Figure 01<span><a href="images/upper-bound-test.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
         </div>
         <p>
           First, we'd mark our upper bound&mdash;which equates to the minimum important correlaton&mdash;on the the vertical baseline of our ‘sideways’ graph of the analysis.  Then, the population probability curve on the right side of the graph would be positioned so that 95% of the area between it and the vertical baseline would be below that minimum important correlation. That would mean that line that bisects the population probability curve is therefore the maximum sample correlation that demonstrates that the population correlation does not meet your criteria for importance, with ‘<i>p</i>&lt;.05’. See <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure01">Figure 01</a>.
@@ -49,8 +48,7 @@
         </p>
         <div class="w1008">
           <img src="images/large/TruncationFades.svg" alt="Figure 02: Probability curves distorted by truncation" />
-          <a href="images/TruncationFades.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 02</p>
+          <p>Figure 02<span><a href="images/TruncationFades.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
         </div>
         <p>
           When considering correlations near zero (which is where null-hypothesis significance testing is most relevant), you can assume that the probability distributions are symmetric about some mean value.  But when looking at larger correlations, you can no longer assume that.
@@ -66,8 +64,7 @@
         </p>
         <div class="w605 left">
           <img src="images/large/Ztransformation.svg" alt="Figure 03: Fisher transformation stretching correlations to infinity" />
-          <a href="images/Ztransformation.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 03</p>
+          <p>Figure 03<span><a href="images/Ztransformation.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
         </div>
         <div class="maths">
           <img src="images/large/Zformula.svg" alt="Fisher transformation equation" />
@@ -80,8 +77,7 @@
         <h2>Type I errors</h2>
         <div class="w1008">
           <img src="images/large/upper-bound-type-I-error.svg" alt="Figure 04: Type I error in an upper bound test" />
-          <a href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 04</p>
+          <p>Figure 04<span><a href="images/upper-bound-type-I-error.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
         </div>
         <p>
           The visual interpretation of Type I errors for this type of analysis differs from that for a null-hypothesis significance test.  For a Type I error in a null-hypothesis significance test, the population is assumed to have a correlation of zero.  While the same sort of wort-case scenario is used in an upper-bound significance test for understanding Type I errors, the specific worst-case used is different.  For a Type I error, instead of being equal to <i>null</i>, the worst-case population correlation is assumed to be infinitesimally higher than the correlation selected as the boundary of importance.
@@ -97,8 +93,7 @@
         <h2>Type II errors</h2>
         <div class="w1008 left">
           <img src="images/large/upper-bound-type-II-error.svg" alt="Figure 05: Type II error in an upper bound test" />
-          <a href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 05</p>
+          <p>Figure 05<span><a href="images/upper-bound-type-II-error.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
         </div>
         <p>
           Type II errors are false negatives.  In this case that means you would fail to properly identify a population correlation as being below the minimum important correlation.  <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 05</a> shows the Type II error in our example test that gave us <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure05">Figure 01</a>.  The difference in Figure 05 is that instead of the statistical power being shaded, the area equal to <i>beta</i> is shaded.  Any sample correlation that is higher than the maximum correlation that is significantly below the importance cut-off will lead to a Type II error.  The population does have an unimportant correlation, but the sample analysis fails to identify it.
@@ -108,8 +103,7 @@
         </p>
         <div class="w1008">
           <img src="images/large/TruncationBeta.svg" alt="Figure 06: Type II error for truncated probability curves" />
-          <a href="images/TruncationBeta.html"><img class="button" src="images/full-screen-button.svg" alt="Show full size" /></a>
-          <p>Figure 06</p>
+          <p>Figure 06<span><a href="images/TruncationBeta.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
         </div>
         <p>
           Of course, these figures are assuming that the correlations have undergone a Fisher transformation. For comparison purposes, <a class= "framejump" target="Gframe" href="upper-bound-graphics.html#Figure06">Figure 06</a> is an example of untransformed correlations.  It's also a different analysis that the one used in the earlier figures, and shows a statistical power of 39.2%.  What's particularly interesting is that the expected population correlation has been moved up to not only be close to +1, but is also equal to the upper-bound.  Without the truncation inherent in correlation analyses, the statistical power would have been only 5%. But since that inherent truncation has an uneven effect on the two non-transformed probability curves, it means that they are no longer symmetric, so their respective mean lines no longer slice through identical areas at identical locations, so the areas bounded by them are no longer equal.
