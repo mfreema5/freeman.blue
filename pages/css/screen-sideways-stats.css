@@ -325,6 +325,7 @@ div.destination {
   border-style:     solid;
   border-color:     #9DC4F6;
   border-width:     0.125em;
+  vertical-align:   top;
   color:      black;
   overflow:   hidden;
   width:      100%;
