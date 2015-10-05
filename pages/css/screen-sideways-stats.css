@@ -85,7 +85,7 @@ section {
   overflow: hidden;
   width: 100%;
 }
-footer {
+nav {
   background-color: #cdc6e1;
   border-radius:  0 0 0.25em 0.25em;
 }
@@ -184,14 +184,11 @@ section.digression {
 section > section {
   display: inline;
 }
-footer {
+nav {
   padding:  0.3125em 0 0.625em 0;;
   height: auto;
 }
-footer.navframe {
-  display: none;
-}
-object.nav {
+nav object {
   width: 100%;
 }
 .before {display: inline-block;}
@@ -307,7 +304,7 @@ object.nav {
   display:  block;
   clear:    both;
   width:    96.875%;         /* 96.875% + margin = 100% */
-  height:   15.9375em;
+  height:   25.9375em;
   border-width:  0;
   border-radius: 0.1875em;
 }
@@ -328,9 +325,11 @@ div.destination {
   border-style:     solid;
   border-color:     #9DC4F6;
   border-width:     0.125em;
+  color:      black;
   overflow:   hidden;
   width:      100%;
   max-width:  9em;
+  height:     4.625em;
   margin:     0.125em 0 0 0;
 }
 .destination p {
@@ -351,6 +350,9 @@ div.destination {
 }
 .destination .icon {
   margin-right: 0.4375em;
+}
+.icon img {
+  height: 100%;
 }
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
@@ -428,39 +430,22 @@ div.destination {
   }
   div.destination {
     display:    inline-block;
-    width:      38.75%;
-    max-width:  9.250em;
     margin:     0.1875em;
     padding:    0.1250em;
-    border-color: #9DC4F6;
+    padding-bottom: 0.375em;
+    border-color:   #9DC4F6;
   }
   div.icon {
-    width:       3.625em;
-    max-width:   8em;
-    max-height:  8em;
-  }
-  div.too-wide {
-    width:      3.625em;
-    height:     3.875em;
-  }
-  div.too-wide img {
-    padding:    0 0 0.3125em 0;
-    width:      3.625em;
-    height:     3.625em;
-  }
-  div.too-short {
-    width:      3.625em;
-    height:     3.875em;
-  }
-  div.too-short img {
-    width:      3.625em;
-    height:     3.750em;
+    width:      reset;
+    height:     100%;
+    max-width:  3.625em;
+    max-height: 8em;
   }
 }
 /********************************[ 32 em < screen ]**/
 @media all and (min-width: 32em) {
   object.nav {
-    height: 10.625em;
+    height: 15.9375em;
   }
 }
 /********************************[ 40 em < screen ]**/
@@ -513,20 +498,16 @@ div.destination {
   .w1008 {
     max-width: 25em;
   }
-  main,
-  footer {
+  main {
     padding-right: 31.25%;
     padding-left:   0.3125em;
+  }
+  object.nav {
+    float: left;
   }
   #top-frame,
   #base-frame {
     display: block;
-  }
-  .framejump {
-    pointer-events: auto;
-    cursor: alias;
-    color: #713d8a;
-    text-decoration: underline;
   }
 }
 /********************************[ 56.75 em < screen ]**/
@@ -538,11 +519,7 @@ div.destination {
   body.navframe {
     padding: 0;
   }
-  footer {
-    margin: 0.1875em 0;
-  }
-  main,
-  footer {
+  main {
     margin-left: 1.375%;
     padding-left: 0;
   }
