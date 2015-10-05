@@ -29,7 +29,7 @@
       <section>
         <h3><i>Alpha</i></h3>
         <p>
-          <a class= "framejump" target="Gframe" href="alpha-beta-graphics.html#Figure01">Figure 01</a> has three curves in it, showing three different values for <i>alpha</i>. The three probability curves are all identical, but the value of the sample correlation<span class="showgloss" id='gloss10'><a onclick="setDisplay('gloss10','none'); setDisplay('gloss11','inline')">&dagger;</a></span><span class="gloss" id='gloss11'><a onclick="setDisplay('gloss10','inline'); setDisplay('gloss11','none')"> (which is the line on the right side of the graph that bisects the population probability curve)</a></span> increases between them. That increase shifts the curve upward (in our sideways view) and decreases the area under<span class="showgloss" id='gloss20'><a onclick="setDisplay('gloss20','none'); setDisplay('gloss21','inline')">&dagger;</a></span><span class="gloss" id='gloss21'><a onclick="setDisplay('gloss20','inline'); setDisplay('gloss21','none')"> (where “under” means between the curve and the vertical baseline)</a></span> the probability curve that is bounded by the null line.  That decreasing area is equal to <i>alpha</i>.
+          Figure 01 has three curves in it, showing three different values for <i>alpha</i>. The three probability curves are all identical, but the value of the sample correlation<span class="showgloss" id='gloss10'><a onclick="setDisplay('gloss10','none'); setDisplay('gloss11','inline')">&dagger;</a></span><span class="gloss" id='gloss11'><a onclick="setDisplay('gloss10','inline'); setDisplay('gloss11','none')"> (which is the line on the right side of the graph that bisects the population probability curve)</a></span> increases between them. That increase shifts the curve upward (in our sideways view) and decreases the area under<span class="showgloss" id='gloss20'><a onclick="setDisplay('gloss20','none'); setDisplay('gloss21','inline')">&dagger;</a></span><span class="gloss" id='gloss21'><a onclick="setDisplay('gloss20','inline'); setDisplay('gloss21','none')"> (where “under” means between the curve and the vertical baseline)</a></span> the probability curve that is bounded by the null line.  That decreasing area is equal to <i>alpha</i>.
         </p>
         <div class="w3072" id="tri-alphas">
           <img class="trigraph" src="images/large/three-alphas-A.svg" alt="alpha = 0.50" />
@@ -47,7 +47,7 @@
       <section>
         <h3><i>Beta</i></h3>
         <p>
-          <a class= "framejump" target="Gframe" href="alpha-beta-graphics.html#Figure02">Figure 02</a> also has three graphs in it, with the statistical power increasing between them, while its inverse, <i>beta</i>, is decreasing.
+          Figure 02 also has three graphs in it, with the statistical power increasing between them, while its inverse, <i>beta</i>, is decreasing.
         </p>
         <div class="w3072">
           <img class="trigraph" src="images/large/three-betas-A.svg" alt="Beta = 0.50" />
@@ -65,7 +65,7 @@
       <section id="alpha-beta-tradeoff">
         <h3>Trading <i>alpha</i> for </i>beta</i></h3>
         <p>
-          Once you've estimated the effect size<span class="showgloss" id='gloss50'><a onclick="setDisplay('gloss50','none'); setDisplay('gloss51','inline')">&dagger;</a></span><span class="gloss" id='gloss51'><a onclick="setDisplay('gloss50','inline'); setDisplay('gloss51','none')"> (which in a sideways graph is the same as the “population correlation”, as is discussed later)</a></span> for a study, and set the number of samples you'll collect, there's only two of the four characteristics of linear regressions left that can be changed: <i>alpha</i> and <i>beta</i>.  <a class= "framejump" target="Gframe" href="alpha-beta-graphics.html#Figure03">Figure 03</a> shows two graphs for a study with a fixed population correlation and sample size.  What changes between them is the placement of the population probability curve.
+          Once you've estimated the effect size<span class="showgloss" id='gloss50'><a onclick="setDisplay('gloss50','none'); setDisplay('gloss51','inline')">&dagger;</a></span><span class="gloss" id='gloss51'><a onclick="setDisplay('gloss50','inline'); setDisplay('gloss51','none')"> (which in a sideways graph is the same as the “population correlation”, as is discussed later)</a></span> for a study, and set the number of samples you'll collect, there's only two of the four characteristics of linear regressions left that can be changed: <i>alpha</i> and <i>beta</i>.  Figure 03 shows two graphs for a study with a fixed population correlation and sample size.  What changes between them is the placement of the population probability curve.
         </p>
         <div class="w2048">
           <img src="images/large/trading-alpha-for-beta.svg" alt="Figure 03: Trading alpha for beta" />
@@ -75,7 +75,7 @@
           We can move the population probability curve by changing the <i>alpha</i> for the analysis.  Despite the nearly universal use of ‘p&lt;.05’, there is nothing <em>mathematically</em> special about that value; we can use a value for <i>alpha</i> other than 0.05 and still get a statistically sound result.  What does inevitably change when we change <i>alpha</i> is <i>beta</i>, and the statistical power.
         </p>
         <p>
-          In the sideways graph (<a class= "framejump" target="Gframe" href="alpha-beta-graphics.html#Figure02">Figure 03</a>), if we want to increase alpha, we shift the population probability curve down.  That also shift the minimum sample correlation that's statistically significant down.  Therefore, less of the area under the sample probability curve is below that minimum correlation line, and more of the area is above it.  Which is the same as saying that <i>beta</i> has gone down, and the statistical power has gone up.
+          In the sideways graph (Figure 03), if we want to increase alpha, we shift the population probability curve down.  That also shift the minimum sample correlation that's statistically significant down.  Therefore, less of the area under the sample probability curve is below that minimum correlation line, and more of the area is above it.  Which is the same as saying that <i>beta</i> has gone down, and the statistical power has gone up.
         </p>
         <p>
           So, once effect size and sample size are fixed, <i>alpha</i> and <i>beta</i> are inversely correlated.  In other words, the chances of a Type I error is inversely correlated to the chances of a Type II error.  So, if you don't care at all about Type II errors, you can minimize the value of <i>alpha</i> by maximizing the value of <i>beta</i>.  Which, in practical application, is typically 0.50, which makes the statistical power 50%.
