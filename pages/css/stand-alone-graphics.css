@@ -16,6 +16,9 @@ main {
   border-radius: 0.250em;
   padding: 0.5625% 0;
 }
+main p {
+  margin: 1em;
+}
 .graphic,
 .graphic-w {
   background-color: #ffffff;
@@ -23,7 +26,8 @@ main {
   border-radius:    0.3125em;
   border-width:     0.1250em;
   border-color:     #7160A2;
-  display:          block;
+  text-align:       center;
+  display:    block;
   width:      98.75%;
   float:      none;
   margin:     0.1250em auto;
@@ -39,6 +43,8 @@ main {
 img {
   max-width:  100%;
   height:     auto;
+  max-height: 30em;
+  max-height: 75vh;
 }
 img.trigraph {
   width: 31.75%;
