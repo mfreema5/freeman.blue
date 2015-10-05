@@ -59,7 +59,7 @@ p {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
   font-size:    1.0625em;
-  line-height:  1.250em;
+  line-height:  1.3125em;
 }
 div p {
   font-family: 'Merriweather Sans', sans-serif;
@@ -85,7 +85,7 @@ section {
   overflow: hidden;
   width: 100%;
 }
-footer {
+nav {
   background-color: #cdc6e1;
   border-radius:  0 0 0.25em 0.25em;
 }
@@ -111,6 +111,24 @@ span.expansion {
 span.show-expansion {
   display: inline;
 }
+.showgloss {
+  display: inline;
+  vertical-align: super;
+  font-size: 0.75em;
+  line-height: 0.75em;
+}
+.gloss {
+  display: none;
+  font-size: small;
+  vertical-align: middle;
+}
+.gloss a {
+  color: initial;
+}
+.gloss  a:hover{
+  text-decoration: none;
+}
+
 #top-frame {
   position:       fixed;
   width:          100%;
@@ -138,10 +156,7 @@ span.show-expansion {
 
 /********************************[ default layout ]**/
 body  {
-  margin: 0.625em 0.625em 0.625em 0;
-  border-style:   solid;
-  border-color:   #7160a2;
-  border-width:   0 0 0 0.625em;
+  margin: 0.0625em;
 }
 body.navframe {
   margin:  0;
@@ -169,18 +184,15 @@ section.digression {
 section > section {
   display: inline;
 }
-footer {
+nav {
   padding:  0.3125em 0 0.625em 0;;
   height: auto;
 }
-footer.navframe {
-  display: none;
-}
-object.nav {
+nav object {
   width: 100%;
 }
-h3.before {display: inline-block;}
-h3.after  {display: none;}
+.before {display: inline-block;}
+.after  {display: none;}
 p {
   margin: 0.250em 0.125em 0.500em 0.250em;
   padding: 0.250em 0 0.250em 0;
@@ -237,6 +249,10 @@ img {
   max-width:  100%;
   height:     auto;
 }
+.trigraph {
+  width:  32.125%;
+  height: auto;
+}
 .maths {
   display:  block;
   margin:   0.125em;
@@ -247,12 +263,12 @@ img {
   margin: 0.125em auto;
   height: 100%;
 }
-.w605-l,
+.w605,
 .w1008,
-.w1008-l,
+.w1008,
 .w1536,
 .w1440,
-.w2400,
+.w2048,
 .w3072 {
   background-color: #ffffff;
   border-style:     solid;
@@ -267,7 +283,7 @@ img {
   padding:    0.1250em;
 }
 .w1440,
-.w2400,
+.w2048,
 .w3072  {
   max-width: 24.625em;
 }
@@ -279,7 +295,7 @@ img {
   border-color:     #43568B;
   display:          block;
   width:      10.3125%;
-  max-width:  1.5em;
+  max-width:  2.0625em;
   float:      right;
   margin:     0.0625em;
   padding:    0;
@@ -288,11 +304,12 @@ object.nav {
   display:  block;
   clear:    both;
   width:    96.875%;         /* 96.875% + margin = 100% */
-  height:   15.9375em;
+  height:   25.9375em;
   border-width:  0;
   border-radius: 0.1875em;
 }
-iframe.graphics {
+#top-frame,
+#base-frame {
   display: none;
 }
 .framejump {
@@ -308,9 +325,11 @@ div.destination {
   border-style:     solid;
   border-color:     #9DC4F6;
   border-width:     0.125em;
+  color:      black;
   overflow:   hidden;
   width:      100%;
   max-width:  9em;
+  height:     4.625em;
   margin:     0.125em 0 0 0;
 }
 .destination p {
@@ -332,12 +351,13 @@ div.destination {
 .destination .icon {
   margin-right: 0.4375em;
 }
-
-
+.icon img {
+  height: 100%;
+}
 /********************************[ 25 em < screen ]**/
 @media all and (min-width: 25em) {
   body  {
-    margin-right: 2.5%;
+    margin: 0.625em 2.5% 0.625em 0.625em;
   }
   article {
     padding: 0.3125em 0.3125em 0.3125em 7.8125%;
@@ -348,8 +368,8 @@ div.destination {
     text-align: center;
     max-width: none;
   }
-  h3.before {display: none;}
-  h3.after  {display: inline-block;}
+  .before {display: none;}
+  .after  {display: inline;}
   div p {
     font-size:    0.875em;
   }
@@ -363,7 +383,7 @@ div.destination {
   .w1008,
   .w1536,
   .w1440,
-  .w2400,
+  .w2048,
   .w3072 {
     float:    right;
     clear:    right;
@@ -371,19 +391,14 @@ div.destination {
     padding:  0.125em;
   }
   .w1440,
-  .w2400,
   .w3072  {
     float:    none;
     clear:    both;
     margin:   0.1875em;
     padding:  0.1250em;
   }
-  .w605-l,
-  .w1008-l,
-  .w1536,
-  #Standard_deviation_diagram,
-  #population-probability,
-  #type-2-errors {
+  .left,
+  .w1536 {
     float:    left;
     clear:    left;
     margin:   0.625em 1.4125em 0.625em 0.625em;
@@ -393,8 +408,7 @@ div.destination {
     width:     25.0%;
     max-width: 11.375em;
   }
-  .w1008,
-  .w1008-l {
+  .w1008 {
     width:     31.25%;
     max-width: 20.0em;
   }
@@ -406,67 +420,50 @@ div.destination {
     width:     58.8750%;
     max-width: 49.1875em;
   }
-  .w2400 {
-    width:     61.6875%;
-    max-width: 51.5625em;
+  .w2048 {
+    width:     59.8175%;
+    max-width: 50em;
   }
   .w3072 {
     width:     89.7500%;
     max-width: 75em;
   }
-  .button {
-    max-width: 2.0625em;
-  }
   div.destination {
     display:    inline-block;
-    width:      38.75%;
-    max-width:  9.250em;
     margin:     0.1875em;
     padding:    0.1250em;
-    border-color: #9DC4F6;
+    padding-bottom: 0.375em;
+    border-color:   #9DC4F6;
   }
   div.icon {
-    width:       3.625em;
-    max-width:   8em;
-    max-height:  8em;
+    width:      reset;
+    height:     100%;
+    max-width:  3.625em;
+    max-height: 8em;
   }
-  div.too-wide {
-    width:      3.625em;
-    height:     3.875em;
-  }
-  div.too-wide img {
-    padding:    0 0 0.3125em 0;
-    width:      3.625em;
-    height:     3.625em;
-  }
-  div.too-short {
-    width:      3.625em;
-    height:     3.875em;
-  }
-  div.too-short img {
-    width:      3.625em;
-    height:     3.750em;
-  }
-
+}
 /********************************[ 32 em < screen ]**/
 @media all and (min-width: 32em) {
   object.nav {
-    height: 10.625em;
+    height: 15.9375em;
   }
 }
-
-
-
 /********************************[ 40 em < screen ]**/
 @media all and (min-width: 40em) {
   body  {
-    margin-right: 1em;
+    margin: 0.625em 1em 0.625em 0;
+    border-style:   solid;
+    border-color:   #7160a2;
+    border-width:   0 0 0 0.625em;
   }
   body.navframe {
     margin: 0;
   }
   article {
     padding: 0.3125em 0.5625em 0.3125em 1.1875em;
+  }
+  section {
+    overflow: visible;
   }
   ul, ol {
     padding: 0.125em 0.300em 0.125em 2.500em;
@@ -478,33 +475,41 @@ div.destination {
     width:     18.75%;
     max-width: 11.375em;
   }
-  div[class^="w"] {
-    display: none;
+  .left,
+  .w1440,
+  .w3072  {
+    float: right;
+    clear: right;
   }
-  main,
-  footer {
+  div[class^="w"] {
+    display:    block;
+    width:      45%;
+    text-align: center;
+    margin-right: -49.375%;
+  }
+  .trigraph {
+    width:      98.75%;
+    max-width:  12.5em;
+  }
+  #tri-alphas {
+    margin-top: -22em;
+  }
+  .w605,
+  .w1008 {
+    max-width: 25em;
+  }
+  main {
     padding-right: 31.25%;
     padding-left:   0.3125em;
   }
-  iframe.graphics {
-    display:  block;
-    position: fixed;
-    top:      0;
-    right:    0;
-    float:    right;
-    clear:    none;
-    border:   none;
-    width:    31.25%;
-    height:   100%;
+  object.nav {
+    float: left;
   }
-  .framejump {
-    pointer-events: auto;
-    cursor: alias;
-    color: #713d8a;
-    text-decoration: underline;
+  #top-frame,
+  #base-frame {
+    display: block;
   }
 }
-
 /********************************[ 56.75 em < screen ]**/
 @media all and (min-width: 56.75em) {
   body {
@@ -514,13 +519,12 @@ div.destination {
   body.navframe {
     padding: 0;
   }
-  footer {
-    margin: 0.1875em 0;
-  }
-  main,
-  footer {
+  main {
     margin-left: 1.375%;
     padding-left: 0;
+  }
+  div[class^="w"] {
+    margin-right:  -50.75%;    /* 49.375 + 1.375 = 50.75 */
   }
   article,
   object.nav {
@@ -537,5 +541,14 @@ div.destination {
     padding: 0.3125em;
     margin: 0;
     max-width: reset;
+  }
+}
+/********************************[ 63.50 em < screen ]**/
+@media all and (min-width: 63.50em) {
+  body {
+    max-width: 70em;
+  }
+  div[class^="w"] {
+    margin-right: -29.3125vw;
   }
 }

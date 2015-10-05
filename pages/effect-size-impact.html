@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="common/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen-sideways-stats.css" rel="stylesheet">
+    <title>Impact of effect size</title>
+    <meta name="author" content="Michael J. Freeman">
+    <meta name="description" content="Using sideways stats to understand statistics.">
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="common/gfx/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="common/gfx/favicon-192x192.png" type="image/png">
+    <link rel="icon" sizes="152x152" href="common/gfx/favicon-152x152.png" type="image/png">
+    <link rel="icon" sizes="120x120" href="common/gfx/favicon-120x120.png" type="image/png">
+    <link rel="shortcut icon" href="common/gfx/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,300,300italic&subset=latin' rel='stylesheet' type='text/css'>
+    <script src="css/modernizr.custom.30817.js"></script>
+  </head>
+  <div id="top-frame">&#8203;</div>
+  <div id="base-frame">&#8203;</div>
+  <body>
+    <main>
+      <h1>Impact of effect size</h1>
+      <h1>Implications of the size of effect on significance testing</h1>
+      <article>
+        <p>
+          As mentioned on the page <a href="alpha-beta-interaction.html">&ldquo;Interaction of <i>alpha</i> and <i>beta</i>&rdquo;</a>, we've been using &lsquo;population correlation&rsquo; to refer to what is often called &lsquo;effect size&rsquo; in experimental design.  This is a valid substitution since we've limited ourselves to talking about linear regressions and significance testing.
+        </p>
+        <div class="w1008">
+          <img src="images/large/basic-alpha-beta-es-n.svg" alt="Figure 01: Basic relationship of alpha and beta" />
+          <p>Figure 01<span><a href="images/basic-alpha-beta-es-n.html"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
+        </div>
+        <p>
+          Talking about effect size can be somewhat confusing since most of the time we don't know the population correlation; if we did, we wouldn't need to be trying to find a sample correlation.  Yet we need to know the effect size in order to determine the <i>statistical power</i> of an analysis.
+        </p>
+        <p>
+          In Figure 01 the statistical power is the shaded area under<span class="showgloss" id='gloss20'><a onclick="setDisplay('gloss20','none'); setDisplay('gloss21','inline')">&dagger;</a></span><span class="gloss" id='gloss21'><a onclick="setDisplay('gloss20','inline'); setDisplay('gloss21','none')"> (where “under” means between the curve and the vertical baseline)</a></span> the sample probability curve on the left side of the graph. The size of that area is determined by two things: the shape of the probability curves, and the distance between the lines bisecting the curves.
+        </p>
+        <p>
+          The two curves are identical, since they are determined by the sample size.
+        </p>
+        <p>
+          The line that bisects the population probability curve on the right side of the graph is the minimum statistically significant sample correlation.  The location of the curve, and thus its bisecting line, is determined by the sample size and the value of <i>alpha</i>.
+        </p>
+        <p>
+          The line that bisects the sample probability curve on the left side of the graph is the effect size.  That line itself is what determines the placement of the sample probability curve.  You typically estimate the effect size based on previous studies of the same, or similar, phenomena.
+        </p>
+        <div class="w2048">
+          <img src="images/large/effect-size-comparison.svg" alt="Figure 02: Effect size influences statistical power and beta" />
+          <p>Figure 02<span><a href="images/effect-size-comparison.svg"><img class="button" src="images/full-screen-arrow.svg" alt="Go to full size" /></a></span></p>
+        </div>
+        <p>
+          Figure 02 shows two examples that are identical except for the effect size.  The different effect size shifts the curve on the left side of the graph, and therefore shifts the relative proportions of the statistical power and <i>beta</i> for the analysis.
+        </p>
+        <p>
+          Of course, you can't really adjust effect size to your liking.  So, to manipulate the statistical power, you have to adjust either the sample size (see: <a href="sample-size-impact.html">&ldquo;Impact of sample size&rdquo;</a>), or <i>alpha</i> (see: <a href="alpha-beta-interaction.html">&ldquo;Interaction of <i>alpha</i> and <i>beta</i>&rdquo;</a>).
+        </p>
+      </article>
+      <nav>
+        <object class="nav" data="nav-frame-sideways-stats.html" type="text/html"></object>
+        <div style="clear: both;"></div>
+      </nav>
+    </main>
+    <footer></footer>
+    <script>
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
+    </script>
+  </body>
+</html>
+
