@@ -18,25 +18,16 @@
   <body>
     <main>
       <div class="graphic-w">
-            <img src="large/N-impact-on-power-overlapped.svg" alt="N-impact-on-power-overlapped" />
+            <img class="trigraph" src="large/N-impact-on-power-overlapped-A.svg" alt="N-impact-on-power-overlapped" />
+            <img class="trigraph" src="large/N-impact-on-power-overlapped-B.svg" alt="N-impact-on-power-overlapped" />
+            <img class="trigraph" src="large/N-impact-on-power-overlapped-C.svg" alt="N-impact-on-power-overlapped" />
             <p>Larger <em>sample sizes</em> have tighter probability curves, so the <em>statistical power</em> increases. The area of the overlapped graphs that is blue is where the increase in <em>statistical power</em> happens.</p>
           </div>
     </main>
-    <footer>
-      <meta name="creator" content="不爽老男人">
-    </footer>
+    <footer></footer>
     <script>
-      if (!Modernizr.svg) {
-          var imgs = document.getElementsByTagName('img');
-          var svgExtension = /.*\.svg$/
-          var l = imgs.length;
-          for(var i = 0; i < l; i++) {
-              if(imgs[i].src.match(svgExtension)) {
-                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-                  console.log(imgs[i].src);
-              }
-          }
-      }
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
     </script>
   </body>
 </html>

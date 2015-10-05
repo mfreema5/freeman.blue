@@ -18,25 +18,16 @@
   <body>
     <main>
       <div class="graphic-w">
-            <img src="large/three-alphas.svg" alt="three-alphas" />
-            <p>As <i>alpha</i> becomes smaller, the minimum correlation that is statistically significant becomes higher.</p>
-          </div>
+        <img class="trigraph" src="large/three-alphas-A.svg" alt="three-alphas" />
+        <img class="trigraph" src="large/three-alphas-B.svg" alt="three-alphas" />
+        <img class="trigraph" src="large/three-alphas-C.svg" alt="three-alphas" />
+        <p>As <i>alpha</i> becomes smaller, the minimum correlation that is statistically significant becomes higher.</p>
+      </div>
     </main>
-    <footer>
-      <meta name="creator" content="不爽老男人">
-    </footer>
+    <footer></footer>
     <script>
-      if (!Modernizr.svg) {
-          var imgs = document.getElementsByTagName('img');
-          var svgExtension = /.*\.svg$/
-          var l = imgs.length;
-          for(var i = 0; i < l; i++) {
-              if(imgs[i].src.match(svgExtension)) {
-                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-                  console.log(imgs[i].src);
-              }
-          }
-      }
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
     </script>
   </body>
 </html>

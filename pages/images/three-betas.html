@@ -18,25 +18,16 @@
   <body>
     <main>
       <div class="graphic-w">
-            <img src="large/three-betas.svg" alt="three-betas" />
-            <p>The greater the distance between the <em>effect size</em> and the minimum statistically significant sample correlation, the larger the <em>statistical power</em>.</p>
-          </div>
+        <img class="trigraph" src="large/three-betas-A.svg" alt="three-betas" />
+        <img class="trigraph" src="large/three-betas-B.svg" alt="three-betas" />
+        <img class="trigraph" src="large/three-betas-C.svg" alt="three-betas" />
+        <p>The greater the distance between the <em>effect size</em> and the minimum statistically significant sample correlation, the larger the <em>statistical power</em>.</p>
+      </div>
     </main>
-    <footer>
-      <meta name="creator" content="不爽老男人">
-    </footer>
+    <footer></footer>
     <script>
-      if (!Modernizr.svg) {
-          var imgs = document.getElementsByTagName('img');
-          var svgExtension = /.*\.svg$/
-          var l = imgs.length;
-          for(var i = 0; i < l; i++) {
-              if(imgs[i].src.match(svgExtension)) {
-                  imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-                  console.log(imgs[i].src);
-              }
-          }
-      }
+      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
+      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
     </script>
   </body>
 </html>

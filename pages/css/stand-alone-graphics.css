@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: 'Merriweather Sans', sans-serif; 
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight:  300;
   font-size:    1.0625em;
   line-height:  1.250em;
@@ -40,3 +40,8 @@ img {
   max-width:  100%;
   height:     auto;
 }
+img.trigraph {
+  width: 31.75%;
+}
+
+
