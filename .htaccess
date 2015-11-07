@@ -1,0 +1,9 @@
+# .htaccess for freeman.blue top-level directory
+# MJF  Nov-2015
+
+#    Rewrites don't work as I expect; probably due to vhost-settings or summat.
+# RewriteEngine on
+# RewriteRule "^thesis" "thesis.html" [NC]
+
+#    Redirects work fine, however, presumably because the target is a full URL.
+Redirect 302 "/thesis" "http://freeman.blue/papers/finding-research-value-thesis-MJF.html"
