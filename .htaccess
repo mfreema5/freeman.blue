@@ -6,5 +6,7 @@
 # RewriteRule "^thesis" "thesis.html" [NC]
 
 #    Redirects work fine, however, presumably because the target is a full URL.
-Redirect 302 "/thesis"   "http://freeman.blue/papers/finding-research-value-thesis-MJF.html"
-Redirect 302 "/sideways" "http://freeman.blue/pages/sideways-stats.html"
+Redirect 302 "/thesis"     "http://freeman.blue/papers/finding-research-value-thesis-MJF.html"
+Redirect 302 "/gamify"     "http://freeman.blue/papers/gamification-lit-review-MJF.html"
+Redirect 302 "/email-alts" "http://freeman.blue/papers/alternatives-to-email-MJF.html"
+Redirect 302 "/sideways"   "http://freeman.blue/pages/sideways-stats.html"
