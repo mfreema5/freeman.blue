@@ -26,25 +26,6 @@
           <h4><em>Chicago, Illinois</em></h4>
         </section>
       </article>
-
-
-<p><strong>Table of Contents</strong></p>
-<p>Executive summary 3</p>
-<p>Introduction 4</p>
-<p>Comprehensive editing versus copyediting 4</p>
-<p>Summary of proposed research study 5</p>
-<p>Three reasons to conduct the proposed study 5</p>
-<p>Methodology 6</p>
-<p>Literature search provided recommendations for design of study 6</p>
-<p>Using results from literature search to estimate sample size 7</p>
-<p>Search for currently available software 8</p>
-<p>Estimating the cost of software development 8</p>
-<p>Alternatives for improving student's editing skills 9</p>
-<p>Cost-Benefit Summary 9</p>
-<p>Conclusions 9</p>
-<p>Recommendations 10</p>
-<p>References 11</p>
-
       <article id="executive-summary">
         <section>
           <h1>Executive summary</h1>
@@ -153,90 +134,213 @@
           </p>
         </section>
       </article>
-      <article>
-<h1 id="methodology">Methodology</h1>
-<section>
-<h2 id="literature-search-provided-recommendations-for-design-of-study">Literature search provided recommendations for design of study</h2>
-<p>A literature search was done to find articles on the effect of computers/software on student writing/revising, with a focus on finding examples of empirical studies.</p>
-<p>Though not comprehensive, the article “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002&quot; (Goldberg 2003) gives a good overview of research on software and the writing and revising/editing of students, and also provides an analytical summary of empirical results of the studies included in the meta-analysis. The effect sizes reported in it are used in the experimental design of the proposed study.</p>
-<p>The chapter &quot;Critical issues, current trends, and possible futures in quantitative methods&quot; (Crawford 2001) in the tome ironically titled “Handbook of Research on Teaching,” is an excellent overview of the application of empirical methods to evaluating educational programs. According to that chapter, despite the prevalence of research which measures the effectiveness of a given educational program by comparing the test results of students before they begin a program and after they complete it, “...we are on shaky ground when we try to infer causality from evaluations of single-groups only using pretest and posttest” (p134, Crawford 2001).</p>
-<p>Single-group studies also are biased to Type I errors (false positives): “The absence of a control or comparison group and the use of the same instrument for both pretest and posttest usually guarantees an apparent positive effect on student learning” (p134, <em>ibid</em>).</p>
-<p>Using a “quasi-control group” (p23, Kirk 1995) will avoid that error. The quasi-control group in the proposed study would follow the same course syllabus, do the same exercises, and be measured with the same instrument, but not use the specialized software. It would not be a true control group since there is no placebo for the specialized software.</p>
-<p>However, a quasi-control group should eliminate the need to do a multivariate ANOVA analysis, such as was done in “Teaching College Composition with Computers: A Program Evaluation Study” (Bernhardt 1989). In that study, each of the subjects were taking an introductory college composition course from one of 12 instructors. The students were split between the using-computers group and the not-using-computers group by course sections, and did not pass through the same course. “We did not urge teachers to attempt to teach the two courses in parallel fashion, with computers being the only variable.” The complexity of the analysis in that study can be avoided in the proposed study.</p>
-<h2 id="using-results-from-literature-search-to-estimate-sample-size">Using results from literature search to estimate sample size</h2>
-<p>Based on the results reported in, “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002&quot; (Goldberg 2003), it is reasonable to expect an effect size of 0.47. To get a statistical power of 0.8 at a confidence level of <em>p≤0.05</em>, given two groups, the study would need to have 20 students in each group. (This calculation was done with the “pwr” package (Champely 2013) for R (www.r-project.org).)</p>
-<p>&gt;pwr.anova.test(k=2,f=.46,sig.level=.05,power=.8)</p>
-<p>Balanced one-way analysis of variance power calculation</p>
-<p>k = 2</p>
-<p>n = 19.55492</p>
-<p>f = 0.46</p>
-<p>sig.level = 0.05</p>
-<p>power = 0.8</p>
-<p>NOTE: n is number in each group</p>
-<p>Output from R</p>
-<h2 id="search-for-currently-available-software">Search for currently available software</h2>
-<p>I was unable to find any currently available software that is intended to help with comprehensive editing. Most software intended to help with document revision is focused on low-level edits: checking spelling and grammar. There is some software that is intended improve “readability” and “cohesion”, which might be considered part of high-level editing. But none of them are involved in the process of editing; rather, they report the results of analyzing the text using “computational linguistic techniques”. And even the utility of that is unclear:</p>
-<blockquote>
-<p>“However, any rule-based effort to improve your writing is going to be wrong a significant part of the time. Readability and grammar tools can be refined, but only to a limited extent. Both have been available in office suites for over twenty years, and neither is anywhere near as reliable as an experienced editor.” (Byfield 2009)</p>
-</blockquote>
-<p>In the end, it seems as if all document-revision aids are, in fact, attempts at document-revision <em>automation</em>. In contrast, the specialized software for this research study is intended to leave it up to the user to do the analysis of the document, and to decide what edits to make. The user will be helped by being forced to focus on high-level edits; the user will be kept in a global conceptualization of the document, and not distracted by copyediting-level issues.</p>
-<h2 id="estimating-the-cost-of-software-development">Estimating the cost of software development</h2>
-<p><strong>Extension for Apache OpenOffice:</strong> The intended functionality of the specialized software can be achieved through an extension for Apache OpenOffice's word processing application, Writer. The extension would facilitate users selecting and re-arranging documents on the sentence and paragraph-level. Functions already available in the API include:</p>
-<p>gotoStartOfSentence gotoStartOfParagraph</p>
-<p>gotoEndOfSentence gotoEndOfParagraph</p>
-<p>gotoNextSentence gotoNextParagraph</p>
-<p>gotoPreviousSentence gotoPreviousParagraph</p>
-<p>It's unclear how difficult it would be to lock out lower level edits while using the extension.</p>
-<h1 id="alternatives-for-improving-students-editing-skills">Alternatives for improving student's editing skills</h1>
-<p>The proposed use of specialized software may be overkill. In &quot;Can We Succeed in Teaching Business Students to Write Effectively?&quot; Pittenger <em>et al</em>. (2006) reported that perhaps “writing assessment outcomes can be improved through the use of a grade incentive, no matter how minuscule, in combination with continuous deliberate instruction on the fundamentals of writing.” Similarly, a practically significant improvement in the comprehensive editing skills of students maybe achieve by changing technical editing courses to focus more on comprehensive editing.</p>
-<p>However, changing technical editing courses to focus more on comprehensive editing would not help to fill the gap in the research on the effect of software on student's revision performance. Also, that change to technical editing courses could not be generalized into a way to improve writing instruction for all students.</p>
-<h1 id="cost-benefit-summary">Cost-Benefit Summary</h1>
-<p>The primary sources of cost in the proposed research study are the cost to develop the word-processor extension, and the cost associated with doing the pretest and posttest of the students.</p>
-<p>The potential benefits of the research study are:</p>
-<ol type="1">
-<li><p>Increased effectiveness of teaching technical editing.</p></li>
-<li><p>Increased effectiveness of teaching writing.</p></li>
-<li><p>Contribution to the literature.</p></li>
-</ol>
-<h1 id="conclusions">Conclusions</h1>
-<p>The gap in the research in regard to software and the revising/editing of students would seem to be related to the lack of software specifically targeted to that task. Word processing software has always been intended to facilitate copyediting and low-level revision, and there is research into the impact of software on those areas.</p>
-<p>Similarly there is research into the effect of spell-checking software e.g., “Does Spell-Checking Software Need a Warning Label?” (Galletta 2005). But unlike checking spelling, or even grammar, the decisions made as part of comprehensive editing cannot be easily codified. While automated checks of spelling and grammer are possible, there is no apparent way to automate the comprehensive editing process. It follows that, as no high-level editing software exists, no research on its effects exist.</p>
-<p>So, the proposed specialized software will both benefit students, and open up this area of research for exploration.</p>
-<h1 id="recommendations">Recommendations</h1>
-<p>The following is an outline of steps for conducting the proposed research study.</p>
-<ol type="1">
-<li><p>Contract development of word-processor extension for comprehensive editing</p></li>
-<li><p>Identify instrument for pretest and posttest</p></li>
-<li><p>Establish partnerships with programs offering technical editing courses</p></li>
-<li><p>Roll out extension to partners; train instructors on extension</p></li>
-<li><p>Coordinate with partners administration of instrument</p></li>
-<li><p>Conduct pretest</p></li>
-<li><p>Evaluate instruments and provide result to partners</p></li>
-<li><p>Conduct posttest</p></li>
-<li><p>Evaluate instruments and provide result to partners</p></li>
-<li><p>Preform statistical analysis of testing results</p></li>
-<li><p>Evaluate effectiveness of program</p></li>
-</ol>
-<h1 id="references">References</h1>
-<p>Albers, Michael J. and John F. Marsella. 2011. “An Analysis of Student Comments in Comprehensive Editing.” <em>Technical Communication</em> 58 (1): 52-67.</p>
-<p>Apache Software Foundation. 2014. “Editing Text”. Accessed 14-Mar-2014. <a href="https://wiki.openoffice.org/wiki/Documentation/DevGuide/Text/Editing_Text">wiki.openoffice.org/wiki/Documentation/DevGuide/Text/Editing_Text</a>.</p>
-<p>Bacon, Donald R., and Elizabeth Scott Anderson. 2004. “Assessing and enhancing the basic writing skills of marketing students.” <em>Business Communication Quarterly</em> 67 (4): 443-454.</p>
-<p>Bernhardt, Stephen A., Penny Edwards, and Patti Wojahn. 1989. “Teaching College Composition with Computers: A Program Evaluation Study.” <em>Written Communication</em> 6 (1): 108-133.</p>
-<p>Byfield, Bruce. “OpenOffice.org: The Limits of Readability and Grammar Extensions.” 08-Sep-2009, retrieved 14-Mar-2014. <a href="http://www.linuxjournal.com/content/openofficeorg-limits-readability-and-grammar-extensions">www.linuxjournal.com/content/openofficeorg-limits-readability-and-grammar-extensions</a>.</p>
-<p>Champely, Stephane. 2013. “Package ‘pwr’”. <a href="https://cran.r-project.org/web/packages/pwr/pwr.pdf">cran.r-project.org/web/packages/pwr/pwr.pdf</a>. Retrieved 12-Mar-2014.</p>
-<p>Crawford, J., and J. C. Impara. 2001. “Critical issues, current trends, and possible futures in quantitative methods.” <em>Handbook of research on teaching</em> 4: 133-173.</p>
-<p>Collier, Richard M. 1983. “The word processor and revision strategies.” <em>College Composition and Communication</em> (1983): 149-155.</p>
-<p>Cook, Thomas D., Donald T. Campbell, Laura Peracchio. 1990. “Quasi experimentation” in <em>Handbook Of Industrial And Organizational Psychology</em>, eds. Marvin D. Dunnette, Leaetta M. Hough. Palo Alto, CA: Consulting Psychologists Press, (1990): 491-576.</p>
-<p>Enos, Marcella F. 2010. “Instructional Interventions for Improving Proofreading and Editing Skills of College Students.” <em>Business Communication Quarterly</em> 73: 265-281.</p>
-<p>Galletta, Dennis F., Alexandra Durcikova, Andrea Everard, and Brian M. Jones. 2005. “Does Spell-Checking Software Need a Warning Label?” <em>Communications of the ACM</em>, 48: 82-6.</p>
-<p>Goldberg, Amie, Michael Russell, and Abigail Cook. 2003. “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002.” <em>The Journal of Technology, Learning and Assessment</em> 2 (1): 4-48.</p>
-<p>Kirk, Roger E. 1995. <em>Experimental design: Procedures for the behavioral sciences.</em> Pacific Grove, CA: Brooks/Cole.</p>
-<p>Pittenger, Khushwant K.S., Mary C. Miller, and Jesse Allison. 2006. “Can We Succeed in Teaching Business Students to Write Effectively?” <em>Business Communication Quarterly</em> 69 (3): 257-263.</p>
-<p>Quible, Zane K. 2006. “Five strategies for remediating sentence-level writing deficiencies.” <em>Business Communication Quarterly</em> 69 (3): 293.</p>
-<p>Rude, Carolyn D., Angela Eaton. 2011. <em>Technical Editing</em>. Boston.</p>
-
-
-
+      <article id="methodology">
+        <h1>Methodology</h1>
+        <section id="literature-search-provided-recommendations-for-design-of-study">
+          <h2>Literature search provided recommendations for design of study</h2>
+          <p>
+            A literature search was done to find articles on the effect of computers/software on student writing/revising, with a focus on finding examples of empirical studies.
+          </p>
+          <p>
+            Though not comprehensive, the article “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002&quot; (Goldberg 2003) gives a good overview of research on software and the writing and revising/editing of students, and also provides an analytical summary of empirical results of the studies included in the meta-analysis. The effect sizes reported in it are used in the experimental design of the proposed study.
+          </p>
+          <p>
+            The chapter &quot;Critical issues, current trends, and possible futures in quantitative methods&quot; (Crawford 2001) in the tome ironically titled “Handbook of Research on Teaching,” is an excellent overview of the application of empirical methods to evaluating educational programs. According to that chapter, despite the prevalence of research which measures the effectiveness of a given educational program by comparing the test results of students before they begin a program and after they complete it, “...we are on shaky ground when we try to infer causality from evaluations of single-groups only using pretest and posttest” (p134, Crawford 2001).
+          </p>
+          <p>
+            Single-group studies also are biased to Type I errors (false positives): “The absence of a control or comparison group and the use of the same instrument for both pretest and posttest usually guarantees an apparent positive effect on student learning” (p134, <em>ibid</em>).
+          </p>
+          <p>
+            Using a “quasi-control group” (p23, Kirk 1995) will avoid that error. The quasi-control group in the proposed study would follow the same course syllabus, do the same exercises, and be measured with the same instrument, but not use the specialized software. It would not be a true control group since there is no placebo for the specialized software.
+          </p>
+          <p>
+            However, a quasi-control group should eliminate the need to do a multivariate ANOVA analysis, such as was done in “Teaching College Composition with Computers: A Program Evaluation Study” (Bernhardt 1989). In that study, each of the subjects were taking an introductory college composition course from one of 12 instructors. The students were split between the using-computers group and the not-using-computers group by course sections, and did not pass through the same course. “We did not urge teachers to attempt to teach the two courses in parallel fashion, with computers being the only variable.” The complexity of the analysis in that study can be avoided in the proposed study.
+          </p>
+        </section>
+        <section id="using-results-from-literature-search-to-estimate-sample-size">
+          <h2>Using results from literature search to estimate sample size</h2>
+          <p>
+            Based on the results reported in, “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002&quot; (Goldberg 2003), it is reasonable to expect an effect size of 0.47. To get a statistical power of 0.8 at a confidence level of <em>p≤0.05</em>, given two groups, the study would need to have 20 students in each group. (This calculation was done with the “pwr” package (Champely 2013) for R (www.r-project.org).)
+          </p>
+          <p>
+            &gt;pwr.anova.test(k=2,f=.46,sig.level=.05,power=.8)
+          </p>
+          <p>
+            Balanced one-way analysis of variance power calculation
+          </p>
+          <p>
+            k = 2
+          </p>
+          <p>
+            n = 19.55492
+          </p>
+          <p>
+            f = 0.46
+          </p>
+          <p>
+            sig.level = 0.05
+          </p>
+          <p>
+            power = 0.8
+          </p>
+          <p>
+            NOTE: n is number in each group
+          </p>
+          <p>
+            Output from R
+          </p>
+        </section>
+        <section id="search-for-currently-available-software">
+          <h2>Search for currently available software</h2>
+          <p>
+            I was unable to find any currently available software that is intended to help with comprehensive editing. Most software intended to help with document revision is focused on low-level edits: checking spelling and grammar. There is some software that is intended improve “readability” and “cohesion”, which might be considered part of high-level editing. But none of them are involved in the process of editing; rather, they report the results of analyzing the text using “computational linguistic techniques”. And even the utility of that is unclear:
+          </p>
+          <blockquote>
+            <p>
+              “However, any rule-based effort to improve your writing is going to be wrong a significant part of the time. Readability and grammar tools can be refined, but only to a limited extent. Both have been available in office suites for over twenty years, and neither is anywhere near as reliable as an experienced editor.” (Byfield 2009)
+            </p>
+          </blockquote>
+          <p>
+            In the end, it seems as if all document-revision aids are, in fact, attempts at document-revision <em>automation</em>. In contrast, the specialized software for this research study is intended to leave it up to the user to do the analysis of the document, and to decide what edits to make. The user will be helped by being forced to focus on high-level edits; the user will be kept in a global conceptualization of the document, and not distracted by copyediting-level issues.
+          </p>
+        </section>
+        <section id="estimating-the-cost-of-software-development">
+          <h2>Estimating the cost of software development</h2>
+          <p>
+            <strong>Extension for Apache OpenOffice:</strong> The intended functionality of the specialized software can be achieved through an extension for Apache OpenOffice's word processing application, Writer. The extension would facilitate users selecting and re-arranging documents on the sentence and paragraph-level. Functions already available in the API include:
+          </p>
+          <p>
+            gotoStartOfSentence gotoStartOfParagraph
+          </p>
+          <p>
+            gotoEndOfSentence gotoEndOfParagraph
+          </p>
+          <p>
+            gotoNextSentence gotoNextParagraph
+          </p>
+          <p>
+            gotoPreviousSentence gotoPreviousParagraph
+          </p>
+          <p>
+            It's unclear how difficult it would be to lock out lower level edits while using the extension.
+          </p>
+        </section>
+      </article>
+      <article id="alternatives">
+        <h1>Alternatives for improving student's editing skills</h1>
+        <section>
+          <p>
+            The proposed use of specialized software may be overkill. In &quot;Can We Succeed in Teaching Business Students to Write Effectively?&quot; Pittenger <em>et al</em>. (2006) reported that perhaps “writing assessment outcomes can be improved through the use of a grade incentive, no matter how minuscule, in combination with continuous deliberate instruction on the fundamentals of writing.” Similarly, a practically significant improvement in the comprehensive editing skills of students maybe achieve by changing technical editing courses to focus more on comprehensive editing.
+          </p>
+          <p>
+            However, changing technical editing courses to focus more on comprehensive editing would not help to fill the gap in the research on the effect of software on student's revision performance. Also, that change to technical editing courses could not be generalized into a way to improve writing instruction for all students.
+          </p>
+        </section>
+      </article>
+      <article id="cost-benefit-summary">
+        <h1>Cost-Benefit Summary</h1>
+        <section>
+          <p>
+            The primary sources of cost in the proposed research study are the cost to develop the word-processor extension, and the cost associated with doing the pretest and posttest of the students.
+          </p>
+          <p>
+            The potential benefits of the research study are:
+          </p>
+          <ol type="1">
+          <li><p>Increased effectiveness of teaching technical editing.</p></li>
+          <li><p>Increased effectiveness of teaching writing.</p></li>
+          <li><p>Contribution to the literature.</p></li>
+          </ol>
+        </section>
+      </article>
+      <article id="conclusions">
+        <h1>Conclusions</h1>
+        <section>
+          <p>
+            The gap in the research in regard to software and the revising/editing of students would seem to be related to the lack of software specifically targeted to that task. Word processing software has always been intended to facilitate copyediting and low-level revision, and there is research into the impact of software on those areas.
+          </p>
+          <p>
+            Similarly there is research into the effect of spell-checking software e.g., “Does Spell-Checking Software Need a Warning Label?” (Galletta 2005). But unlike checking spelling, or even grammar, the decisions made as part of comprehensive editing cannot be easily codified. While automated checks of spelling and grammer are possible, there is no apparent way to automate the comprehensive editing process. It follows that, as no high-level editing software exists, no research on its effects exist.
+          </p>
+          <p>
+            So, the proposed specialized software will both benefit students, and open up this area of research for exploration.
+          </p>
+        </section>
+      </article>
+      <article id="recommendations">
+        <h1>Recommendations</h1>
+        <section>
+          <p>
+            The following is an outline of steps for conducting the proposed research study.
+          </p>
+          <ol type="1">
+          <li><p>Contract development of word-processor extension for comprehensive editing</p></li>
+          <li><p>Identify instrument for pretest and posttest</p></li>
+          <li><p>Establish partnerships with programs offering technical editing courses</p></li>
+          <li><p>Roll out extension to partners; train instructors on extension</p></li>
+          <li><p>Coordinate with partners administration of instrument</p></li>
+          <li><p>Conduct pretest</p></li>
+          <li><p>Evaluate instruments and provide result to partners</p></li>
+          <li><p>Conduct posttest</p></li>
+          <li><p>Evaluate instruments and provide result to partners</p></li>
+          <li><p>Preform statistical analysis of testing results</p></li>
+          <li><p>Evaluate effectiveness of program</p></li>
+          </ol>
+        </section>
+      </article>
+      <article id="references">
+        <section class="ref">
+          <h1>References</h1>
+          <p id="Albers_2011">
+            Albers, Michael J. and John F. Marsella. 2011. “An Analysis of Student Comments in Comprehensive Editing.” <i>Technical Communication</i> 58 (1): 52-67.
+          </p>
+          <p id="Apache_2014">
+            Apache Software Foundation. 2014. “Editing Text”. Accessed 14-Mar-2014. <a href="https://wiki.openoffice.org/wiki/Documentation/DevGuide/Text/Editing_Text">wiki.openoffice.org/wiki/Documentation/DevGuide/Text/Editing_Text</a>.
+          </p>
+          <p id="Bacon_2004">
+            Bacon, Donald R., and Elizabeth Scott Anderson. 2004. “Assessing and enhancing the basic writing skills of marketing students.” <i>Business Communication Quarterly</i> 67 (4): 443-454.
+          </p>
+          <p id="Bernhardt_1989">
+            Bernhardt, Stephen A., Penny Edwards, and Patti Wojahn. 1989. “Teaching College Composition with Computers: A Program Evaluation Study.” <i>Written Communication</i> 6 (1): 108-133.
+          </p>
+          <p id="Byfield_2009">
+            Byfield, Bruce. “OpenOffice.org: The Limits of Readability and Grammar Extensions.” 08-Sep-2009, retrieved 14-Mar-2014. <a href="http://www.linuxjournal.com/content/openofficeorg-limits-readability-and-grammar-extensions">www.linuxjournal.com/content/openofficeorg-limits-readability-and-grammar-extensions</a>.
+          </p>
+          <p id="Champely_2013">
+            Champely, Stephane. 2013. “Package ‘pwr’”. <a href="https://cran.r-project.org/web/packages/pwr/pwr.pdf">cran.r-project.org/web/packages/pwr/pwr.pdf</a>. Retrieved 12-Mar-2014.
+          </p>
+          <p id="Crawford_2001">
+            Crawford, J., and J. C. Impara. 2001. “Critical issues, current trends, and possible futures in quantitative methods.” <i>Handbook of research on teaching</i> 4: 133-173.
+          </p>
+          <p id="Collier_1983">
+            Collier, Richard M. 1983. “The word processor and revision strategies.” <i>College Composition and Communication</i> (1983): 149-155.
+          </p>
+          <p id="Cook_1990">
+            Cook, Thomas D., Donald T. Campbell, Laura Peracchio. 1990. “Quasi experimentation” in <i>Handbook Of Industrial And Organizational Psychology</i>, eds. Marvin D. Dunnette, Leaetta M. Hough. Palo Alto, CA: Consulting Psychologists Press, (1990): 491-576.
+          </p>
+          <p id="Enos_2010">
+            Enos, Marcella F. 2010. “Instructional Interventions for Improving Proofreading and Editing Skills of College Students.” <i>Business Communication Quarterly</i> 73: 265-281.
+          </p>
+          <p id="Galletta_2005">
+            Galletta, Dennis F., Alexandra Durcikova, Andrea Everard, and Brian M. Jones. 2005. “Does Spell-Checking Software Need a Warning Label?” <i>Communications of the ACM</i>, 48: 82-6.
+          </p>
+          <p id="Goldberg_2003">
+            Goldberg, Amie, Michael Russell, and Abigail Cook. 2003. “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002.” <i>The Journal of Technology, Learning and Assessment</i> 2 (1): 4-48.
+          </p>
+          <p id="Kirk_1995">
+            Kirk, Roger E. 1995. <i>Experimental design: Procedures for the behavioral sciences.</i> Pacific Grove, CA: Brooks/Cole.
+          </p>
+          <p id="Pittenger_2006">
+            Pittenger, Khushwant K.S., Mary C. Miller, and Jesse Allison. 2006. “Can We Succeed in Teaching Business Students to Write Effectively?” <i>Business Communication Quarterly</i> 69 (3): 257-263.
+          </p>
+          <p id="Quible_2006">
+            Quible, Zane K. 2006. “Five strategies for remediating sentence-level writing deficiencies.” <i>Business Communication Quarterly</i> 69 (3): 293.
+          </p>
+          <p id="Rude_2011">
+            Rude, Carolyn D., Angela Eaton. 2011. <i>Technical Editing</i>. Boston.
+          </p>
+        </section>
+      </article>
     </main>
     <nav class="gamificiation">
       <a href="#introduction">
@@ -244,24 +348,24 @@
           Introduction
         </div>
       </a>
-      <a href="#definition">
+      <a href="#methodology">
         <div>
-          Definition<span> of gamification</span>
+          Methodology
         </div>
       </a>
-      <a href="#goals-motivations">
+      <a href="#alternatives">
         <div>
-          Goals<span> &amp; motivations</span>
+          Alternatives
         </div>
       </a>
-      <a href="#evaluating-gamification-against-theory">
+      <a href="#conclusions">
         <div>
-          Practice<span> versus theory</span>
+          Conclusions
         </div>
       </a>
-      <a href="#conclusion">
+      <a href="#recommendations">
         <div>
-          Conclusion
+          Recommendations
         </div>
       </a>
       <a href="#references">
