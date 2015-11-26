@@ -97,7 +97,7 @@
         <section id="summary-of-proposed-research-study">
           <h2>Summary of proposed research study</h2>
           <p>
-            The subjects for the proposed research study would be students in a college-level technical editing course. The specialized software would be an extension to freely available word-processing software, Apache OpenOffice (www.openoffice.org).
+            The subjects for the proposed research study would be students in a college-level technical editing course. The specialized software would be an extension to freely available word-processing software, Apache OpenOffice (<a href="http://www.openoffice.org">www.openoffice.org</a>).
           </p>
           <p>
             The student subject would be split into two groups: one would use the word-processing software with an extension to do comprehensive editing assignments, and the other would use the software with*out* the extension to do the same assignments. Having both groups use the same base software package to complete the same assignments, and only varying the use of the extension, is a simple (if not perfect) way to reduce the effects of other independent variables. (For more details on the imperfections of this approach see, e.g., “Quasi experimentation” <span class="ajax"><a onclick="fetchText('ajax/Cook_1990.html','ref-target')">(Cook 1990)</a></span><span class="niljax">(Cook 1990)</span>.)
@@ -162,32 +162,32 @@
           <p>
             Based on the results reported in, “The effect of computers on student writing: A meta-analysis of studies from 1992 to 2002&quot; <span class="ajax"><a onclick="fetchText('ajax/Goldberg_2003.html','ref-target')">(Goldberg 2003)</a></span><span class="niljax">(Goldberg 2003)</span>, it is reasonable to expect an effect size of 0.47. To get a statistical power of 0.8 at a confidence level of <em>p≤0.05</em>, given two groups, the study would need to have 20 students in each group. (This calculation was done with the “pwr” package <span class="ajax"><a onclick="fetchText('ajax/Champely_2013.html','ref-target')">(Champely 2013)</a></span><span class="niljax">(Champely 2013)</span> for R (www.r-project.org).)
           </p>
+          <h3>Output from R</h3>
+          <div class="code">
+            <p>
+              &gt;pwr.anova.test(k=2,f=.46,sig.level=.05,power=.8)
+            </p>
+            <p>
+              Balanced one-way analysis of variance power calculation
+            </p>
+            <p>
+              k = 2
+            </p>
+            <p>
+              n = 19.55492
+            </p>
+            <p>
+              f = 0.46
+            </p>
+            <p>
+              sig.level = 0.05
+            </p>
+            <p>
+              power = 0.8
+            </p>
+          </div>
           <p>
-            &gt;pwr.anova.test(k=2,f=.46,sig.level=.05,power=.8)
-          </p>
-          <p>
-            Balanced one-way analysis of variance power calculation
-          </p>
-          <p>
-            k = 2
-          </p>
-          <p>
-            n = 19.55492
-          </p>
-          <p>
-            f = 0.46
-          </p>
-          <p>
-            sig.level = 0.05
-          </p>
-          <p>
-            power = 0.8
-          </p>
-          <p>
-            NOTE: n is number in each group
-          </p>
-          <p>
-            Output from R
+            NOTE: n is <em>number in each group</em>
           </p>
         </section>
         <section id="search-for-currently-available-software">
@@ -197,7 +197,7 @@
           </p>
           <blockquote>
             <p>
-              “However, any rule-based effort to improve your writing is going to be wrong a significant part of the time. Readability and grammar tools can be refined, but only to a limited extent. Both have been available in office suites for over twenty years, and neither is anywhere near as reliable as an experienced editor.” <span class="ajax"><a onclick="fetchText('ajax/Byfield_2009.html','ref-target')">(Byfield 2009)</a></span><span class="niljax">(Byfield 2009)</span>
+              However, any rule-based effort to improve your writing is going to be wrong a significant part of the time. Readability and grammar tools can be refined, but only to a limited extent. Both have been available in office suites for over twenty years, and neither is anywhere near as reliable as an experienced editor. <span class="ajax"><a onclick="fetchText('ajax/Byfield_2009.html','ref-target')">(Byfield 2009)</a></span><span class="niljax">(Byfield 2009)</span>
             </p>
           </blockquote>
           <p>
@@ -209,18 +209,20 @@
           <p>
             <strong>Extension for Apache OpenOffice:</strong> The intended functionality of the specialized software can be achieved through an extension for Apache OpenOffice's word processing application, Writer. The extension would facilitate users selecting and re-arranging documents on the sentence and paragraph-level. Functions already available in the API include:
           </p>
-          <p>
-            gotoStartOfSentence gotoStartOfParagraph
-          </p>
-          <p>
-            gotoEndOfSentence gotoEndOfParagraph
-          </p>
-          <p>
-            gotoNextSentence gotoNextParagraph
-          </p>
-          <p>
-            gotoPreviousSentence gotoPreviousParagraph
-          </p>
+          <div class="code">
+            <p>
+              gotoStartOfSentence gotoStartOfParagraph
+            </p>
+            <p>
+              gotoEndOfSentence gotoEndOfParagraph
+            </p>
+            <p>
+              gotoNextSentence gotoNextParagraph
+            </p>
+            <p>
+              gotoPreviousSentence gotoPreviousParagraph
+            </p>
+          </div>
           <p>
             It's unclear how difficult it would be to lock out lower level edits while using the extension.
           </p>
@@ -247,9 +249,9 @@
             The potential benefits of the research study are:
           </p>
           <ol type="1">
-          <li><p>Increased effectiveness of teaching technical editing.</p></li>
-          <li><p>Increased effectiveness of teaching writing.</p></li>
-          <li><p>Contribution to the literature.</p></li>
+          <li>Increased effectiveness of teaching technical editing.</li>
+          <li>Increased effectiveness of teaching writing.</li>
+          <li>Contribution to the literature.</li>
           </ol>
         </section>
       </article>
@@ -274,17 +276,17 @@
             The following is an outline of steps for conducting the proposed research study.
           </p>
           <ol type="1">
-          <li><p>Contract development of word-processor extension for comprehensive editing</p></li>
-          <li><p>Identify instrument for pretest and posttest</p></li>
-          <li><p>Establish partnerships with programs offering technical editing courses</p></li>
-          <li><p>Roll out extension to partners; train instructors on extension</p></li>
-          <li><p>Coordinate with partners administration of instrument</p></li>
-          <li><p>Conduct pretest</p></li>
-          <li><p>Evaluate instruments and provide result to partners</p></li>
-          <li><p>Conduct posttest</p></li>
-          <li><p>Evaluate instruments and provide result to partners</p></li>
-          <li><p>Preform statistical analysis of testing results</p></li>
-          <li><p>Evaluate effectiveness of program</p></li>
+          <li>Contract development of word-processor extension for comprehensive editing</li>
+          <li>Identify instrument for pretest and posttest</li>
+          <li>Establish partnerships with programs offering technical editing courses</li>
+          <li>Roll out extension to partners; train instructors on extension</li>
+          <li>Coordinate with partners administration of instrument</li>
+          <li>Conduct pretest</li>
+          <li>Evaluate instruments and provide result to partners</li>
+          <li>Conduct posttest</li>
+          <li>Evaluate instruments and provide result to partners</li>
+          <li>Preform statistical analysis of testing results</li>
+          <li>Evaluate effectiveness of program</li>
           </ol>
         </section>
       </article>
@@ -385,8 +387,23 @@
     </aside>
     <footer></footer>
     <script>
-      if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
-      function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
+      function setDisplay (targetEID,targetDisplay) {
+        var targetElement = document.getElementById(targetEID);
+        targetElement.style.display = ( targetElement.style.display = targetDisplay );
+      }
+      function fetchText (targetHypertext,targetID) {
+        var xhr = new XMLHttpRequest();
+          xhr.open("GET", targetHypertext, true);
+          xhr.onreadystatechange = function ()
+            {
+              if (xhr.readyState==4 && xhr.status==200)
+              {
+                document.getElementById(targetID).innerHTML=xhr.responseText;
+              }
+            }
+          xhr.send();
+        setDisplay('side-ref','block');
+      }
     </script>
   </body>
 </html>
