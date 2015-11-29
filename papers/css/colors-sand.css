@@ -1,0 +1,35 @@
+html     { background-color: #b19979; }
+main     { background-color: #d1c0a9; }
+article,
+nav      { background-color: #f5eadb; }
+section  { background-color: #fcf3e8; }
+div.code { background-color: #fdf9f3; }
+nav      { border-color:     #d1c0a9; }
+nav div  { background-color: #d1c0a9; }
+a           { color: #537969; }
+.ajax a     { color: #795363; }
+nav a       { color: #537969; }
+nav a:hover { color: #7a7a92; }
+span.ajax   { color: #537969; }
+aside    { background-color: #f5eadb; border-color: #d1c0a9; }
+thead th { background-color: #537969; border-color: #5b5b7c; color: #f1f2f1; }
+tbody td { background-color: #f1f2f1; border-color: #5b5b7c; color: #537969; }
+tbody tr:nth-child(odd) td { background-color: #c3cac7; }
+
+/**********************************************[ screen < 16.25 em ]*/
+@media all and (max-width: 16.24em) {
+  body { background-color: #d1c0a9; }
+}
+/***********************************[ 16.25 em < screen < 22.25 em ]*/
+/***********************************[ 22.25 em < screen < 37.50 em ]*/
+/***********************************[ 37.50 em < screen < 45.25 em ]*/
+@media all and (min-width: 37.5em)  {
+  body { background-color: #b19979; border-color: #b19979; }
+  main { background-color: #d1c0a9; }
+}
+/***********************************[ 45.25 em < screen < 60.00 em ]*/
+/***********************************[ 60.00 em < screen ]************/
+@media all and (min-width: 60em)    {
+  aside { border-color: #d1c0a9; }
+}
+
