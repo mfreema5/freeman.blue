@@ -164,6 +164,18 @@ p {
   text-indent: -1em;
   /* for hacky hanging indents */
 }
+.code p {
+  font-family:  monospace;
+  font-style:   normal;
+  font-size:    0.9375em;
+  line-height:  1.0;
+  margin: 0.250em 0.125em 0.500em 0.250em;
+  padding: 0;
+}
+div.code {
+  padding: 0.500em 0.75em;
+  background-color: #fdf9f3;
+}
 nav {
   /* see css/notes-on-breakpoints.txt for sizing */
   display: block;
@@ -353,7 +365,7 @@ th + th {
   nav div {
     font-size: 0.8125em;
     padding: 0.250em 0.125em;
-  } 
+  }
   aside {
     bottom: 4.375em;
   }
