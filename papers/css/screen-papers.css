@@ -98,6 +98,7 @@ h5, h6, b, strong {
 }
 i, em {
   font-style: italic;
+  font-size:  1.125em;
 }
 p {
   font-family: inherit;
