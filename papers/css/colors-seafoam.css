@@ -1,0 +1,35 @@
+html     { background-color: #076161; }
+main     { background-color: #1f8383; }
+article,
+nav      { background-color: #b7dede; }
+section  { background-color: #d2eaea; }
+div.code { background-color: #edf6f6; }
+nav      { border-color:     #1f8383; }
+nav div  { background-color: #489d9d; }
+a           { color: #502400; }
+.ajax a     { color: #502400; }
+nav a       { color: #502400; }
+nav a:hover { color: #7c3e09; }
+span.ajax   { color: #537969; }
+aside    { background-color: #b7dede; border-color: #1f8383; }
+thead th { background-color: #537969; border-color: #5b5b7c; color: #f1f2f1; }
+tbody td { background-color: #f1f2f1; border-color: #5b5b7c; color: #537969; }
+tbody tr:nth-child(odd) td { background-color: #c3cac7; }
+
+/**********************************************[ screen < 16.25 em ]*/
+@media all and (max-width: 16.24em) {
+  body { background-color: #1f8383; }
+}
+/***********************************[ 16.25 em < screen < 22.25 em ]*/
+/***********************************[ 22.25 em < screen < 37.50 em ]*/
+/***********************************[ 37.50 em < screen < 45.25 em ]*/
+@media all and (min-width: 37.5em)  {
+  body { background-color: #076161; border-color: #076161; }
+  main { background-color: #1f8383; }
+}
+/***********************************[ 45.25 em < screen < 60.00 em ]*/
+/***********************************[ 60.00 em < screen ]************/
+@media all and (min-width: 60em)    {
+  aside { border-color: #1f8383; }
+}
+
