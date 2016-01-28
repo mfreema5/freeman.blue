@@ -1,0 +1,30 @@
+/* Default color scheme for freeman.blue */
+
+/**
+    #9dc4f6;
+    #713d8a;
+    #36399E;
+    #e3eefc;
+              **/
+
+
+main      { background-color: #9dc4f6;    }
+section   { background-color: white;      }
+#header-background
+          { background-color: #9dc4f6;    }
+.header   { background-color: ghostwhite; }
+.header section
+          { background-color: inherit;    }
+#backing  { background-color: #e3eefc;    }
+.icon     { background-color: ghostwhite; }
+article.links
+          { background-color: white;      }
+
+
+.postcard { background-color: #9dc4f6;    }
+.matting  { background-color: white;      }
+.stamp    { background-color: ghostwhite; }
+
+
+
+
