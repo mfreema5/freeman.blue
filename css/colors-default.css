@@ -5,11 +5,24 @@
     #713d8a;
     #36399E;
     #e3eefc;
+
+    #f0f2f8;
+    #8a9fd0;
+    #738fd1;
+    #5a7dd0;
+    #3f6acd;
+    #295bd0;
+    #124dd3;
+    #0a40bd;
+    #0737a5;
+    #083193;
+    #04297f;
+    #062369;
               **/
 
 
-main      { background-color: #9dc4f6;    }
-section   { background-color: white;      }
+main      { background-color: #5a7dd0;    }
+section   { background-color: #5a7dd0;    }
 #header-background
           { background-color: #9dc4f6;    }
 .header   { background-color: ghostwhite; }
@@ -21,9 +34,15 @@ article.links
           { background-color: white;      }
 
 
-.postcard { background-color: #9dc4f6;    }
-.matting  { background-color: white;      }
-.stamp    { background-color: ghostwhite; }
+.postcard { background-color: #5a7dd0;    }
+.matting  {
+  background-color: ghostwhite;
+  border-color: ghostwhite;
+}
+.stamp {
+  background-color: ghostwhite;
+  border-color:     ghostwhite;
+}
 
 
 
