@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+  background-color: white;
+  width: 100%;
+  max-width: 55em;
+  height: 100%;
+  padding: 1.25em;
+}
+
+.chip {
+  padding:       1.5em;
+  padding-right: 2.25em;
+  max-width:     7.125em;
+  font-size:     1.625em;
+  line-height:   3em;
+  display: inline-block;
+}
+
+
+#c001 { background-color: #f0f2f8; }
+#c002 { background-color: #8a9fd0; }
+#c003 { background-color: #738fd1; }
+#c004 { background-color: #5a7dd0; }
+#c005 { background-color: #3f6acd; }
+#c006 { background-color: #295bd0; }
+#c007 { background-color: #124dd3; }
+#c008 { background-color: #0a40bd; }
+#c009 { background-color: #0737a5; }
+#c010 { background-color: #083193; }
+#c011 { background-color: #04297f; }
+#c012 { background-color: #062369; }
+
+
+
+
+
+
+
+
