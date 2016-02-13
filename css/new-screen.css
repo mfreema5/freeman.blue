@@ -69,6 +69,10 @@ img {
   height: auto;
 }
 
+.roll-up {
+  padding: 0.375em 2.875em;
+}
+
 .pointers {
   padding-top: 2.625em;
 }
@@ -79,6 +83,17 @@ img {
   max-width:  50em;
 }
 
+.finders {
+  background-color: #99c3f7;
+  margin:     0.25em 1.00% 0.25em 5.25%;
+  padding:    4% 1% 1% 4%;
+  max-width:  50em;
+}
+
+.finders h3 {
+  display: block;
+}
+
 .stamp {
   margin-bottom: 0.0625em;
   margin-right:  0.7500em;
@@ -87,17 +102,49 @@ img {
   width:     13.625%;
   width:     12.75vw;
   max-width: 6em;
-  border-style:  solid;
-  border-width:  0.4375em;
-  border-width:  0.825vw;
-  border-radius: 0.1875em;
   overflow:  visible;
   display:   inline-block;
   float:     left;
 }
 
+.postmark {
+  display:    inline-block;
+  float: left;
+  max-width:  20em;
+  max-height: 20em;
+  width:  12%;
+  height: auto;
+  margin: 3%
+}
+
+.postmark .button {
+  text-align: center;
+}
+
+.postmark .button img {
+  display: inline-block;
+  width:   100%;
+  height:  auto;
+}
+
+.postmark .button img.snood {
+  width:  59.375%;
+  height: auto;
+}
+
+.postmark .button img.octocat {
+  width:  82.4125%;
+  height: auto;
+}
+
 .button {
   display: block;
+  border-style:  solid;
+  border-width:  0.2500em;
+  border-width:  0.3750vw;
+  border-radius: 0.1875em;
+  padding:       0.3125em;
+  padding:       0.4375vw;
 }
 
 .button img {
@@ -114,7 +161,7 @@ img {
   height:    100%;
   max-width: 96%;
   padding:   1% 2% 0 2%;
-  border-radius: 3.125em;
+  border-radius: 0.125em 0.875em 0.125em 0.875em;
   border-width:  0.250em;
   border-style:  solid;
 }
@@ -128,13 +175,13 @@ img {
   margin: -0.125em 0;
   display: inline;
   float: right;
+  color: inherit;
   font-size: 1.0625em;
-  color: white;
   background-image: url("gfx/arrow-filled.svg");
   background-size: 100% 100%;
   padding: 0.5625em 1.125em 0.5625em 0.125em;
-margin: -0.125em 0.625em -0.125em 0;
 /**
+  margin: -0.125em 0.625em -0.125em 0;
       display: block;
       margin: 0.0625em 5% 0 25%;
       font-size: 0.8125em;
