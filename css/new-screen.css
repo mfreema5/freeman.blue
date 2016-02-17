@@ -86,12 +86,13 @@ img {
 .finders {
   background-color: #99c3f7;
   margin:     0.25em 1.00% 0.25em 5.25%;
-  padding:    4% 1% 1% 7.75%;
+  padding:    4% 1% 1% 4%;
   max-width:  50em;
 }
 
 .finders h3 {
   display: block;
+  margin-left: -20.625%;  /* .postmark = -12.5% :: -12.5% - 8.125% = -20.625% */
 }
 
 .stamp {
@@ -107,21 +108,26 @@ img {
   float:     left;
 }
 
+.superpost {
+  width:      100%;
+  max-width:  24em;
+  overflow: visible;
+}
+
 .postbox {
   width:      100%;
-  max-width:  27.75em;
+  max-width:  24em;
+  margin: 0 -12.5% 0 12.5%;
 }
 
 .postmark {
   background-image: url("gfx/postback.svg");
   background-size:  100% 100%;
   background-color: transparent;
-  float:      left;
-  width:      44.4375%;
-  max-width:  10em;
-  margin:     3% -3.75%;
-  padding:    4.75%;
-  overflow:   visible;
+  float:        left;
+  width:        41.6875%;
+  margin-left:  -12.5%;
+  padding:      8.125%;
 }
 
 .postmark .button {
