@@ -53,8 +53,7 @@ p {
   font-size:    1.0625em;
   line-height:  1.250em;
 }
-/****  Basic layout  ****/
-
+/**************************************[  default layout  ]**/
 article {
   width: 100%;
 }
@@ -73,92 +72,35 @@ img {
   padding: 0.375em 2.875em;
 }
 
-.pointers {
+.pointers {                  /** TOC article **/
   padding-top: 2.625em;
 }
 
-.postcard {
+.postcard {                  /* Item in TOC **/
   margin:     0.25em 1.00% 0.25em 5.25%;
   padding:    4%  1%  1%  4%;
   max-width:  50em;
 }
 
-.finders {
-  background-color: #99c3f7;
-  margin:     0.25em 1.00% 0.25em 5.25%;
-  padding:    4% 1% 1% 4%;
-  max-width:  50em;
-}
-
-.finders h3 {
-  display: block;
-  margin-left: -20.625%;  /* .postmark = -12.5% :: -12.5% - 8.125% = -20.625% */
-}
-
-.stamp {
+.stamp {                     /** Icon links to other pages on this site **/
   margin-bottom: 0.0625em;
   margin-right:  0.7500em;
   margin-top:  -5%;
   margin-left: -6%;
-  width:     13.625%;
-  width:     12.75vw;
+  width:     13.625%;        /** For browsers w/o “vw” units **/
+  width:     12.75vw;        /** Supplants percentage-units style in supported browsers **/
   max-width: 6em;
   overflow:  visible;
   display:   inline-block;
   float:     left;
 }
 
-.superpost {
-  width:      100%;
-  max-width:  24em;
-  overflow: visible;
-}
-
-.postbox {
-  width:      100%;
-  max-width:  24em;
-  margin: 0 -12.5% 0 12.5%;
-}
-
-.postmark {
-  background-image: url("gfx/postback.svg");
-  background-size:  100% 100%;
-  background-color: transparent;
-  float:        left;
-  width:        41.6875%;
-  margin-left:  -12.5%;
-  padding:      8.125%;
-}
-
-.postmark .button {
-  display:  inline-block;
-  position: relative;
-  bottom:   15%;
-  text-align: center;
-}
-
-.postmark .button img {
-  display: inline-block;
-  width:   100%;
-  height:  auto;
-}
-
-.postmark .button img.snood {
-  width:  59.375%;
-  height: auto;
-}
-
-.postmark .button img.octocat {
-  width:  82.4125%;
-  height: auto;
-}
-
 .button {
   display:       block;
   border-style:  solid;
+  border-radius: 0.1875em;
   border-width:  0.2500em;
   border-width:  0.3750vw;
-  border-radius: 0.1875em;
   padding:       0.3125em;
   padding:       0.4375vw;
 }
@@ -182,12 +124,12 @@ img {
   border-style:  solid;
 }
 
-.linkthis {
+.linkthis {                  /** Machine translatable “Read more”-esque icon **/
   display: inline;
   float: right;
 }
 
-.readthis {
+.readthis {                  /** Machine translatable “Read more”-esque icon **/
   margin: -0.125em 0;
   display: inline;
   float: right;
@@ -196,16 +138,81 @@ img {
   background-image: url("gfx/arrow-filled.svg");
   background-size: 100% 100%;
   padding: 0.5625em 1.125em 0.5625em 0.125em;
-/**
-  margin: -0.125em 0.625em -0.125em 0;
-      display: block;
-      margin: 0.0625em 5% 0 25%;
-      font-size: 0.8125em;
-**/
-
-
 }
 
+.finders {                   /** “Find me on…” article **/
+  background-color: #99c3f7;
+  margin:     0.25em 1.00% 0.25em 5.25%;
+  padding:    4% 1% 1% 4%;
+  max-width:  50em;
+}
+
+.superpost {                 /** wrapper for postmarks **/
+  width:      100%;
+  max-width:  24em;
+  overflow: visible;
+}
+
+.postbox {                   /** wrapper for postmarks; corrects for negative margins **/
+  width:      100%;
+  max-width:  24em;
+  margin: 0 -12.5% 0 12.5%;
+}
+
+.postmark {                  /** Icon links to other sites **/
+  background-image: url("gfx/postback.svg");
+  background-size:  100% 100%;
+  background-color: transparent;
+  float:        left;
+  width:        41.6875%;
+  margin-left:  -12.5%;
+  padding:      8.125%;
+}
+
+.finders h3 {
+  display: block;
+  margin-left: -20.625%;     /* .postmark = -12.5% --> (-12.5% - 8.125%) = -20.625% */
+}
+
+.postmark .button {          /** differences from the other ‘buttons’ **/
+  display:  inline-block;
+  position: relative;
+  bottom:   15%;
+  text-align: center;
+}
+
+.postmark .button img {
+  display: inline-block;
+  width:   100%;
+  height:  auto;
+}
+
+.postmark .button img.snood {     /** adjust size of reddit icon **/
+  width:  59.375%;
+  height: auto;
+}
+
+.postmark .button img.octocat {   /** adjust size of GitHub icon **/
+  width:  82.4125%;
+  height: auto;
+}
+
+
+/********************************[ screen < 16 em (256px) ]**/
+@media all and (max-width: 16em) {
+}
+
+/********************************[ screen > 25 em (400px) ]**/
+@media all and (min-width: 25em) {
+}
+
+/********************************[ screen > 40 em (640px) ]**/
+@media all and (min-width: 40em) {
+}
+
+/********************************[ screen > 60 em (960px) ]**/
+@media all and (min-width: 56em) {
+}
 
 
 
