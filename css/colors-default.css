@@ -1,49 +1,33 @@
 /* Default color scheme for freeman.blue */
 
-/**
-    #9dc4f6;
-    #713d8a;
-    #36399E;
-    #e3eefc;
-
-    #f0f2f8;
-    #8a9fd0;
-    #738fd1;
-    #5a7dd0;
-    #3f6acd;
-    #295bd0;
-    #124dd3;
-    #0a40bd;
-    #0737a5;
-    #083193;
-    #04297f;
-    #062369;
-              **/
-
-
-main      { background-color: #5a7dd0;    }
-section   { background-color: #5a7dd0;    }
+main      { background-color: #9dc4f6; }
+section   { background-color: #9dc4f6; }
 #header-background
-          { background-color: #9dc4f6;    }
-.header   { background-color: ghostwhite; }
+          { background-color: #9dc4f6; }
+.header   { background-color: #f6f9fe; }
 .header section
-          { background-color: inherit;    }
-#backing  { background-color: #e3eefc;    }
-.icon     { background-color: ghostwhite; }
+          { background-color: inherit; }
+#backing  { background-color: #e3eefc; }
+.icon     { background-color: #f6f9fe; }
 article.links
-          { background-color: white;      }
+          { background-color: white;   }
 
 
-.postcard { background-color: #5a7dd0;    }
+.postcard { background-color: #9dc4f6; }
 .matting  {
-  background-color: ghostwhite;
-  border-color: ghostwhite;
+  background-color: #f6f9fe;
+  border-color: #f6f9fe;
 }
-.stamp {
-  background-color: ghostwhite;
-  border-color:     ghostwhite;
+.stamp {}
+.button {
+  background-color: #f6f9fe;
+  border-color:     #f6f9fe;
 }
-
-
+a:hover.button {
+  background-color: #ffffff;
+  border-color:     #e7f0fd;
+}
+.linkthis        { color: #ffffff; }
+a:hover.linkthis { color: #1263ca; }
 
 
