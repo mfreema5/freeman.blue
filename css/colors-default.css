@@ -1,6 +1,6 @@
 /* Default color scheme for freeman.blue */
 
-main      { background-color: #9dc4f6; }
+body      { background-color: #9dc4f6; }
 section   { background-color: #9dc4f6; }
 #header-background
           { background-color: #9dc4f6; }
