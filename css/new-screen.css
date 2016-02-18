@@ -54,18 +54,28 @@ p {
   line-height:  1.250em;
 }
 /**************************************[  default layout  ]**/
-article {
-  width: 100%;
+main {
+  max-width:  72em;
 }
-
+article {}
 section {
     border-radius: 0.125em;
-    width: 100%;
 }
-
 img {
   max-width: 100%;
   height: auto;
+}
+.button {
+  display:       block;
+  border-style:  solid;
+  border-radius: 0.1875em;
+  border-width:  0.2500em;
+  border-width:  0.3750vw;
+  padding:       0.3125em;
+  padding:       0.4375vw;
+}
+.button img {
+  display: block;
 }
 
 .roll-up {
@@ -73,15 +83,14 @@ img {
 }
 
 .pointers {                  /** TOC article **/
-  padding-top: 2.625em;
+  padding-top:  4.3750%;
+  max-width:   44.8125em;
+  float:       left;
 }
-
-.postcard {                  /* Item in TOC **/
+.postcard {                  /* Items in TOC **/
   margin:     0.25em 1.00% 0.25em 5.25%;
   padding:    4%  1%  1%  4%;
-  max-width:  50em;
 }
-
 .stamp {                     /** Icon links to other pages on this site **/
   margin-bottom: 0.0625em;
   margin-right:  0.7500em;
@@ -94,25 +103,9 @@ img {
   display:   inline-block;
   float:     left;
 }
-
-.button {
-  display:       block;
-  border-style:  solid;
-  border-radius: 0.1875em;
-  border-width:  0.2500em;
-  border-width:  0.3750vw;
-  padding:       0.3125em;
-  padding:       0.4375vw;
-}
-
-.button img {
-  display: block;
-}
-
 .prose {
   display: inline;
 }
-
 .matting {
   display:   block;
   width:     100%;
@@ -123,12 +116,10 @@ img {
   border-width:  0.250em;
   border-style:  solid;
 }
-
 .linkthis {                  /** Machine translatable “Read more”-esque icon **/
   display: inline;
   float: right;
 }
-
 .readthis {                  /** Machine translatable “Read more”-esque icon **/
   margin: -0.125em 0;
   display: inline;
@@ -144,21 +135,19 @@ img {
   background-color: #99c3f7;
   margin:     0.25em 1.00% 0.25em 5.25%;
   padding:    4% 1% 1% 4%;
-  max-width:  50em;
+  max-width:  44.8125em;
 }
-
 .superpost {                 /** wrapper for postmarks **/
   width:      100%;
   max-width:  24em;
-  overflow: visible;
+  overflow:   visible;
 }
-
 .postbox {                   /** wrapper for postmarks; corrects for negative margins **/
-  width:      100%;
-  max-width:  24em;
+  width:  100%;
   margin: 0 -12.5% 0 12.5%;
+  margin: 0;
+  margin-left: 12.5%;
 }
-
 .postmark {                  /** Icon links to other sites **/
   background-image: url("gfx/postback.svg");
   background-size:  100% 100%;
@@ -168,30 +157,25 @@ img {
   margin-left:  -12.5%;
   padding:      8.125%;
 }
-
 .finders h3 {
   display: block;
   margin-left: -20.625%;     /* .postmark = -12.5% --> (-12.5% - 8.125%) = -20.625% */
 }
-
 .postmark .button {          /** differences from the other ‘buttons’ **/
   display:  inline-block;
   position: relative;
   bottom:   15%;
   text-align: center;
 }
-
 .postmark .button img {
   display: inline-block;
   width:   100%;
   height:  auto;
 }
-
 .postmark .button img.snood {     /** adjust size of reddit icon **/
   width:  59.375%;
   height: auto;
 }
-
 .postmark .button img.octocat {   /** adjust size of GitHub icon **/
   width:  82.4125%;
   height: auto;
@@ -211,8 +195,35 @@ img {
 }
 
 /********************************[ screen > 60 em (960px) ]**/
-@media all and (min-width: 56em) {
+@media all and (min-width: 60em) {
+  .finders {                   /** “Find me on…” article **/
+    float:      right;
+    width:      20%;
+    margin:     0 2.50% 0 2.8125%;
+    padding:    5.375% 0 0 0;
+  }
+  .superpost {
+    max-width:  10em;
+  }
+  .postbox {
+    margin:     30% 0 -30% 0;
+  }
+  .postmark {
+    width:       100%;
+    margin-left: 0;
+    margin-top: -30%;
+    padding:     20%;
+  }
+  .finders h3 {
+    margin: -30% 0 30% 0;
+  }
+
+
+
+
 }
+
+
 
 
 
