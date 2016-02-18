@@ -12,22 +12,19 @@ section   { background-color: #9dc4f6; }
 article.links
           { background-color: white;   }
 
-
+.logo
+          { background-color: #0d4e9e; }
 .postcard { background-color: #9dc4f6; }
-.matting  {
-  background-color: #f6f9fe;
-  border-color: #f6f9fe;
-}
+.matting  { background-color: #f6f9fe;
+            border-color:     #f6f9fe; }
 .stamp {}
-.button {
-  background-color: #f6f9fe;
-  border-color:     #f6f9fe;
-}
-a:hover.button {
-  background-color: #ffffff;
-  border-color:     #e7f0fd;
-}
-.linkthis        { color: #ffffff; }
-a:hover.linkthis { color: #1263ca; }
+.button   { background-color: #f6f9fe;
+            border-color:     #f6f9fe; }
+a:hover.button
+          { background-color: #ffffff;
+            border-color:     #e7f0fd; }
+.linkthis { color:            #ffffff; }
+a:hover.linkthis
+          { color:            #1263ca; }
 
 

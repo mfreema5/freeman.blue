@@ -65,6 +65,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+.headline {
+  width: 100%;
+  width: 100vw;
+/**
+  padding-top: 1.6875em;
+  padding-top: 2.6250vw;
+ **/
+}
 .button {
   display:       block;
   border-style:  solid;
@@ -151,12 +159,12 @@ img {
   padding:      8.125%;
 }
 .postmark + .postmark {
-  margin-left:  -12.53125%;      /**  0.0625 over-size ; 0.0625/2 = 0.03125 **/
+  margin-left:  -12.53125%;  /**  0.0625 over-size ; 0.0625/2 = 0.03125 **/
 }
 
 .finders h3 {
   display: block;
-  margin-left: -5.125%;     /* -8.125% (.postmark) + 3% (.stamp) = -5.125% */
+  margin-left: -5.125%;      /** -8.125% (.postmark) + 3% (.stamp) = -5.125% **/
 }
 .postmark .button {          /** differences from the other ‘buttons’ **/
   display:  inline-block;
@@ -177,6 +185,48 @@ img {
   width:  82.4125%;
   height: auto;
 }
+                             /** Fancy page valence?  **/
+.static-logo  {              /** Smallest, always-visible logo **/
+  display:    block;
+  position:   fixed;
+  top:        0;
+  left:       0;
+  width:      100%;
+  width:      100vw;
+  height:     1.6875em;
+  height:     2.625vw;
+  min-height: 1.625em;
+  padding:    0.375%;
+  z-index:    10;
+}
+.static-logo img {
+  height:     100%;
+}
+.big-backer {
+  top:      0;
+  left:     0;
+  width:    100%;
+  height:   100%;
+  z-index: -10;
+}
+.big-logo  {                 /** Scrolls with article **/
+  background-image:
+                url("gfx/logo-fade-back.svg");
+  display:      block;
+  position:     relative;    /** This impacts z-index, confusingly enough **/
+  z-index:      11;
+  width:        100%;
+  width:        100vw;
+  height:       3.375em;
+  height:       5.0625em;
+  height:       5.250vw;
+  height:       7.875vw;
+  min-height:   3.250em;
+  padding:      0.75%;
+  padding-top:  1.6875em;
+}
+
+
 
 
 /********************************[ screen < 16 em (256px) ]**/
