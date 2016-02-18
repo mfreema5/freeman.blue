@@ -137,16 +137,10 @@ img {
   padding:    4% 1% 1% 4%;
   max-width:  44.8125em;
 }
-.superpost {                 /** wrapper for postmarks **/
+.postbox {                   /** wrapper for postmarks; corrects for negative margins **/
   width:      100%;
   max-width:  24em;
   overflow:   visible;
-}
-.postbox {                   /** wrapper for postmarks; corrects for negative margins **/
-  width:  100%;
-  margin: 0 -12.5% 0 12.5%;
-  margin: 0;
-  margin-left: 12.5%;
 }
 .postmark {                  /** Icon links to other sites **/
   background-image: url("gfx/postback.svg");
@@ -154,12 +148,15 @@ img {
   background-color: transparent;
   float:        left;
   width:        41.6875%;
-  margin-left:  -12.5%;
   padding:      8.125%;
 }
+.postmark + .postmark {
+  margin-left:  -12.53125%;      /**  0.0625 over-size ; 0.0625/2 = 0.03125 **/
+}
+
 .finders h3 {
   display: block;
-  margin-left: -20.625%;     /* .postmark = -12.5% --> (-12.5% - 8.125%) = -20.625% */
+  margin-left: -5.125%;     /* -8.125% (.postmark) + 3% (.stamp) = -5.125% */
 }
 .postmark .button {          /** differences from the other ‘buttons’ **/
   display:  inline-block;
@@ -202,24 +199,17 @@ img {
     margin:     0 2.50% 0 2.8125%;
     padding:    5.375% 0 0 0;
   }
-  .superpost {
-    max-width:  10em;
-  }
   .postbox {
-    margin:     30% 0 -30% 0;
+    max-width:  10em;
   }
   .postmark {
     width:       100%;
-    margin-left: 0;
-    margin-top: -30%;
     padding:     20%;
   }
-  .finders h3 {
-    margin: -30% 0 30% 0;
+  .postmark + .postmark {
+    margin-left: unset;
+    margin-top: -30%;
   }
-
-
-
 
 }
 
