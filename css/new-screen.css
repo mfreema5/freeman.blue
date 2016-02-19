@@ -152,14 +152,15 @@ img {
 }
 .postmark {                  /** Icon links to other sites **/
   background-image: url("gfx/postback.svg");
-  background-size:  100% 100%;
+  background-size:  100% auto;
   background-color: transparent;
   float:        left;
   width:        41.6875%;
   padding:      8.125%;
 }
 .postmark + .postmark {
-  margin-left:  -12.53125%;  /**  0.0625 over-size ; 0.0625/2 = 0.03125 **/
+  margin-left:  -12.5625%;  /**  0.0625 over-size ; 0.0625/2 = 0.03125         **/
+                            /**  Safari does math badly: 12.53125 doesn't work **/
 }
 
 .finders h3 {
@@ -214,7 +215,7 @@ img {
 }
 .big-logo  {                 /** Scrolls with article **/
   background-image: url("gfx/logo-fade-back.svg");
-  background-size:  100% 100%;
+  background-size:  auto 100%;
   display:      block;
   position:     relative;    /** This impacts z-index, confusingly enough **/
   z-index:      11;
@@ -257,7 +258,7 @@ img {
     padding:     20%;
   }
   .postmark + .postmark {
-    margin-left: unset;
+    margin-left: 0;
     margin-top: -30%;
   }
 
