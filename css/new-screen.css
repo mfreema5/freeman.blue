@@ -202,28 +202,28 @@ img {
 .static-logo img {
   height:     100%;
 }
+.big-logo img {
+  height:     100%;
+  min-height: 1.875em;
+}
 .big-backer {
   top:      0;
   left:     0;
-  width:    100%;
-  height:   100%;
   z-index: -10;
+  min-height:   4.625em;
 }
 .big-logo  {                 /** Scrolls with article **/
-  background-image:
-                url("gfx/logo-fade-back.svg");
+  background-image: url("gfx/logo-fade-back.svg");
+  background-size:  100% 100%;
   display:      block;
   position:     relative;    /** This impacts z-index, confusingly enough **/
   z-index:      11;
   width:        100%;
-  width:        100vw;
-  height:       3.375em;
   height:       5.0625em;
-  height:       5.250vw;
   height:       7.875vw;
-  min-height:   3.250em;
+  min-height:   4.625em;
   padding:      0.75%;
-  padding-top:  1.6875em;
+  padding:      1.625em 0.75% 1.625em 0.75%;
 }
 
 
