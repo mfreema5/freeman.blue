@@ -96,13 +96,8 @@ img {
   float:       left;
 }
 .postcard {                  /* Items in TOC **/
-  /* margin:     0.25em 1.00% 0.25em 5.25%; */
-  /* padding:    4%  1%  1%  4%; */
-  margin:   0;
-  padding:  0;
-  border-style:  solid;
-  border-width:  1em 1em 2em 3em;
-  border-radius: 0;
+  margin:     0.25em 1.00% 0.25em 5.25%;
+  padding:    4%  1%  1%  4%;
 }
 .stamp {                     /** Icon links to other pages on this site **/
   margin-bottom: 0.0625em;
@@ -119,34 +114,12 @@ img {
 .prose {
   display: inline;
 }
-#matting {
-  display:  block;
-  width:    100%;
-  height:   100%;
-  margin:   0;
-  padding:  0;
-  border-style: solid;
-  border-width: 0.4375em;
-
-}
-.back-matt{
-  background-image:   url("gfx/hashback.svg");
-  background-size:    200px, contain;
-  background-origin:  border-box;
-  display:  block;
-  width:    100%;
-  height:   100%;
-  margin:   0;
-  padding:  0.0625% 0 0.625% 0;
-  border-radius: 0.125em 0.875em 0.125em 0.875em;
-}
 .matting {
   display:   block;
   width:     100%;
   height:    100%;
   max-width: 96%;
   padding:   1% 2% 0 2%;
-  margin:    2.875% 0 0.375% 2.875%;
   border-radius: 0.125em 0.875em 0.125em 0.875em;
   border-width:  0.250em;
   border-style:  solid;
@@ -213,9 +186,8 @@ img {
   width:  82.4125%;
   height: auto;
 }
-
-/********************************[ Fancy page valance     ]**/
-.static-logo  {          /** Smallest, always-visible logo **/
+                             /** Fancy page valence?  **/
+.static-logo  {              /** Smallest, always-visible logo **/
   display:    block;
   position:   fixed;
   top:        0;
@@ -241,7 +213,7 @@ img {
   z-index: -10;
   min-height:   4.625em;
 }
-.big-logo  {                      /** Scrolls with article **/
+.big-logo  {                 /** Scrolls with article **/
   background-image: url("gfx/logo-fade-back.svg");
   background-size:  auto 100%;
   display:      block;
@@ -255,19 +227,7 @@ img {
   padding:      1.625em 0.75% 1.625em 0.75%;
 }
 
-/********************************[ flashy background      ]**/
 
-
-#back-hack {
-  background-image:   url("gfx/hashback.svg");
-  background-size:    25% auto, contain;
-  background-origin:  border-box;
-  display:    block;
-  position:   relative;
-  width:      100%;
-  height:     100%;
-  z-index:    0;
-}
 
 
 /********************************[ screen < 16 em (256px) ]**/
