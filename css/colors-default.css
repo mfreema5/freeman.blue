@@ -1,6 +1,6 @@
 /* Default color scheme for freeman.blue */
 
-body      { background-color: transparent; }
+body      { background-color: #9dc4f6; }
 section   { background-color: #9dc4f6; }
 #header-background
           { background-color: #9dc4f6; }
@@ -12,8 +12,8 @@ section   { background-color: #9dc4f6; }
 article.links
           { background-color: white;   }
 
-.logo
-          { background-color: #0d4e9e; }
+.logo     { background-color: #0d4e9e; }
+.pointers { background-color: #9dc4f6; }
 .postcard { background-color: transparent;
             border-color:     #9dc4f6; }
 .matting  { background-color: #f6f9fe;
