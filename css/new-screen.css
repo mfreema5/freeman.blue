@@ -96,8 +96,8 @@ img {
   float:       left;
 }
 .postcard {                  /* Items in TOC **/
-  background-image:   url("gfx/hashmoback.svg");
-  background-size:    35em, contain;
+  background-image:   url("gfx/15-106-hash.svg");
+  background-size:    0.9375em, contain;
   background-origin:  border-box;
   background-attachment: fixed;
   /* margin:     0.25em 1.00% 0.25em 5.25%; */
@@ -124,8 +124,8 @@ img {
   display: inline;
 }
 .back-matt{
-  background-image:   url("gfx/hashback.svg");
-  background-size:    40em, contain;
+  background-image:   url("gfx/15-106-hash.svg");
+  background-size:    1em, contain;
   background-origin:  border-box;
   background-attachment: scroll;
   display:  block;
