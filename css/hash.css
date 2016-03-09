@@ -1,0 +1,42 @@
+html {
+  padding-right: 2em;
+}
+.floater {
+  background-image: url("gfx/15-106-hash.svg");
+  background-size:  2em 2em, contain;
+  height:           10em;
+  width:            100%;
+  background-color: transparent;
+}
+.parallax_container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  perspective-origin-x: 100%;
+}
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 100vh 0;
+  margin: 0;
+  transform-origin-x: 100%;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+  /* scale =  1 - ( translateZ / perspective ) */
+  /*   2   =  1 - (      -1    /   1         )   =   1 - ( -1 )   =   1 + 1  */
+
