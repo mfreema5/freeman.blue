@@ -20,6 +20,9 @@ article.links
 .stamp {}
 .button   { background-color: #f6f9fe;
             border-color:     #f6f9fe; }
+.stamp .button   
+          { border-color:     #9dc4f6; }
+
 a:hover.button
           { background-color: #ffffff;
             border-color:     #e7f0fd; }
