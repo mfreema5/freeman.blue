@@ -142,36 +142,48 @@ img {
 .finders {                   /** “Find me on…” article **/
   background-color: #99c3f7;
   margin:     0.25em 1.00% 0.25em 5.25%;
-  padding:    4% 1% 1% 4%;
+  padding:    4% 1% 1% 0;
+  width:      90%;
   max-width:  44.8125em;
+  float:      left;
 }
-.postbox {                   /** wrapper for postmarks; corrects for negative margins **/
-  width:      100%;
-  max-width:  24em;
-  overflow:   visible;
+.postbox {                   /** wrapper for postmarks **/
+  width:        100%;
+  max-width:    24em;
+  margin-left:  4%;
+  overflow:     visible;
+}
+.aspect-ratio {
+  padding-bottom: 100%;      /** See: http://stackoverflow.com/a/10441480 **/
 }
 .postmark {                  /** Icon links to other sites **/
+  position: relative;
   background-image: url("gfx/postback.svg");
-  background-size:  100% auto;
+  background-size:  cover;
   background-color: transparent;
   float:        left;
   width:        41.6875%;
-  padding:      8.125%;
+  /* padding:      8.125%; */
 }
 .postmark + .postmark {
   margin-left:  -12.5625%;  /**  0.0625 over-size ; 0.0625/2 = 0.03125         **/
                             /**  Safari does math badly: 12.53125 doesn't work **/
 }
-
 .finders h3 {
   display: block;
-  margin-left: -5.125%;      /** -8.125% (.postmark) + 3% (.stamp) = -5.125% **/
 }
 .postmark .button {          /** differences from the other ‘buttons’ **/
   display:  inline-block;
   position: relative;
-  bottom:   15%;
+  z-index:  1;
+  padding-top:  7%;
   text-align: center;
+  position: absolute;     /** See: http://stackoverflow.com/a/10441480 **/
+  top:      18.125%;
+  right:    18.125%;
+  bottom:   18.125%;
+  left:     18.125%;
+
 }
 .postmark .button img {
   display: inline-block;
@@ -251,7 +263,8 @@ img {
     padding:    5.375% 0 0 0;
   }
   .postbox {
-    max-width:  10em;
+    max-width:    9.625em;
+    margin-left:  1.625em;
   }
   .postmark {
     width:       100%;
