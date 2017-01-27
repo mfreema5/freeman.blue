@@ -17,12 +17,13 @@ article.links
 .postcard { background-color: #9dc4f6; }
 .matting  { background-color: #f6f9fe;
             border-color:     #f6f9fe; }
+.roll-up  { background-color: #e7f0fd; }
 .stamp {}
 .button   { background-color: #f6f9fe;
             border-color:     #f6f9fe; }
-.stamp .button   
-          { border-color:     #9dc4f6; }
-
+.stamp .button
+          { border-color:     #9dc4f6;
+            background-color: #fcfdff; }
 a:hover.button
           { background-color: #ffffff;
             border-color:     #e7f0fd; }

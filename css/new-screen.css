@@ -85,11 +85,12 @@ img {
 .button img {
   display: block;
 }
-
 .roll-up {
-  padding: 0.375em 2.875em;
+  padding: 0.375em 2.875em 2em 2.875em;
 }
-
+.roll-up p {
+  font-weight: 400;
+}
 .pointers {                  /** TOC article **/
   padding-top:  4.3750%;
   max-width:   44.8125em;
@@ -274,11 +275,13 @@ img {
     margin-left: 0;
     margin-top: -30%;
   }
-
 }
 
-
-
-
+/********************************[ screen > 70 em (1120px) ]**/
+@media all and (min-width: 70em) {
+  .pointers {
+    margin-left: 2%;
+  }
+}
 
 
