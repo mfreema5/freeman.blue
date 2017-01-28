@@ -199,7 +199,6 @@ img {
   width:  82.4125%;
   height: auto;
 }
-                             /** Fancy page valence?  **/
 .static-logo  {              /** Smallest, always-visible logo **/
   display:    block;
   position:   fixed;
@@ -214,11 +213,15 @@ img {
   z-index:    10;
 }
 .static-logo img {
-  height:     100%;
+  height:   100%;
+  position: absolute;        /** See: http://stackoverflow.com/a/33644245 **/
+  top:      0;
 }
 .big-logo img {
-  height:     100%;
+  height:     80%;
   min-height: 1.875em;
+  position:   absolute;      /** See: http://stackoverflow.com/a/33644245 **/
+  bottom:     0;
 }
 .big-backer {
   top:      0;
