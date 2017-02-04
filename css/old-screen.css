@@ -1,0 +1,315 @@
+/*****  screen.css: Screen Styles  *****/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Typography, color, etc. */
+h1 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:  700;
+  font-size:    1.625em;
+  line-height:  1.500em;
+  margin-bottom:  0.250em;
+  margin-left:    0.250em;
+}
+h1 + h1 {
+  margin-top:  -0.4375em;
+  margin-left:  0.5625em;
+  font-size:    1.3125em;
+  font-style:   italic;
+}
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   normal;
+  font-weight:  700;
+  font-size:    1.250em;
+  line-height:  1.250;
+  margin:       0.9375em 0 0.750em 0;
+}
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-style:   italic;
+  font-weight:  700;
+  font-size:    1.125em;
+  line-height:  1.250;
+}
+
+h4, h5, h6, b, strong, caption {
+  font-weight: bold;
+}
+i, em {
+  font-style: italic;
+}
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:  300;
+}
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight:  300;
+  font-size:    1.0625em;
+  line-height:  1.250em;
+}
+main {
+  border-radius:  0.250em;
+  padding-bottom: 0.1250em;
+  background-color: #9DC4F6;
+}
+article {
+  border-radius: 0.250em;
+}
+section {
+  background-color: white;
+  border-radius: 0.125em;
+  overflow: hidden;
+  width: 100%;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+a {
+  color: #713d8a;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:hover.button {
+  text-decoration: none;
+}
+
+/********************************[ default layout ]**/
+
+h2 + p {
+  display: inline;
+}
+h3 {
+  margin-bottom: 0.5625em;
+  padding-top:   0.3750em;
+}
+#header-background {
+  width: 100%;
+  background-color: #9dc4f6;
+}
+#header-spacer {
+  display:      block;
+  line-height:  0;
+  height:       0.5em;
+}
+#header-title {
+  width:      9.750em;
+  min-width:  6.625em;
+}
+.header {
+  background-color: ghostwhite;
+}
+.header section {
+  padding:  0.6250em 6.6875% 1.875em 3.125%;
+  background-color: inherit;
+}
+.header h2 {
+  display: inline;
+  margin-left:  -0.4375em;
+  margin-right:  0.5625em;
+}
+.header p {
+  font-size: 0.875em;
+  margin: 0.4375em 0;
+  line-height: 1.4375em;
+}
+.header h2 + p {
+  line-height:  1.250;
+}
+#backing{
+  background-color: #e3eefc;
+  padding-bottom: 0.125em;
+  border-width: 1em 0.125em;
+  border-style: solid;
+  border-color: #9dc4f6;
+}
+img {
+  max-width:  100%;
+  height:     auto;
+}
+article.pages {
+  padding-top:   0.0625em;
+}
+.pages section {
+  margin:  0.375em 0;
+  padding: 0.7125em 0.3125em;
+}
+.pages h3 {
+  display: block;
+}
+.pages p {
+  font-size: 0.9375em;
+}
+.icon {
+  display:    inline;
+  float:      left;
+  width:      31.25%;
+  max-width:  10em;
+  background-color: ghostwhite;
+  border-style: solid;
+  border-color: #36399E;
+  border-width: 0.0625em;
+  margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
+  padding:    0.0625em;
+}
+article.links {
+  background-color: white;
+  margin: 0.5625em 0 0.5625em 0;
+}
+.readthis {
+  display:   block;
+  margin: 0.0625em 5% 0 25%;
+  font-size: 0.8125em;
+  color:     white;
+  font-family: sans-serif;
+  background-image: url("gfx/arrow-filled.svg");
+  background-size:  100% 100%;
+  padding: 0.5625em 1.125em 0.5625em 0.125em;
+
+}
+div#stylin {
+  text-align: center;
+  display: block;
+  margin:  -3.5625em 0;
+}
+.links section {
+  text-align: center;
+  max-width:  8em;
+  display: inline-block;
+  width:   18.75%;
+  margin:  0 5%;
+}
+#snoo {
+  display: inline-block;
+  max-width: 9em;
+  width: 72%;
+}
+.links h3 {
+  display:   block;
+  font-size: 0.875em;
+  border-style: solid;
+  border-color: #9dc4f6 white white #9dc4f6;
+  border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
+  width:  48.25%;
+  height: 4.90909em;
+}
+.links h4 {
+  display: block;
+  border-style: solid;
+  border-color: white #9dc4f6 #9dc4f6 white;
+  border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
+  width: 51.75%;
+  height: 4.90909em;
+  margin: -4.5em 0 0 48.25%;
+}
+
+
+/********************************[ 10.9375 em < screen ]**/
+@media all and (max-width: 10.9375em) {
+  #header-title {
+    width: 98.75%;
+  }
+}
+
+/********************************[ 25 em < screen ]**/
+@media all and (min-width: 25em) {
+  .header {
+    width: 100%;
+  }
+  #header-background {
+    width: 100%;
+    background-color: #9DC4F6;
+    margin-bottom:    0.8125em;
+  }
+  #header-title {
+    width:        38.875%;
+    max-width:    17.125em;
+    margin-left:  0.25em;
+  }
+  .header section {
+    max-width: 62.50em;
+    padding: 0 5.4375%;
+  }
+  #backing {
+    background-image: url("gfx/background.svg");
+    background-size:  100% 100%;
+  }
+  .pages section {
+    width:      68.75%;
+    max-width:  48em;
+    margin: 0.5625em 0.5625em 0.5625em 10.375%;
+    padding: 0.3125em 1.125em 0.3125em 0.3125em;
+  }
+  .pages p {
+    font-size: 1.0625em;
+  }
+  .icon {
+    width:        18.25%;
+    border-width: 0.125em;
+  }
+  img {
+    max-width:  100%;
+    height:     auto;
+  }
+  h3 {
+    display:     inline;
+    padding-top: 0.6875em;
+  }
+  .readthis {
+    display: inline;
+    float:   right;
+    font-size: 1.0625em;
+    margin:  0 -1.0em 0 0;
+  }
+  .pages p {
+    display:        inline;
+    margin-bottom:  0.1825em;
+  }
+  article.links {
+    background-color: white;
+    width:     68.75%;
+    max-width: 48em;
+    margin:    0.5625em 0.5625em 0.5625em 10.375%;
+  }
+  .links section {
+    width:  12.5%;
+    margin: 0 7.25%;
+  }
+  .links h3 {
+    font-size: 1.125em;
+    border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
+    height: 4.90909em;
+  }
+  .links h4 {
+    margin-top: 0;
+    border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
+    height: 4.90909em;
+  }
+}
+
+/********************************[ 40 em < screen ]**/
+@media all and (min-width: 40em) {
+  #header-spacer {
+    margin-top: -8.4375em;
+    height:      8.4375em;
+    height:     21.5625vw;
+  }
+
+}
+
+/********************************[ 56 em < screen ]**/
+@media all and (min-width: 56em) {
+  #header-spacer {
+    height:     12.075em;
+  }
+
+}

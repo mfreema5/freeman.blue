@@ -1,11 +1,12 @@
-/*****  screen.css: Screen Styles  *****/
+/**  screen.css: Screen Styles  **/
+/****  Use border-box model for layout  ****/
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-/* Typography, color, etc. */
+/****  Typography/fonts  ****/
 h1 {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight:  700;
@@ -52,264 +53,239 @@ p {
   font-size:    1.0625em;
   line-height:  1.250em;
 }
+/**************************************[  default layout  ]**/
 main {
-  border-radius:  0.250em;
-  padding-bottom: 0.1250em;
-  background-color: #9DC4F6;
+  max-width:  72em;
 }
-article {
-  border-radius: 0.250em;
-}
+article {}
 section {
-  background-color: white;
-  border-radius: 0.125em;
-  overflow: hidden;
-  width: 100%;
-}
-ul {
-  list-style-type: disc;
-}
-ol {
-  list-style-type: decimal;
-}
-a {
-  color: #713d8a;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-a:hover.button {
-  text-decoration: none;
-}
-
-/********************************[ default layout ]**/
-
-h2 + p {
-  display: inline;
-}
-h3 {
-  margin-bottom: 0.5625em;
-  padding-top:   0.3750em;
-}
-#header-background {
-  width: 100%;
-  background-color: #9dc4f6;
-}
-#header-spacer {
-  display:      block;
-  line-height:  0;
-  height:       0.5em;
-}
-#header-title {
-  width:      9.750em;
-  min-width:  6.625em;
-}
-.header {
-  background-color: ghostwhite;
-}
-.header section {
-  padding:  0.6250em 6.6875% 1.875em 3.125%;
-  background-color: inherit;
-}
-.header h2 {
-  display: inline;
-  margin-left:  -0.4375em;
-  margin-right:  0.5625em;
-}
-.header p {
-  font-size: 0.875em;
-  margin: 0.4375em 0;
-  line-height: 1.4375em;
-}
-.header h2 + p {
-  line-height:  1.250;
-}
-#backing{
-  background-color: #e3eefc;
-  padding-bottom: 0.125em;
-  border-width: 1em 0.125em;
-  border-style: solid;
-  border-color: #9dc4f6;
+    border-radius: 0.125em;
 }
 img {
-  max-width:  100%;
-  height:     auto;
+  max-width: 100%;
+  height: auto;
 }
-article.pages {
-  padding-top:   0.0625em;
+.headline {
+  width: 100%;
+  width: 100vw;
+/**
+  padding-top: 1.6875em;
+  padding-top: 2.6250vw;
+ **/
 }
-.pages section {
-  margin:  0.375em 0;
-  padding: 0.7125em 0.3125em;
+.button {
+  display:       block;
+  border-style:  solid;
+  border-radius: 0.1875em;
+  border-width:  0.2500em;
+  border-width:  0.3750vw;
+  padding:       0.3125em;
+  padding:       0.4375vw;
 }
-.pages h3 {
+.button img {
   display: block;
 }
-.pages p {
-  font-size: 0.9375em;
+.roll-up {
+  padding: 0.375em 2.875em 2em 2.875em;
 }
-.icon {
-  display:    inline;
-  float:      left;
-  width:      31.25%;
-  max-width:  10em;
-  background-color: ghostwhite;
-  border-style: solid;
-  border-color: #36399E;
-  border-width: 0.0625em;
-  margin:     0.1250em 0.5625em 0.1250em 0.1250em ;
-  padding:    0.0625em;
+.roll-up p {
+  font-weight: 400;
 }
-article.links {
-  background-color: white;
-  margin: 0.5625em 0 0.5625em 0;
+.pointers {                  /** TOC article **/
+  padding-top:  4.3750%;
+  max-width:   44.8125em;
+  float:       left;
 }
-.readthis {
+.postcard {                  /* Items in TOC **/
+  margin:     0.25em 1.00% 0.25em 5.25%;
+  padding:    4%  1%  1%  4%;
+}
+.stamp {                     /** Icon links to other pages on this site **/
+  margin-bottom: 0.0625em;
+  margin-right:  0.7500em;
+  margin-top:  -5%;
+  margin-left: -6%;
+  width:     13.625%;        /** For browsers w/o “vw” units **/
+  width:     12.75vw;        /** Supplants percentage-units style in supported browsers **/
+  max-width: 6em;
+  overflow:  visible;
+  display:   inline-block;
+  float:     left;
+}
+.prose {
+  display: inline;
+}
+.matting {
   display:   block;
-  margin: 0.0625em 5% 0 25%;
-  font-size: 0.8125em;
-  color:     white;
-  font-family: sans-serif;
+  width:     100%;
+  height:    100%;
+  max-width: 96%;
+  padding:   1% 2% 0 2%;
+  border-radius: 0.125em 0.875em 0.125em 0.875em;
+  border-width:  0.250em;
+  border-style:  solid;
+}
+.linkthis {                  /** Machine translatable “Read more”-esque icon **/
+  display: inline;
+  float: right;
+}
+.readthis {                  /** Machine translatable “Read more”-esque icon **/
+  margin: -0.125em 0;
+  display: inline;
+  float: right;
+  color: inherit;
+  font-size: 1.0625em;
+  background-image: url("gfx/arrow-filled.png");
   background-image: url("gfx/arrow-filled.svg");
-  background-size:  100% 100%;
+  background-size: 100% 100%;
   padding: 0.5625em 1.125em 0.5625em 0.125em;
-
 }
-div#stylin {
-  text-align: center;
+
+.finders {                   /** “Find me on…” article **/
+  background-color: #99c3f7;
+  margin:     0.25em 1.00% 0.25em 5.25%;
+  padding:    4% 1% 1% 0;
+  width:      90%;
+  max-width:  44.8125em;
+  float:      left;
+}
+.postbox {                   /** wrapper for postmarks **/
+  width:        100%;
+  max-width:    24em;
+  margin-left:  4%;
+  overflow:     visible;
+}
+.aspect-ratio {
+  padding-bottom: 100%;      /** See: http://stackoverflow.com/a/10441480 **/
+}
+.postmark {                  /** Icon links to other sites **/
+  position: relative;
+  background-image: url("gfx/postback.svg");
+  background-size:  cover;
+  background-color: transparent;
+  float:        left;
+  width:        41.6875%;
+  /* padding:      8.125%; */
+}
+.postmark + .postmark {
+  margin-left:  -12.5625%;  /**  0.0625 over-size ; 0.0625/2 = 0.03125         **/
+                            /**  Safari does math badly: 12.53125 doesn't work **/
+}
+.finders h3 {
   display: block;
-  margin:  -3.5625em 0;
 }
-.links section {
+.postmark .button {          /** differences from the other ‘buttons’ **/
+  display:  inline-block;
+  position: relative;
+  z-index:  1;
+  padding-top:  7%;
   text-align: center;
-  max-width:  8em;
+  position: absolute;     /** See: http://stackoverflow.com/a/10441480 **/
+  top:      18.125%;
+  right:    18.125%;
+  bottom:   18.125%;
+  left:     18.125%;
+
+}
+.postmark .button img {
   display: inline-block;
-  width:   18.75%;
-  margin:  0 5%;
+  width:   100%;
+  height:  auto;
 }
-#snoo {
-  display: inline-block;
-  max-width: 9em;
-  width: 72%;
+.postmark .button img.snood {     /** adjust size of reddit icon **/
+  width:  59.375%;
+  height: auto;
 }
-.links h3 {
-  display:   block;
-  font-size: 0.875em;
-  border-style: solid;
-  border-color: #9dc4f6 white white #9dc4f6;
-  border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
-  width:  48.25%;
-  height: 4.90909em;
+.postmark .button img.octocat {   /** adjust size of GitHub icon **/
+  width:  82.4125%;
+  height: auto;
 }
-.links h4 {
-  display: block;
-  border-style: solid;
-  border-color: white #9dc4f6 #9dc4f6 white;
-  border-width: 0.617045em 0.35625em 0.35625em 0.617045em;
-  width: 51.75%;
-  height: 4.90909em;
-  margin: -4.5em 0 0 48.25%;
+.static-logo  {              /** Smallest, always-visible logo **/
+  display:    block;
+  position:   fixed;
+  top:        0;
+  left:       0;
+  width:      100%;
+  width:      100vw;
+  height:     1.6875em;
+  height:     2.625vw;
+  min-height: 1.625em;
+  padding:    0.375%;
+  z-index:    10;
+}
+.static-logo img {
+  height:   100%;
+  position: absolute;        /** See: http://stackoverflow.com/a/33644245 **/
+  top:      0;
+}
+.big-logo img {
+  height:     80%;
+  min-height: 1.875em;
+  position:   absolute;      /** See: http://stackoverflow.com/a/33644245 **/
+  bottom:     0;
+}
+.big-backer {
+  top:      0;
+  left:     0;
+  z-index: -10;
+  min-height:   4.625em;
+}
+.big-logo  {                 /** Scrolls with article **/
+  background-image: url("gfx/logo-fade-back.svg");
+  background-size:  auto 100%;
+  display:      block;
+  position:     relative;    /** This impacts z-index, confusingly enough **/
+  z-index:      11;
+  width:        100%;
+  height:       5.0625em;
+  height:       7.875vw;
+  min-height:   4.625em;
+  padding:      0.75%;
+  padding:      1.625em 0.75% 1.625em 0.75%;
 }
 
 
-/********************************[ 10.9375 em < screen ]**/
-@media all and (max-width: 10.9375em) {
-  #header-title {
-    width: 98.75%;
-  }
+
+
+/********************************[ screen < 16 em (256px) ]**/
+@media all and (max-width: 16em) {
 }
 
-/********************************[ 25 em < screen ]**/
+/********************************[ screen > 25 em (400px) ]**/
 @media all and (min-width: 25em) {
-  .header {
-    width: 100%;
-  }
-  #header-background {
-    width: 100%;
-    background-color: #9DC4F6;
-    margin-bottom:    0.8125em;
-  }
-  #header-title {
-    width:        38.875%;
-    max-width:    17.125em;
-    margin-left:  0.25em;
-  }
-  .header section {
-    max-width: 62.50em;
-    padding: 0 5.4375%;
-  }
-  #backing {
-    background-image: url("gfx/background.svg");
-    background-size:  100% 100%;
-  }
-  .pages section {
-    width:      68.75%;
-    max-width:  48em;
-    margin: 0.5625em 0.5625em 0.5625em 10.375%;
-    padding: 0.3125em 1.125em 0.3125em 0.3125em;
-  }
-  .pages p {
-    font-size: 1.0625em;
-  }
-  .icon {
-    width:        18.25%;
-    border-width: 0.125em;
-  }
-  img {
-    max-width:  100%;
-    height:     auto;
-  }
-  h3 {
-    display:     inline;
-    padding-top: 0.6875em;
-  }
-  .readthis {
-    display: inline;
-    float:   right;
-    font-size: 1.0625em;
-    margin:  0 -1.0em 0 0;
-  }
-  .pages p {
-    display:        inline;
-    margin-bottom:  0.1825em;
-  }
-  article.links {
-    background-color: white;
-    width:     68.75%;
-    max-width: 48em;
-    margin:    0.5625em 0.5625em 0.5625em 10.375%;
-  }
-  .links section {
-    width:  12.5%;
-    margin: 0 7.25%;
-  }
-  .links h3 {
-    font-size: 1.125em;
-    border-width: 0.7125em 1.23409em 1.23409em 0.7125em;
-    height: 4.90909em;
-  }
-  .links h4 {
-    margin-top: 0;
-    border-width: 1.23409em 0.7125em 0.7125em 1.23409em;
-    height: 4.90909em;
-  }
 }
 
-/********************************[ 40 em < screen ]**/
+/********************************[ screen > 40 em (640px) ]**/
 @media all and (min-width: 40em) {
-  #header-spacer {
-    margin-top: -8.4375em;
-    height:      8.4375em;
-    height:     21.5625vw;
-  }
-
 }
 
-/********************************[ 56 em < screen ]**/
-@media all and (min-width: 56em) {
-  #header-spacer {
-    height:     12.075em;
+/********************************[ screen > 60 em (960px) ]**/
+@media all and (min-width: 60em) {
+  .finders {                   /** “Find me on…” article **/
+    float:      right;
+    width:      20%;
+    margin:     0 2.50% 0 2.8125%;
+    padding:    5.375% 0 0 0;
   }
-
+  .postbox {
+    max-width:    9.625em;
+    margin-left:  1.625em;
+  }
+  .postmark {
+    width:       100%;
+    padding:     20%;
+  }
+  .postmark + .postmark {
+    margin-left: 0;
+    margin-top: -30%;
+  }
 }
+
+/********************************[ screen > 70 em (1120px) ]**/
+@media all and (min-width: 70em) {
+  .pointers {
+    margin-left: 2%;
+  }
+}
+
+
