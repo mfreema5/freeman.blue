@@ -1,6 +1,13 @@
 # .htaccess for freeman.blue top-level directory
 # MJF  Nov-2015
 
+#   Enable compression (Re: http://httpd.apache.org/docs/current/mod/mod_deflate.html)
+SetOutputFilter DEFLATE
+SetEnvIfNoCase Request_URI "\.(?:gif|jpe?g|png)$" no-gzip
+
+#   Specify caching – 86400 seconds = 1 day
+Header set Cache-Control "max-age=86400, public"
+
 #    Rewrites don't work as I expect; probably due to vhost-settings or summat.
 # RewriteEngine on
 # RewriteRule "^thesis" "thesis.html" [NC]
