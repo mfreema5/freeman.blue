@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link href="common/reset.css" media="screen,print" rel="stylesheet">
-    <script src="common/modernizr.custom.30817.js"></script>
     <link href="css/screen.css" rel="stylesheet">
     <link href="css/colors-default.css" rel="stylesheet">
     <title>freeman.blue</title>
@@ -140,6 +139,7 @@
       <div style="clear: both;"></div>
     </main>
     <footer></footer>
+    <script src="common/modernizr-SVG-only.js"></script>
     <script>
       if(!Modernizr.svg)for(var imgs=document.getElementsByTagName("img"),svgExtension=/.*\.svg$/,l=imgs.length,i=0;i<l;i++)imgs[i].src.match(svgExtension)&&(imgs[i].src=imgs[i].src.slice(0,-3)+"png",console.log(imgs[i].src));
       function setDisplay(b,c){var a=document.getElementById(b);a.style.display=a.style.display=c};
