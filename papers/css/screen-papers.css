@@ -229,8 +229,8 @@ aside div {
 aside h4      { float: left; font-size: 0.8125em; }
 aside span    { float: right; font-size: 0.6825em; }
 aside section { clear: both;  }
-span.ajax     { display: inline; }
-span.niljax   { display: none; }
+span.ajax     { display: inline; float: none; font-size: inherit; }
+span.niljax   { display: none;   float: none; font-size: inherit; }
 table {
   width: 96.25%;
   border-collapse: collapse;
